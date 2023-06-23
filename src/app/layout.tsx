@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import './globals.css';
 import { Inter } from 'next/font/google';
 
@@ -23,7 +24,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}</body>
       {/* 
       RootLayout 컴포넌트의 <body> 요소에 Inter 폰트의 스타일이 적용
       */}
