@@ -1,65 +1,111 @@
-// import Image from 'next/image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Navbar from './Navbar';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+
+import {
+  faPenToSquare,
+  faCalendar,
+  faUserLarge,
+  faMobile,
+  faEnvelope,
+  faSpinner,
+} from '@fortawesome/free-solid-svg-icons';
+import Image from 'next/image';
+import bg from '../../public/bg.jpeg';
+
 
 export default function Home() {
+
+
+  // const data = [
+  //   { icon: faUserLarge, title: '이름', content: '임종정' },
+  //   { icon: faCalendar, title: '생년월일', content: '1995.01.15' },
+  //   { icon: faMobile, title: '연락처', content: '010-7157-5537' },
+  //   { icon: faPenToSquare, title: '학력', content: '한양대학교' },
+  //   { icon: faEnvelope, title: '이메일', content: 'leem1315@gmail.com' },
+  // ];
+
+  interface DataItem {
+    icon: IconDefinition;
+    title: string;
+    content: string;
+  }
+  
+  const data: DataItem[] = [
+    { icon: faUserLarge, title: '이름', content: '임종정' },
+    { icon: faCalendar, title: '생년월일', content: '1995.01.15' },
+    { icon: faMobile, title: '연락처', content: '010-7157-5537' },
+    { icon: faPenToSquare, title: '학력', content: '한양대학교' },
+    { icon: faEnvelope, title: '이메일', content: 'leem1315@gmail.com' },
+  ];
+
+  // 로딩 컴포넌트
+  // <FontAwesomeIcon icon={faSpinner} className='animate-spin h-5 w-5' />
+
   return (
     <div>
-      메인페이지
-      <div className='h-screen bg-gray-100'>
-        {/* <nav className='bg-primary py-4'> */}
-        {/* <div className='container mx-auto px-5'> */}
-        <h1 className='font-bold text-xl'>portfolio</h1>
-        {/* </div> */}
-        {/* </nav> */}
+      <Navbar />
 
-        {/* <div className='container mx-auto'>
-          <header className='mb-4'>
-            <h2 className='font-bold text-lg'>내 게시물</h2>
-          </header>
-        </div> */}
-        <div>목차 1 - ABOUT ME</div>
-
-        <div>
-          목차 2 - ABOUT ME
-          <div className='p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4'>
-            <div className='shrink-0'>
-              <img
-                className='h-12 w-12'
-                src='https://picsum.photos/200'
-                alt=''
-              />
-            </div>
-            <div>
-              <div className='text-xl font-medium text-black'>ChitChat</div>
-              <p className='text-slate-500'>You have a new message!</p>
-            </div>
-          </div>
-        </div>
-
-        <div className='grid grid-cols-4 gap-5'>
-          {[...Array(3)].map((_, i) => (
-            <div key={i} className='rounded-2xl overflow-hidden'>
-              <img
-                src='https://picsum.photos/200'
-                className='w-full h-[150px] object-cover'
-                alt='랜덤이미지'
-              />
-              <div className='p-4 bg-white'>
-                <header className='mb-2'>
-                  <h3 className='font-bold text-ellipsis whitespace-nowrap overflow-hidden'>
-                    {i}번 프로젝트 이름
-                  </h3>
-                </header>
-                <p className='text-gray-400 text-sm'>
-                  안녕하세요! 프로젝트 내용!
-                </p>
+      {/* ABOUT ME */}
+      <div className='flex flex-col items-center px-5 py-5'>
+        <h3
+          id='목차1'
+          className='mb-5 text-xl text-center md:text-2xl lg:text-3xl'
+        >
+          목차 1 - ABOUT ME
+        </h3>
+        <div className='grid grid-cols-1 gap-4 text-center md:grid-cols-2 lg:grid-cols-3'>
+          {data.map(({ icon, title, content }) => (
+            <div className='flex items-center justify-start p-6 ' key={title}>
+              <FontAwesomeIcon icon={icon} className='h-[30px] w-[30px] mr-5' />
+              <div className='text-start'>
+                <div className='text-base font-bold md:text-lg lg:text-xl'>
+                  {title}
+                </div>
+                <div className='text-sm md:text-base lg:text-lg'>{content}</div>
               </div>
             </div>
           ))}
         </div>
-
-        {/* <div>lorem</div> */}
-        <div className='grid grid-cols-2'></div>
       </div>
+
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+        {[...Array(8)].map((_, i) => (
+          // transform transition-all duration-300 ease-linear hover:-translate-y-1
+
+          <div
+            key={i}
+            className='overflow-hidden rounded-2xl transform transition-all duration-300 ease-linear hover:-translate-y-3'
+          >
+            {/* <img
+
+              // src='https://picsum.photos/200' // 랜덤이미지 맨뒤에 숫자 바꿔서 크기 조정할 수 있음 500/500 이런식으로
+              src='/bg.jpeg'
+              className='w-full h-[150px] object-cover'
+              alt='프로젝트 이미지'
+            /> */}
+
+            <Image
+              // src='https://picsum.photos/200'
+              src={bg}
+              className='w-full h-[150px] object-cover'
+              alt='프로젝트 이미지'
+            />
+            <div className='p-4 bg-white'>
+              <header className='mb-2'>
+                <h3 className='overflow-hidden font-bold text-ellipsis whitespace-nowrap'>
+                  {i}번 프로젝트 이름
+                </h3>
+              </header>
+              <p className='text-sm text-gray-400'>
+                안녕하세요! 프로젝트 내용!
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* <div>lorem</div> */}
     </div>
   );
 }
