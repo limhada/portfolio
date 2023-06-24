@@ -1,23 +1,27 @@
 'use client';
 
-import Link from 'next/link';
+// import Link from 'next/link';
 
 export default function Navbar() {
-  const handleScrollToTop = () => {
+  const handleScrollToTop = (): void => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
     });
   };
 
-  const handleScroll = (e: string) => {
+  const handleScroll = (e: string): void => {
     const element = document.getElementById(e);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
-  const data = [
+  interface DataItem {
+    title: string;
+  }
+
+  const data: DataItem[] = [
     { title: '목차1' },
     { title: '목차2' },
     { title: '목차3' },
@@ -48,7 +52,6 @@ export default function Navbar() {
                   {title}
                 </div>
               ))}
-
             </div>
           </div>
           <div className='flex flex-col text-center'>

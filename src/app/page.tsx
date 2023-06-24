@@ -1,5 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Navbar from './Navbar';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+
 import {
   faPenToSquare,
   faCalendar,
@@ -10,17 +12,26 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 import bg from '../../public/bg.jpeg';
-import 배경 from '../../public/배경.jpeg';
+
 
 export default function Home() {
-  const handleScrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
 
-  const data = [
+
+  // const data = [
+  //   { icon: faUserLarge, title: '이름', content: '임종정' },
+  //   { icon: faCalendar, title: '생년월일', content: '1995.01.15' },
+  //   { icon: faMobile, title: '연락처', content: '010-7157-5537' },
+  //   { icon: faPenToSquare, title: '학력', content: '한양대학교' },
+  //   { icon: faEnvelope, title: '이메일', content: 'leem1315@gmail.com' },
+  // ];
+
+  interface DataItem {
+    icon: IconDefinition;
+    title: string;
+    content: string;
+  }
+  
+  const data: DataItem[] = [
     { icon: faUserLarge, title: '이름', content: '임종정' },
     { icon: faCalendar, title: '생년월일', content: '1995.01.15' },
     { icon: faMobile, title: '연락처', content: '010-7157-5537' },
