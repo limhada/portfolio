@@ -18,6 +18,23 @@ export default function Home() {
         </div> */}
         <div>목차 1 - ABOUT ME</div>
 
+        <div>
+          목차 2 - ABOUT ME
+          <div className='p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4'>
+            <div className='shrink-0'>
+              <img
+                className='h-12 w-12'
+                src='https://picsum.photos/200'
+                alt=''
+              />
+            </div>
+            <div>
+              <div className='text-xl font-medium text-black'>ChitChat</div>
+              <p className='text-slate-500'>You have a new message!</p>
+            </div>
+          </div>
+        </div>
+
         <div className='grid grid-cols-4 gap-5'>
           {[...Array(3)].map((_, i) => (
             <div key={i} className='rounded-2xl overflow-hidden'>
@@ -39,6 +56,7 @@ export default function Home() {
             </div>
           ))}
         </div>
+
         {/* <div>lorem</div> */}
         <div className='grid grid-cols-2'></div>
       </div>
