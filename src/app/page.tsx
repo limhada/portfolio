@@ -18,56 +18,41 @@ export default function Home() {
   //   });
   // }
 
+  const data = [
+    { icon: faUserLarge, title: '이름', content: '임종정' },
+    { icon: faCalendar, title: '생년월일', content: '1995.01.15' },
+    { icon: faMobile, title: '연락처', content: '010-7157-5537' },
+    { icon: faPenToSquare, title: '학력', content: '한양대학교' },
+    { icon: faEnvelope, title: '이메일', content: 'leem1315@gmail.com' },
+  ];
+
   return (
     <div>
       <Navbar />
 
-      {/* text-white bg-slate-800 */}
-      <div className='px-2 py-2 '>
-        <h3 id='목차1' className='text-center'>
+      {/* ABOUT ME */}
+      <div className='flex flex-col items-center px-5 py-5'>
+        <h3
+          id='목차1'
+          className='mb-5 text-xl text-center md:text-2xl lg:text-3xl'
+        >
           목차 1 - ABOUT ME
         </h3>
-        <div className='grid grid-cols-2 gap-4 text-center'>
-          <div className='flex items-center justify-center '>
-            <FontAwesomeIcon icon={faUserLarge} className='h-[30px] w-[30px]' />
-            <div className='text-start'>
-              <div>이름</div>
-              <div>임종정</div>
+        <div className='grid grid-cols-1 gap-4 text-center md:grid-cols-2 lg:grid-cols-3'>
+          {data.map(({ icon, title, content }) => (
+            <div className='flex items-center justify-start' key={title}>
+              <FontAwesomeIcon icon={icon} className='h-[30px] w-[30px] mr-5' />
+              <div className='text-start'>
+                <div className='text-base font-bold md:text-lg lg:text-xl'>
+                  {title}
+                </div>
+                <div className='text-sm md:text-base lg:text-lg'>{content}</div>
+              </div>
             </div>
-          </div>
-          <div className='flex items-center justify-center'>
-            <FontAwesomeIcon icon={faCalendar} className='h-[30px] w-[30px]' />
-            <div className='text-start'>
-              <div className='font-bold'>생년월일</div>
-              <div>1995.01.15</div>
-            </div>
-          </div>
-          <div className='flex items-center justify-center'>
-            <FontAwesomeIcon icon={faMobile} className='h-[30px] w-[30px]' />
-            <div className='text-start'>
-              <div>연락처</div>
-              <div>010-7157-5537</div>
-            </div>
-          </div>
-          <div className='flex items-center justify-center'>
-            <FontAwesomeIcon icon={faEnvelope} className='h-[30px] w-[30px]' />
-            <div className='text-start'>
-              <div>이메일</div>
-              <div>leem1315@gmail.com</div>
-            </div>
-          </div>
-          <div className='flex items-center justify-center'>
-            <FontAwesomeIcon
-              icon={faPenToSquare}
-              className='h-[30px] w-[30px]'
-            />
-            <div className='text-start'>
-              <div className='font-bold'>학력</div>
-              <div>한양대학교</div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
+
       {/* 
       
       
