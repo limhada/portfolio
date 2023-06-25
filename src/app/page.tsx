@@ -8,15 +8,12 @@ import {
   faUserLarge,
   faMobile,
   faEnvelope,
-  faSpinner,
+  // faSpinner,
 } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 import bg from '../../public/bg.jpeg';
 
-
 export default function Home() {
-
-
   // const data = [
   //   { icon: faUserLarge, title: '이름', content: '임종정' },
   //   { icon: faCalendar, title: '생년월일', content: '1995.01.15' },
@@ -30,7 +27,7 @@ export default function Home() {
     title: string;
     content: string;
   }
-  
+
   const data: DataItem[] = [
     { icon: faUserLarge, title: '이름', content: '임종정' },
     { icon: faCalendar, title: '생년월일', content: '1995.01.15' },
@@ -66,6 +63,33 @@ export default function Home() {
               </div>
             </div>
           ))}
+        </div>
+      </div>
+
+      <div className='flex flex-col items-center px-5 py-5'>
+        <h3
+          id='목차'
+          className='mb-5 text-xl text-center md:text-2xl lg:text-3xl'
+        >
+          목차 2 - SKILLS
+        </h3>
+        <div>frontend</div>
+        <div>backend</div>
+        <div>deployment</div>
+        <div>Others</div>
+          {/* FIXME: 스킬 이미지 or 아이콘 정리하기 */}
+        <div className='grid grid-cols-1 gap-4 text-center md:grid-cols-2 lg:grid-cols-3'>
+          {/* {data.map(({ icon, title, content }) => (
+            <div className='flex items-center justify-start p-6 ' key={title}>
+              <FontAwesomeIcon icon={icon} className='h-[30px] w-[30px] mr-5' />
+              <div className='text-start'>
+                <div className='text-base font-bold md:text-lg lg:text-xl'>
+                  {title}
+                </div>
+                <div className='text-sm md:text-base lg:text-lg'>{content}</div>
+              </div>
+            </div>
+          ))} */}
         </div>
       </div>
 
