@@ -77,7 +77,7 @@ export default function Home() {
         <div>backend</div>
         <div>deployment</div>
         <div>Others</div>
-
+          {/* FIXME: 스킬 이미지 or 아이콘 정리하기 */}
         <div className='grid grid-cols-1 gap-4 text-center md:grid-cols-2 lg:grid-cols-3'>
           {/* {data.map(({ icon, title, content }) => (
             <div className='flex items-center justify-start p-6 ' key={title}>
