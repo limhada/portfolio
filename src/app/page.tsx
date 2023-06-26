@@ -14,6 +14,7 @@ import Image from 'next/image';
 import bg from '../../public/bg.jpeg';
 import logo_github from '../../public/logo_github.png';
 import logo_naver from '../../public/logo_naver.png';
+import Skills from './Skills';
 
 export default function Home() {
   // const data = [
@@ -121,16 +122,14 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='flex flex-col items-center px-5 py-5 bg-mycolor2'>
+      <div className='flex flex-col items-center px-5 py-5 bg-white'>
         <h3
           id='목차3'
           className='mb-5 text-xl text-center md:text-2xl lg:text-3xl'
         >
           목차 3 - SKILLS
         </h3>
-        <div>frontend</div>
-        <div>backend</div>
-
+        <Skills></Skills>
         {/* FIXME: 스킬 이미지 or 아이콘 정리하기 */}
         {/* <div className='grid grid-cols-1 gap-4 text-center md:grid-cols-2 lg:grid-cols-3'>
           {data.map(({ icon, title, content }) => (
