@@ -41,12 +41,13 @@ export default function Navbar() {
               <br />
               Portfolio
             </div>
+            {/* FIXME: 수정하기 top버튼만들고 LJJPortfolio 클릭 시 메인페이지로 이동하게 */}
 
             <div className='flex flex-row mt-3 '>
               {data.map(({ title }, i) => (
                 <div
                   key={i}
-                  onClick={() => handleScroll('목차1')}
+                  onClick={() => handleScroll(title)}
                   className='mx-[10px] my-[10px]'
                 >
                   {title}
