@@ -77,7 +77,7 @@ export default function Home() {
         >
           목차 2 - ARCHIVING
         </h3>
-        <div className='grid grid-cols-1 gap-4 text-center md:grid-cols-2'>
+        <div className='grid grid-cols-1 gap-4 md:grid-cols-2'>
           <a
             href='https://github.com/limhada'
             target='_blank'
