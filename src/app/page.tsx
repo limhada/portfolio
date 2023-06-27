@@ -78,6 +78,7 @@ export default function Home() {
           목차 2 - ARCHIVING
         </h3>
         <div className='grid grid-cols-1 gap-4 md:grid-cols-2'>
+          {/* FIXME: 호버 시 색상 살짝 변경해주기 */}
           <a
             href='https://github.com/limhada'
             target='_blank'
@@ -134,6 +135,7 @@ export default function Home() {
       </div>
 
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+        {/* FIXME: 프로젝트 내용 넣기 마우스 클릭 시 프로젝트 상세페이지 or  */}
         {[...Array(8)].map((_, i) => (
           // transform transition-all duration-300 ease-linear hover:-translate-y-1
 
