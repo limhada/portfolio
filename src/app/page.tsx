@@ -130,20 +130,7 @@ export default function Home() {
           목차 3 - SKILLS
         </h3>
         <Skills></Skills>
-        {/* FIXME: 스킬 이미지 or 아이콘 정리하기 */}
-        {/* <div className='grid grid-cols-1 gap-4 text-center md:grid-cols-2 lg:grid-cols-3'>
-          {data.map(({ icon, title, content }) => (
-            <div className='flex items-center justify-start p-6 ' key={title}>
-              <FontAwesomeIcon icon={icon} className='h-[30px] w-[30px] mr-5' />
-              <div className='text-start'>
-                <div className='text-base font-bold md:text-lg lg:text-xl'>
-                  {title}
-                </div>
-                <div className='text-sm md:text-base lg:text-lg'>{content}</div>
-              </div>
-            </div>
-          ))}
-        </div> */}
+        
       </div>
 
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
@@ -154,6 +141,7 @@ export default function Home() {
             key={i}
             className='overflow-hidden rounded-2xl transform transition-all duration-300 ease-linear hover:-translate-y-3'
           >
+            {/* FIXME: 기록하고 주석 삭제하기  */}
             {/* <img
 
               // src='https://picsum.photos/200' // 랜덤이미지 맨뒤에 숫자 바꿔서 크기 조정할 수 있음 500/500 이런식으로
