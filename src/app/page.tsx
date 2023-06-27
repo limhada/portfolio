@@ -135,6 +135,12 @@ export default function Home() {
       </div>
 
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+      <h3
+          id='목차4'
+          className='mb-5 text-xl text-center md:text-2xl lg:text-3xl'
+        >
+          목차 4 - 프로젝트
+        </h3>
         {/* FIXME: 프로젝트 내용 넣기 마우스 클릭 시 프로젝트 상세페이지 or  */}
         {[...Array(8)].map((_, i) => (
           // transform transition-all duration-300 ease-linear hover:-translate-y-1
