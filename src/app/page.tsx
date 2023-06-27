@@ -12,6 +12,9 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 import bg from '../../public/bg.jpeg';
+import logo_github from '../../public/logo_github.png';
+import logo_naver from '../../public/logo_naver.png';
+import Skills from './Skills';
 
 export default function Home() {
   // const data = [
@@ -53,7 +56,7 @@ export default function Home() {
         </h3>
         <div className='grid grid-cols-1 gap-4 text-center md:grid-cols-2 lg:grid-cols-3'>
           {data.map(({ icon, title, content }) => (
-            <div className='flex items-center justify-start p-6 ' key={title}>
+            <div className='flex items-center justify-start p-6' key={title}>
               <FontAwesomeIcon icon={icon} className='h-[30px] w-[30px] mr-5' />
               <div className='text-start'>
                 <div className='text-base font-bold md:text-lg lg:text-xl'>
@@ -66,20 +69,70 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='flex flex-col items-center px-5 py-5'>
+      {/* ARCHIVING */}
+      <div className='flex flex-col items-center px-5 py-5 bg-mycolor1 '>
         <h3
-          id='목차'
+          id='목차2'
           className='mb-5 text-xl text-center md:text-2xl lg:text-3xl'
         >
-          목차 2 - SKILLS
+          목차 2 - ARCHIVING
         </h3>
-        <div>frontend</div>
-        <div>backend</div>
-        <div>deployment</div>
-        <div>Others</div>
-          {/* FIXME: 스킬 이미지 or 아이콘 정리하기 */}
-        <div className='grid grid-cols-1 gap-4 text-center md:grid-cols-2 lg:grid-cols-3'>
-          {/* {data.map(({ icon, title, content }) => (
+        <div className='grid grid-cols-1 gap-4 text-center md:grid-cols-2'>
+          <a
+            href='https://github.com/limhada'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='flex items-center justify-start p-6 bg-white rounded-[10px]'
+          >
+            <Image
+              src={logo_github}
+              className='h-[30px] w-[30px] mr-5'
+              alt='logo_github'
+            />
+            <div className='text-start'>
+              <div className='text-base font-bold md:text-lg lg:text-xl'>
+                github
+              </div>
+              <div className='text-sm md:text-base lg:text-lg text-sky-400'>
+                github.com/limhada
+              </div>
+            </div>
+          </a>
+
+          <a
+            href='https://blog.naver.com/leem95'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='flex items-center justify-start p-6 bg-white rounded-[10px]'
+          >
+            <Image
+              src={logo_naver}
+              className='h-[30px] w-[30px] mr-5'
+              alt='logo_naver'
+            />
+            <div className='text-start'>
+              <div className='text-base font-bold md:text-lg lg:text-xl'>
+                github
+              </div>
+              <div className='text-sm md:text-base lg:text-lg text-sky-400'>
+                blog.naver.com/leem95
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div className='flex flex-col items-center px-5 py-5 bg-white'>
+        <h3
+          id='목차3'
+          className='mb-5 text-xl text-center md:text-2xl lg:text-3xl'
+        >
+          목차 3 - SKILLS
+        </h3>
+        <Skills></Skills>
+        {/* FIXME: 스킬 이미지 or 아이콘 정리하기 */}
+        {/* <div className='grid grid-cols-1 gap-4 text-center md:grid-cols-2 lg:grid-cols-3'>
+          {data.map(({ icon, title, content }) => (
             <div className='flex items-center justify-start p-6 ' key={title}>
               <FontAwesomeIcon icon={icon} className='h-[30px] w-[30px] mr-5' />
               <div className='text-start'>
@@ -89,8 +142,8 @@ export default function Home() {
                 <div className='text-sm md:text-base lg:text-lg'>{content}</div>
               </div>
             </div>
-          ))} */}
-        </div>
+          ))}
+        </div> */}
       </div>
 
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
