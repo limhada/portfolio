@@ -1,6 +1,7 @@
 'use client';
 
 import Image /* {StaticImageData} */ from 'next/image';
+import { useState } from 'react';
 // import bg from '../../public/bg.jpeg';
 // import bg2 from '../../public/bg.jpeg';
 
@@ -44,23 +45,47 @@ export default function Projects() {
     },
   ];
 
-  const handle = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
+  const [showModal, setShowModal] = useState(false);
+  const [modalContent, setModalContent] = useState<React.ReactNode | null>(
+    null
+  );
+
+  const handleClick = (projectId: number) => {
+    // 해당 프로젝트의 id를 모달 내용에 추가하는 로직을 구현합니다.
+    const project = projects.find((project) => project.id === projectId);
+    if (project) {
+      // console.log(project, '확인~~');
+      const result = (
+        <div className='fixed inset-0 flex items-center justify-center z-50'>
+          <div className='bg-sky-400 p-6 w-full h-full'>
+            <h2>프로젝트 제목: {project.name}</h2>
+            <p>프로젝트 내용: {project.description}</p>
+            
+            <br/>
+            {/* 모달 닫기 버튼 */}
+            <button onClick={() => setShowModal(false)}>닫기</button>
+          </div>
+        </div>
+      );
+      setModalContent(result);
+    }
+    setShowModal(true);
   };
 
   return (
     <div>
+      <div>
+        {/* 모달 */}
+        {showModal && <div>{modalContent}</div>}
+      </div>
+
       {/* FIXME: 프로젝트 내용 넣기 마우스 클릭 시 프로젝트 상세페이지 or  */}
-      {/* TODO: 화면 크기에 따라 px값 조절하기 */}
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-[20px] md:px-[10%] lg:px-[20%]'>
         {projects.map((project) => (
           <div
             key={project.id}
             className='overflow-hidden rounded-2xl transform transition-all duration-300 ease-linear hover:-translate-y-3'
-            onClick={handle}
+            onClick={() => handleClick(project.id)}
           >
             <Image
               src={project.image}
