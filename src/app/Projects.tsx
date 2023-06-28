@@ -1,6 +1,7 @@
 'use client';
 
 import Image /* {StaticImageData} */ from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 // import bg from '../../public/bg.jpeg';
 // import bg2 from '../../public/bg.jpeg';
@@ -57,11 +58,20 @@ export default function Projects() {
       // console.log(project, '확인~~');
       const result = (
         <div className='fixed inset-0 flex items-center justify-center z-50'>
-          <div className='bg-sky-400 p-6 w-full h-full'>
+          <div className='bg-slate-200 p-6 w-full h-full'>
+            {/* FIXME: 상세내용 projects에 추가하기  */}
             <h2>프로젝트 제목: {project.name}</h2>
             <p>프로젝트 내용: {project.description}</p>
-            
-            <br/>
+            <Link href={'abc'}>GitHub</Link>
+            <br />
+            <p>주요기능</p>
+            <p>개발배경? 개발한 이유</p>
+            <Link href={'abc'}>배포</Link>
+            <p>review:</p>
+            <p>사용한 기술 스택</p>
+            <p>테스트 계정</p>
+            <p>힘들었던점</p>
+            <p>해결방법</p>
             {/* 모달 닫기 버튼 */}
             <button onClick={() => setShowModal(false)}>닫기</button>
           </div>
