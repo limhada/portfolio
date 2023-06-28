@@ -5,11 +5,8 @@ import Skills from './Skills';
 import Projects from './Projects';
 
 export default function Home() {
-
-
   // 로딩 컴포넌트
   // <FontAwesomeIcon icon={faSpinner} className='animate-spin h-5 w-5' />
-
 
   return (
     <div>
@@ -34,10 +31,9 @@ export default function Home() {
         >
           목차 2 - ARCHIVING
         </h3>
-          {/* FIXME: 호버 시 색상 살짝 변경해주기 */}
-      <Archiving></Archiving>
+        {/* FIXME: 호버 시 색상 살짝 변경해주기 */}
+        <Archiving></Archiving>
       </div>
-
 
       <div className='flex flex-col items-center px-5 py-5 bg-white'>
         <h3
@@ -56,11 +52,19 @@ export default function Home() {
         >
           목차 4 - PROJECTS
         </h3>
+        <Projects></Projects>
+      </div>
 
-            <Projects></Projects>
-
-
-        
+      <div className='flex flex-col  px-5 py-5 bg-white'>
+        <h3
+          id='목차4'
+          className='mb-5 text-xl text-center md:text-2xl lg:text-3xl'
+        >
+          목차 5 - CAREER(커리어)
+        </h3>
+        <div>
+          내용~
+        </div>
       </div>
     </div>
   );

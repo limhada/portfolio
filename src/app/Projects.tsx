@@ -97,7 +97,7 @@ export default function Projects() {
     <div>
       {/* FIXME: 프로젝트 내용 넣기 마우스 클릭 시 프로젝트 상세페이지 or  */}
       {/* TODO: 화면 크기에 따라 px값 조절하기 */}
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-[200px]'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-[20px] md:px-[10%] lg:px-[20%]'>
         {projects.map((project) => (
           <div
             key={project.id}
