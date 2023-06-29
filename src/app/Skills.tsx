@@ -1,8 +1,10 @@
 export default function Skills() {
   return (
-    <div className='flex flex-col flex-wrap justify-start items-center w-[350px] h-[600px] md:w-[600px] md:h-[800px] '>
-      <div className=''>
-        프론트
+    <div className='flex flex-col flex-wrap justify-start items-center w-[350px] h-[800px] md:w-[600px] md:h-[1100px] '>
+      {/* FIXME: 테두리 굵기, 및 색 정하기 or 테투리 할지 안할지 정하기*/}
+      <div className='border-4 p-2 m-2 rounded-[10px] border-indigo-500'>
+        {/* FIXME: 색 확정하기, 글씨크기 정하기 */}
+        <div className='text-orange-400'>Frontend</div>
         <img
           src='https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white'
           className='w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[10px]'
@@ -39,10 +41,23 @@ export default function Skills() {
           src='https://img.shields.io/badge/styled_components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white'
           className='w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[10px]'
         ></img>
+        <img
+          src='https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white'
+          className='w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[10px]'
+        ></img>
       </div>
 
-      <div className=''>
-        백
+      <div className='border-4 p-2 m-2 rounded-[10px] border-indigo-500'>
+        <div className='text-orange-400'>Database</div>
+        <img
+          src='https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white'
+          className='w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[10px]'
+        ></img>
+      </div>
+
+     
+      <div className='border-4 p-2 m-2 rounded-[10px] border-indigo-500'>
+        <div className='text-orange-400'>Backend</div>
         <img
           src='https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white'
           className='w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[10px]'
@@ -53,20 +68,31 @@ export default function Skills() {
         ></img>
       </div>
 
-      <div className=''>
-        데이터베이스
-        <img
-          src='https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white'
-          className='w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[10px]'
-        ></img>
-      </div>
 
-      <div className=''>
-        배포
+ 
+
+
+      <div className='border-4 p-2 m-2 rounded-[10px] border-indigo-500'>
+        <div className='text-orange-400'>Deployment</div>
         <img
           src='https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white'
           className='w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[10px]'
         ></img>
+        <img
+  src="https://img.shields.io/badge/AWS_Lambda-FF9900?style=for-the-badge&logo=aws-lambda&logoColor=white"
+  alt="AWS Lambda badge"
+  className="w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[10px]"
+/>
+<img
+  src="https://img.shields.io/badge/AWS_S3-FF9900?style=for-the-badge&logo=amazon-s3&logoColor=white"
+  alt="AWS S3 badge"
+  className="w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[10px]"
+/>
+<img
+  src="https://img.shields.io/badge/AWS_EC2-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white"
+  alt="AWS EC2 badge"
+  className="w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[10px]"
+/>
         <img
           src='https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white'
           className='w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[10px]'
@@ -75,10 +101,14 @@ export default function Skills() {
           src='https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white'
           className='w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[10px]'
         ></img>
+
+
+
+
       </div>
 
-      <div className=''>
-        여러가지
+      <div className='border-4 p-2 m-2 rounded-[10px] border-indigo-500'>
+        <div className='text-orange-400'>Others</div>
         <img
           src='https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white'
           className='w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[10px]'

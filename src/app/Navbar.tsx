@@ -42,13 +42,14 @@ export default function Navbar() {
               Portfolio
             </div>
             {/* FIXME: 수정하기 top버튼만들고 LJJPortfolio 클릭 시 메인페이지로 이동하게 */}
-
+            {/* 목차1 목차2 버튼 영역 글씨에 딱맞게 조정하기 */}
             <div className='flex flex-row mt-3 '>
               {data.map(({ title }, i) => (
                 <div
                   key={i}
+                  
                   onClick={() => handleScroll(title)}
-                  className='mx-[10px] my-[10px]'
+                  className='mx-[10px] my-[10px] cursor-pointer'
                 >
                   {title}
                 </div>
