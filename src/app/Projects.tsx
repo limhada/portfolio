@@ -73,7 +73,9 @@ export default function Projects() {
             <p>힘들었던점</p>
             <p>해결방법</p>
             {/* 모달 닫기 버튼 */}
-            <button onClick={() => setShowModal(false)}>닫기</button>
+            <button onClick={() => setShowModal(false)}
+            id="scrollButton" className="fixed right-10 top-10 bg-lime-600"
+            >닫기⬆️</button>
           </div>
         </div>
       );

@@ -3,6 +3,7 @@ import Aboutme from './Aboutme';
 import Archiving from './Archiving';
 import Skills from './Skills';
 import Projects from './Projects';
+import ScrollToTop from './components/ScrollToTop';
 
 export default function Home() {
   // 로딩 컴포넌트
@@ -66,6 +67,9 @@ export default function Home() {
           내용~
         </div>
       </div>
+      <ScrollToTop/>
+      {/* <button id="scrollButton" className="fixed right-10 bottom-10 bg-lime-600"
+            >닫기⬆️</button> */}
     </div>
   );
 }
