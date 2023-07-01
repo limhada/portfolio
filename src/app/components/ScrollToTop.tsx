@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-
+// TODO: 설명 추가하기
 
 
 export default function ScrollToTop() {
@@ -25,7 +25,6 @@ export default function ScrollToTop() {
 
   useEffect(() => {
     window.addEventListener('scroll', onScroll);
-
     return () => {
       window.removeEventListener('scroll', onScroll);
     };
