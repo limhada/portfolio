@@ -2,7 +2,7 @@
 
 import Image /* {StaticImageData} */ from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 // import bg from '../../public/bg.jpeg';
 // import bg2 from '../../public/bg.jpeg';
 
@@ -83,6 +83,16 @@ export default function Projects() {
     }
     setShowModal(true);
   };
+
+// 모달 창이 활성화될 때 기존의 스크롤바를 숨기고 모달 창의 스크롤바만 보이게
+  useEffect(() => {
+    if (showModal) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [showModal]);
+
 
   return (
     <div>
