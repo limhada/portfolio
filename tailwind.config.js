@@ -16,10 +16,10 @@ module.exports = {
 
           // mycolor1: '#167c80',
           mycolor1: '#2a9d8f',
-          // mycolor1: '#fca311',
           // mycolor2: '#ff6b61',
           // mycolor2: '#e76f51',
-          mycolor2: '#14213d',
+          mycolor2: '#14213D',
+          mycolor3: '#fca311',
 
       },
     },
