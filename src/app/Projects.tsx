@@ -199,6 +199,7 @@ export default function Projects() {
               alt='프로젝트 이미지'
               width={150}
               height={150}
+              draggable='false'
             />
             <div className='p-4 bg-white'>
               <header className='mb-2'>

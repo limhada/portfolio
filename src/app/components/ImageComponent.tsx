@@ -53,17 +53,18 @@ export default function ImageComponent(props: Project) {
   return (
     <div>
       <div
-        className='relative w-[500px] h-[500px] overflow-hidden'
-        onMouseMove={handleMouseMove}
+      className="relative w-full h-0 md:w-[500px] md:h-[500px] pb-[100%]  overflow-hidden"
+      onMouseMove={handleMouseMove}
       >
         {imgArr[props.imageName].map((src, index) => (
+          // FIXME: 볼더 라디우스 줄지말지 결정하기
           <Image
             key={index}
             src={src}
             alt={''}
             width={100}
             height={100}
-            className={`absolute top-0 left-0 md:w-[500px] md:h-[500px] ${
+            className={`absolute top-0 left-0 w-full h-full ${
               dragging ? '' : 'transition-transform duration-700'
             }`}
             style={{
@@ -89,8 +90,10 @@ export default function ImageComponent(props: Project) {
 
       <div>
         <button
-        className={`w-10 h-10 ${num === 0 ? 'opacity-50 cursor-default' : ''}`}
-        onClick={() => {
+          className={`w-10 h-10 ${
+            num === 0 ? 'opacity-50 cursor-default' : ''
+          }`}
+          onClick={() => {
             if (num > 0) {
               setNum(num - 1);
             }
@@ -101,8 +104,12 @@ export default function ImageComponent(props: Project) {
         {/* 이미지 번호 출력 */}
         {num + 1}
         <button
-        className={`w-10 h-10 ${num === imgArr[props.imageName].length - 1 ? 'opacity-50 cursor-default' : ''}`}
-        onClick={() => {
+          className={`w-10 h-10 ${
+            num === imgArr[props.imageName].length - 1
+              ? 'opacity-50 cursor-default'
+              : ''
+          }`}
+          onClick={() => {
             if (num < imgArr[props.imageName].length - 1) {
               setNum(num + 1);
             }
