@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { useState } from 'react';
-
+// FIXME: 이미지 슬라이드 공부하고 정리해 놓기
 interface Project {
   id: number;
   image: string;
@@ -52,7 +52,10 @@ export default function ImageComponent(props: Project) {
 
   return (
     <div>
-      <div className='relative w-[500px] h-[500px] overflow-hidden' onMouseMove={handleMouseMove}>
+      <div
+        className='relative w-[500px] h-[500px] overflow-hidden'
+        onMouseMove={handleMouseMove}
+      >
         {imgArr[props.imageName].map((src, index) => (
           <Image
             key={index}
@@ -60,7 +63,9 @@ export default function ImageComponent(props: Project) {
             alt={''}
             width={100}
             height={100}
-            className={`absolute top-0 left-0 md:w-[500px] md:h-[500px] ${dragging ? '' : 'transition-transform duration-700'}`}
+            className={`absolute top-0 left-0 md:w-[500px] md:h-[500px] ${
+              dragging ? '' : 'transition-transform duration-700'
+            }`}
             style={{
               transform: ((): string => {
                 if (num === index) {
@@ -81,7 +86,7 @@ export default function ImageComponent(props: Project) {
           />
         ))}
       </div>
-     
+
       <div>
         <button
           className='w-10 h-10'
@@ -93,6 +98,8 @@ export default function ImageComponent(props: Project) {
         >
           &lt;
         </button>
+        {/* 이미지 번호 출력 */}
+        {num + 1}
         <button
           className='w-10 h-10'
           onClick={() => {
