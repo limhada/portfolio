@@ -15,6 +15,8 @@ export default function Projects() {
     description: string;
     github: string;
     deployment: string;
+    summary: string;
+    background: string;
   }
 
   const projects: Project[] = [
@@ -26,6 +28,8 @@ export default function Projects() {
       deployment: 'https://realguenlog.vercel.app/start',
       description:
         '지속적이고 꾸준한 운동 습관을 유지할 수 있는 도움을 제공하는 서비스입니다.',
+        summary: "요약내용",
+        background: "배경내용",
     },
     {
       id: 2,
@@ -35,6 +39,8 @@ export default function Projects() {
       deployment: 'https://animal-personality-type-test.vercel.app/',
       description:
         'Big Five 기법을 사용하여 성격 유형을 테스트하고 나의 성격을 대표하는 동물들을 찾아볼 수 있습니다.',
+        summary: "요약내용",
+        background: "배경내용",
     },
     {
       id: 3,
@@ -44,6 +50,8 @@ export default function Projects() {
       deployment: 'https://fortuneteller-eqt.pages.dev/',
       description:
         '인공지능 AI인 ChatGPT를 기반으로 구현하여 깜냥이에게 사람과의 대화처럼 운세를 질문하고 상담할 수 있습니다.',
+        summary: "요약내용",
+        background: "배경내용",
     },
     {
       id: 4,
@@ -53,6 +61,8 @@ export default function Projects() {
       deployment: 'naver.com',
       description:
         '자기소개, 기술 스택, 프로젝트, 블로그 등을 소개하는 페이지입니다.',
+        summary: "요약내용",
+        background: "배경내용",
     },
   ];
 
@@ -69,33 +79,67 @@ export default function Projects() {
       const result = (
         <div className='fixed inset-0 flex items-center justify-center z-50'>
           <div className='bg-slate-200 w-full h-full overflow-auto'>
-            <div className='flex text-white'>
-              <div className='bg-mycolor2 h-10 w-full flex items-center pl-5'>
-                자세히보기
+            <div className='flex text-white bg-mycolor2'>
+              <div className='text-5xl h-10 w-full h-auto flex items-center p-5'>
+                {project.title}
               </div>
               {/* 모달 닫기 버튼 */}
               <button
                 onClick={() => setShowModal(false)}
-                className='bg-mycolor3 w-10 h-10'
+                className='bg-mycolor3 w-14 h-14 m-2 rounded-tl-full rounded-bl-full rounded-br-full'
               >
                 닫기
               </button>
             </div>
-            <div className='px-6 pb-6'>
+            <div className='p-6'>
               {/* FIXME: 상세내용 projects에 추가하기  */}
-              <h1 className='text-5xl mt-5'>프로젝트 제목: {project.title}</h1>
-              <hr className='border-t border-gray-400 my-5' />
-              <p>프로젝트 내용: {project.description}</p>
-              <Link href={project.github}>GitHub</Link>
-              <br />
-              <p>주요기능</p>
-              <p>개발배경? 개발한 이유</p>
-              <Link href={project.deployment}>배포</Link>
-              <p>review:</p>
-              <p>사용한 기술 스택</p>
-              <p>테스트 계정</p>
+              {/* <h1 className='text-5xl mt-5'>프로젝트 제목: {project.title}</h1> */}
+
+              <div className='mb-1'>
+                GitHub:{' '}
+                <Link href={project.github} className='text-sky-400 '>
+                  GitHub
+                </Link>
+              </div>
+              <div className='mb-10'>
+                Deployment URL :{' '}
+                <Link href={project.deployment} className='text-sky-400 '>
+                  {project.deployment}
+                </Link>
+              </div>
+
+              {/* FIXME: 안쓰면 삭제하기 */}
+              {/* <hr className='border-t border-gray-400 my-5' /> */}
+
+              <div className='mb-10'>
+                <h1 className='text-3xl mb-5'>요약</h1>
+                <p className='text-base'>{project.description}</p>
+              </div>
+              {/* <p>주요기능</p> */}
+              <div className='mb-10'>
+                <h1 className='text-3xl mb-5'>배경</h1>
+                <p className='text-base'>개발하게 된 배경</p>
+              </div>
+              <div className='mb-10'>
+                <h1 className='text-3xl mb-5'>
+                후기
+                </h1>
+                <p className='text-base' >{project.description}</p>
+                <p>테스트 계정</p>
               <p>힘들었던점</p>
               <p>해결방법</p>
+             </div>
+              <p></p>
+              <div className='mb-10'>
+                <h1 className='text-3xl mb-5'>사용한 기술</h1>
+                <p>프론트엔드</p>
+                <p>백엔드</p>
+                <p>백엔드</p>
+                <p>데이터베이스</p>
+                <p>배포</p>
+                <p>기타</p>
+                <p className='text-base'>{project.description}</p>
+              </div>
             </div>
           </div>
         </div>
@@ -135,14 +179,14 @@ export default function Projects() {
 
       {/* FIXME: 프로젝트 내용 넣기 마우스 클릭 시 프로젝트 상세페이지 or  */}
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-[20px] md:px-[10%] lg:px-[20%]'>
-        {projects.map((project) => (
+        {projects.map((el) => (
           <div
-            key={project.id}
+            key={el.id}
             className='overflow-hidden rounded-2xl transform transition-all duration-300 ease-linear hover:-translate-y-3'
-            onClick={() => handleClick(project.id)}
+            onClick={() => handleClick(el.id)}
           >
             <Image
-              src={project.image}
+              src={el.image}
               className='w-full h-[200px] object-cover'
               alt='프로젝트 이미지'
               width={150}
@@ -151,10 +195,10 @@ export default function Projects() {
             <div className='p-4 bg-white'>
               <header className='mb-2'>
                 <h3 className='overflow-hidden font-bold text-ellipsis whitespace-nowrap'>
-                  {project.title}
+                  {el.title}
                 </h3>
               </header>
-              <p className='text-sm text-gray-400'>{project.description}</p>
+              <p className='text-sm text-gray-400'>{el.description}</p>
             </div>
           </div>
         ))}
