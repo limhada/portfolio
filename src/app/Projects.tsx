@@ -3,6 +3,7 @@
 import Image /* {StaticImageData} */ from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import ImageComponent from './components/ImageComponent';
 // import bg from '../../public/bg.jpeg';
 // import bg2 from '../../public/bg.jpeg';
 
@@ -17,52 +18,57 @@ export default function Projects() {
     deployment: string;
     summary: string;
     background: string;
+    imageName: string;
   }
 
   const projects: Project[] = [
     {
       id: 1,
       image: '/bg1.jpeg',
+      imageName: "guenlog",
       title: '근로그',
       github: 'https://github.com/limhada/seb40_main_028',
       deployment: 'https://realguenlog.vercel.app/start',
       description:
         '지속적이고 꾸준한 운동 습관을 유지할 수 있는 도움을 제공하는 서비스입니다.',
-        summary: "요약내용",
-        background: "배경내용",
+      summary: '요약내용',
+      background: '배경내용',
     },
     {
       id: 2,
       image: '/bg2.jpeg',
+      imageName: "animaltest",
       title: '동물 성격유형 테스트',
       github: 'https://github.com/limhada/animal-personality-type-test',
       deployment: 'https://animal-personality-type-test.vercel.app/',
       description:
         'Big Five 기법을 사용하여 성격 유형을 테스트하고 나의 성격을 대표하는 동물들을 찾아볼 수 있습니다.',
-        summary: "요약내용",
-        background: "배경내용",
+      summary: '요약내용',
+      background: '배경내용',
     },
     {
       id: 3,
       image: '/bg1.jpeg',
+      imageName: "fortuneteller",
       title: '운세 보는 깜냥이',
       github: 'https://github.com/limhada/fortuneteller',
       deployment: 'https://fortuneteller-eqt.pages.dev/',
       description:
         '인공지능 AI인 ChatGPT를 기반으로 구현하여 깜냥이에게 사람과의 대화처럼 운세를 질문하고 상담할 수 있습니다.',
-        summary: "요약내용",
-        background: "배경내용",
+      summary: '요약내용',
+      background: '배경내용',
     },
     {
       id: 4,
       image: '/bg2.jpeg',
+      imageName: "guenlog",
       title: '포트폴리오 웹사이트',
       github: 'naver.com',
       deployment: 'naver.com',
       description:
         '자기소개, 기술 스택, 프로젝트, 블로그 등을 소개하는 페이지입니다.',
-        summary: "요약내용",
-        background: "배경내용",
+      summary: '요약내용',
+      background: '배경내용',
     },
   ];
 
@@ -95,10 +101,11 @@ export default function Projects() {
               {/* FIXME: 상세내용 projects에 추가하기  */}
               {/* <h1 className='text-5xl mt-5'>프로젝트 제목: {project.title}</h1> */}
 
+              <ImageComponent {...project}></ImageComponent>
               <div className='mb-1'>
                 GitHub:{' '}
                 <Link href={project.github} className='text-sky-400 '>
-                  GitHub
+                  {project.github}
                 </Link>
               </div>
               <div className='mb-10'>
@@ -121,14 +128,12 @@ export default function Projects() {
                 <p className='text-base'>개발하게 된 배경</p>
               </div>
               <div className='mb-10'>
-                <h1 className='text-3xl mb-5'>
-                후기
-                </h1>
-                <p className='text-base' >{project.description}</p>
+                <h1 className='text-3xl mb-5'>후기</h1>
+                <p className='text-base'>{project.description}</p>
                 <p>테스트 계정</p>
-              <p>힘들었던점</p>
-              <p>해결방법</p>
-             </div>
+                <p>힘들었던점</p>
+                <p>해결방법</p>
+              </div>
               <p></p>
               <div className='mb-10'>
                 <h1 className='text-3xl mb-5'>사용한 기술</h1>
@@ -140,6 +145,9 @@ export default function Projects() {
                 <p>기타</p>
                 <p className='text-base'>{project.description}</p>
               </div>
+
+              
+
             </div>
           </div>
         </div>
