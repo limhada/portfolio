@@ -49,9 +49,9 @@ export default function ImageComponent(props: Project) {
   // 드래그 종료
   const handleMouseUp = () => {
     setDragging(false);
-    if (offsetX > 100) {
+    if (offsetX > 50) {
       if (num > 0) setNum(num - 1);
-    } else if (offsetX < -100) {
+    } else if (offsetX < -50) {
       if (num < imgArr[props.imageName].length - 1) setNum(num + 1);
     }
     setOffsetX(0);
@@ -59,62 +59,62 @@ export default function ImageComponent(props: Project) {
 
   return (
     <div>
-    <div className="relative w-[500px] h-[500px] overflow-hidden">
-      {imgArr[props.imageName].map((src, index) => (
-        <Image
-          key={index}
-          src={src}
-          alt={""}
-          width={100}
-          height={100}
-          className={`absolute top-0 left-0 md:w-[500px] md:h-[500px] transition-transform duration-500`}
-          style={{
-            transform: (():string => {
-              if (num === index) {
-                return `translateX(${offsetX}px)`;
-              } else if (num < index) {
-                // 마지막 이미지에서 다른 이미지로 이동하지 않도록 수정
-                return index === imgArr[props.imageName].length - 1 && num === 0
-                  ? "translateX(100%)"
-                  : `translateX(calc(100% + ${offsetX}px))`;
-              } else {
-                return `translateX(calc(-100% + ${offsetX}px))`;
-              }
-            })() ,
-          }}
-          onMouseDown={handleMouseDown}
-          onMouseMove={handleMouseMove}
-          onMouseUp={handleMouseUp}
-          onMouseLeave={handleMouseUp}
-          draggable="false"
-        />
-      ))}
-      {/* <img src={imgArr[props.imageName][num]} alt={''} /> */}
-      
-      
-    </div>
+      <div className='relative w-[500px] h-[500px] overflow-hidden'>
+        {imgArr[props.imageName].map((src, index) => (
+          <Image
+            key={index}
+            src={src}
+            alt={''}
+            width={100}
+            height={100}
+            className={`absolute top-0 left-0 md:w-[500px] md:h-[500px] transition-transform duration-700`}
+            style={{
+              transform: ((): string => {
+                if (num === index) {
+                  return `translateX(${offsetX}px)`;
+                } else if (num < index) {
+                  // 마지막 이미지에서 다른 이미지로 이동하지 않도록 수정
+                  return index === imgArr[props.imageName].length - 1 &&
+                    num === 0
+                    ? 'translateX(100%)'
+                    : `translateX(calc(100% + ${offsetX}px))`;
+                } else {
+                  return `translateX(calc(-100% + ${offsetX}px))`;
+                }
+              })(),
+            }}
+            onMouseDown={handleMouseDown}
+            onMouseMove={handleMouseMove}
+            onMouseUp={handleMouseUp}
+            onMouseLeave={handleMouseUp}
+            draggable='false'
+          />
+        ))}
+        {/* <img src={imgArr[props.imageName][num]} alt={''} /> */}
+      </div>
 
-    <div><button
-        className='w-10 h-10'
-        onClick={() => {
-          if (num > 0) {
-            setNum(num - 1);
-          }
-        }}
-      >
-        &lt;
-      </button>
-      <button
-        className='w-10 h-10'
-        onClick={() => {
-          if (num < imgArr[props.imageName].length - 1) {
-            setNum(num + 1);
-          }
-        }}
-      >
-        &gt;
-      </button></div>
-    
+      <div>
+        <button
+          className='w-10 h-10'
+          onClick={() => {
+            if (num > 0) {
+              setNum(num - 1);
+            }
+          }}
+        >
+          &lt;
+        </button>
+        <button
+          className='w-10 h-10'
+          onClick={() => {
+            if (num < imgArr[props.imageName].length - 1) {
+              setNum(num + 1);
+            }
+          }}
+        >
+          &gt;
+        </button>
+      </div>
     </div>
   );
 }
