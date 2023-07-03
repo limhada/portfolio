@@ -89,8 +89,8 @@ export default function ImageComponent(props: Project) {
 
       <div>
         <button
-          className='w-10 h-10'
-          onClick={() => {
+        className={`w-10 h-10 ${num === 0 ? 'opacity-50 cursor-default' : ''}`}
+        onClick={() => {
             if (num > 0) {
               setNum(num - 1);
             }
@@ -101,8 +101,8 @@ export default function ImageComponent(props: Project) {
         {/* 이미지 번호 출력 */}
         {num + 1}
         <button
-          className='w-10 h-10'
-          onClick={() => {
+        className={`w-10 h-10 ${num === imgArr[props.imageName].length - 1 ? 'opacity-50 cursor-default' : ''}`}
+        onClick={() => {
             if (num < imgArr[props.imageName].length - 1) {
               setNum(num + 1);
             }
