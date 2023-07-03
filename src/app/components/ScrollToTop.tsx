@@ -16,7 +16,8 @@ export default function ScrollToTop() {
   };
 
   const onScroll = () => {
-    if (window.scrollY > 100) {
+    // 스크롤이 위치에 따라 top버튼을 화면에 렌더링 할지 말지
+    if (window.scrollY > 50) {
       setIsVisible(true);
     } else {
       setIsVisible(false);
