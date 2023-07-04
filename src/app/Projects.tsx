@@ -25,7 +25,7 @@ export default function Projects() {
     {
       id: 1,
       image: '/bg1.jpeg',
-      imageName: "guenlog",
+      imageName: 'guenlog',
       title: '근로그',
       github: 'https://github.com/limhada/seb40_main_028',
       deployment: 'https://realguenlog.vercel.app/start',
@@ -37,7 +37,7 @@ export default function Projects() {
     {
       id: 2,
       image: '/bg2.jpeg',
-      imageName: "animaltest",
+      imageName: 'animaltest',
       title: '동물 성격유형 테스트',
       github: 'https://github.com/limhada/animal-personality-type-test',
       deployment: 'https://animal-personality-type-test.vercel.app/',
@@ -49,7 +49,7 @@ export default function Projects() {
     {
       id: 3,
       image: '/bg1.jpeg',
-      imageName: "fortuneteller",
+      imageName: 'fortuneteller',
       title: '운세 보는 깜냥이',
       github: 'https://github.com/limhada/fortuneteller',
       deployment: 'https://fortuneteller-eqt.pages.dev/',
@@ -61,7 +61,7 @@ export default function Projects() {
     {
       id: 4,
       image: '/bg2.jpeg',
-      imageName: "guenlog",
+      imageName: 'guenlog',
       title: '포트폴리오 웹사이트',
       github: 'naver.com',
       deployment: 'naver.com',
@@ -89,13 +89,16 @@ export default function Projects() {
               <div className='text-5xl h-10 w-full h-auto flex items-center p-5'>
                 {project.title}
               </div>
-              {/* 모달 닫기 버튼 */}
-              <button
-                onClick={() => setShowModal(false)}
-                className='bg-mycolor3 w-14 h-14 m-2 rounded-tl-full rounded-bl-full rounded-br-full'
-              >
-                닫기
-              </button>
+              <div>
+                {/* 모달 닫기 버튼 */}
+                <button
+                  onClick={() => setShowModal(false)}
+                  // className='bg-mycolor3 w-10 h-10 md:w-14 md:h-14 m-2 rounded-tl-full rounded-bl-full rounded-br-full'
+                  className='bg-mycolor3 w-14 h-14 m-2 rounded-tl-full rounded-bl-full rounded-br-full'
+                >
+                  닫기
+                </button>
+              </div>
             </div>
             <div className='p-6'>
               {/* FIXME: 상세내용 projects에 추가하기  */}
@@ -145,9 +148,6 @@ export default function Projects() {
                 <p>기타</p>
                 <p className='text-base'>{project.description}</p>
               </div>
-
-              
-
             </div>
           </div>
         </div>
