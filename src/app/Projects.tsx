@@ -25,7 +25,7 @@ export default function Projects() {
     {
       id: 1,
       image: '/bg1.jpeg',
-      imageName: "guenlog",
+      imageName: 'guenlog',
       title: '근로그',
       github: 'https://github.com/limhada/seb40_main_028',
       deployment: 'https://realguenlog.vercel.app/start',
@@ -37,7 +37,7 @@ export default function Projects() {
     {
       id: 2,
       image: '/bg2.jpeg',
-      imageName: "animaltest",
+      imageName: 'animaltest',
       title: '동물 성격유형 테스트',
       github: 'https://github.com/limhada/animal-personality-type-test',
       deployment: 'https://animal-personality-type-test.vercel.app/',
@@ -49,7 +49,7 @@ export default function Projects() {
     {
       id: 3,
       image: '/bg1.jpeg',
-      imageName: "fortuneteller",
+      imageName: 'fortuneteller',
       title: '운세 보는 깜냥이',
       github: 'https://github.com/limhada/fortuneteller',
       deployment: 'https://fortuneteller-eqt.pages.dev/',
@@ -61,7 +61,7 @@ export default function Projects() {
     {
       id: 4,
       image: '/bg2.jpeg',
-      imageName: "guenlog",
+      imageName: 'guenlog',
       title: '포트폴리오 웹사이트',
       github: 'naver.com',
       deployment: 'naver.com',
@@ -86,68 +86,77 @@ export default function Projects() {
         <div className='fixed inset-0 flex items-center justify-center z-50'>
           <div className='bg-slate-200 w-full h-full overflow-auto'>
             <div className='flex text-white bg-mycolor2'>
-              <div className='text-5xl h-10 w-full h-auto flex items-center p-5'>
+              <div className='text-5xl w-full h-auto flex items-center p-5'>
                 {project.title}
               </div>
-              {/* 모달 닫기 버튼 */}
-              <button
-                onClick={() => setShowModal(false)}
-                className='bg-mycolor3 w-14 h-14 m-2 rounded-tl-full rounded-bl-full rounded-br-full'
-              >
-                닫기
-              </button>
+              <div>
+                {/* 모달 닫기 버튼 */}
+                <button
+                  onClick={() => setShowModal(false)}
+                  // className='bg-mycolor3 w-10 h-10 md:w-14 md:h-14 m-2 rounded-tl-full rounded-bl-full rounded-br-full'
+                  className='bg-mycolor3 w-14 h-14 m-2 rounded-tl-full rounded-bl-full rounded-br-full'
+                >
+                  닫기
+                </button>
+              </div>
             </div>
-            <div className='p-6'>
+            <div className='p-6 md:flex md:flex-row'>
               {/* FIXME: 상세내용 projects에 추가하기  */}
               {/* <h1 className='text-5xl mt-5'>프로젝트 제목: {project.title}</h1> */}
 
-              <ImageComponent {...project}></ImageComponent>
-              <div className='mb-1'>
-                GitHub:{' '}
-                <Link href={project.github} className='text-sky-400 '>
-                  {project.github}
-                </Link>
-              </div>
-              <div className='mb-10'>
-                Deployment URL :{' '}
-                <Link href={project.deployment} className='text-sky-400 '>
-                  {project.deployment}
-                </Link>
+              <div className='flex flex-col'>
+                <div className=' md:w-[600px]'>
+                  <ImageComponent {...project}></ImageComponent>
+                </div>
+
+                <div>
+                  <div className='mb-1 '>
+                    GitHub:{' '}
+                    <Link href={project.github} className='text-sky-400 break-all'>
+                      {project.github}
+                    </Link>
+                  </div>
+                  <div className='mb-10  '>
+                    Deployment URL :{' '}
+                    <Link href={project.deployment} className='text-sky-400 break-all'>
+                      {project.deployment}
+                    </Link>
+                  </div>
+                </div>
               </div>
 
-              {/* FIXME: 안쓰면 삭제하기 */}
-              {/* <hr className='border-t border-gray-400 my-5' /> */}
+              <div>
+                {/* FIXME: 안쓰면 삭제하기 */}
+                {/* <hr className='border-t border-gray-400 my-5' /> */}
 
-              <div className='mb-10'>
-                <h1 className='text-3xl mb-5'>요약</h1>
-                <p className='text-base'>{project.description}</p>
+                <div className='mb-10'>
+                  <h1 className='text-3xl mb-5'>요약</h1>
+                  <p className='text-base'>{project.description}</p>
+                </div>
+                {/* <p>주요기능</p> */}
+                <div className='mb-10'>
+                  <h1 className='text-3xl mb-5'>배경</h1>
+                  <p className='text-base'>개발하게 된 배경</p>
+                </div>
+                <div className='mb-10'>
+                  <h1 className='text-3xl mb-5'>후기</h1>
+                  <p className='text-base'>{project.description}</p>
+                  <p>테스트 계정</p>
+                  <p>힘들었던점</p>
+                  <p>해결방법</p>
+                </div>
+                <p></p>
+                <div className='mb-10'>
+                  <h1 className='text-3xl mb-5'>사용한 기술</h1>
+                  <p>프론트엔드</p>
+                  <p>백엔드</p>
+                  <p>백엔드</p>
+                  <p>데이터베이스</p>
+                  <p>배포</p>
+                  <p>기타</p>
+                  <p className='text-base'>{project.description}</p>
+                </div>
               </div>
-              {/* <p>주요기능</p> */}
-              <div className='mb-10'>
-                <h1 className='text-3xl mb-5'>배경</h1>
-                <p className='text-base'>개발하게 된 배경</p>
-              </div>
-              <div className='mb-10'>
-                <h1 className='text-3xl mb-5'>후기</h1>
-                <p className='text-base'>{project.description}</p>
-                <p>테스트 계정</p>
-                <p>힘들었던점</p>
-                <p>해결방법</p>
-              </div>
-              <p></p>
-              <div className='mb-10'>
-                <h1 className='text-3xl mb-5'>사용한 기술</h1>
-                <p>프론트엔드</p>
-                <p>백엔드</p>
-                <p>백엔드</p>
-                <p>데이터베이스</p>
-                <p>배포</p>
-                <p>기타</p>
-                <p className='text-base'>{project.description}</p>
-              </div>
-
-              
-
             </div>
           </div>
         </div>
@@ -199,6 +208,7 @@ export default function Projects() {
               alt='프로젝트 이미지'
               width={150}
               height={150}
+              draggable='false'
             />
             <div className='p-4 bg-white'>
               <header className='mb-2'>
