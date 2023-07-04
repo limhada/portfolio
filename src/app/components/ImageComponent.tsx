@@ -53,7 +53,7 @@ export default function ImageComponent(props: Project) {
   return (
     <div>
       <div
-      className="relative w-full h-0 md:w-[500px] md:h-[500px] pb-[100%]  overflow-hidden"
+      className="relative w-full h-0 pb-[100%] overflow-hidden"
       onMouseMove={handleMouseMove}
       >
         {imgArr[props.imageName].map((src, index) => (
