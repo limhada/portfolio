@@ -19,6 +19,15 @@ export default function Projects() {
     summary: string;
     background: string;
     imageName: string;
+    review: string;
+    stack:Stack;
+  }
+
+  interface Stack {
+    frontend: string;
+    backend: string;
+    deployment: string;
+    database: string;
   }
 
   const projects: Project[] = [
@@ -33,6 +42,8 @@ export default function Projects() {
         '지속적이고 꾸준한 운동 습관을 유지할 수 있는 도움을 제공하는 서비스입니다.',
       summary: '요약내용',
       background: '배경내용',
+      review: "후기내용~",
+      stack: {frontend:"자바스크립트", backend:"", deployment:"버셀?", database:""}
     },
     {
       id: 2,
@@ -45,6 +56,8 @@ export default function Projects() {
         'Big Five 기법을 사용하여 성격 유형을 테스트하고 나의 성격을 대표하는 동물들을 찾아볼 수 있습니다.',
       summary: '요약내용',
       background: '배경내용',
+      review: "후기내용~",
+      stack: {frontend:"자바스크립트", backend:"동물", deployment:"버셀?", database:""}
     },
     {
       id: 3,
@@ -57,6 +70,9 @@ export default function Projects() {
         '인공지능 AI인 ChatGPT를 기반으로 구현하여 깜냥이에게 사람과의 대화처럼 운세를 질문하고 상담할 수 있습니다.',
       summary: '요약내용',
       background: '배경내용',
+      review: "후기내용~",
+      stack: {frontend:"자바스크립트", backend:"", deployment:"버셀?", database:""}
+      
     },
     {
       id: 4,
@@ -69,6 +85,8 @@ export default function Projects() {
         '자기소개, 기술 스택, 프로젝트, 블로그 등을 소개하는 페이지입니다.',
       summary: '요약내용',
       background: '배경내용',
+      review: "후기내용~",
+      stack: {frontend:"자바스크립트", backend:"", deployment:"버셀?", database:""}
     },
   ];
 
@@ -125,7 +143,7 @@ export default function Projects() {
                 </div>
               </div>
 
-              <div>
+              <div className='md:ml-10'>
                 {/* FIXME: 안쓰면 삭제하기 */}
                 {/* <hr className='border-t border-gray-400 my-5' /> */}
 
@@ -148,13 +166,11 @@ export default function Projects() {
                 <p></p>
                 <div className='mb-10'>
                   <h1 className='text-3xl mb-5'>사용한 기술</h1>
-                  <p>프론트엔드</p>
-                  <p>백엔드</p>
-                  <p>백엔드</p>
-                  <p>데이터베이스</p>
-                  <p>배포</p>
-                  <p>기타</p>
-                  <p className='text-base'>{project.description}</p>
+                  <p>프론트엔드:{project.stack.frontend}</p>
+                  <p>백엔드:{project.stack.backend}</p>
+                  <p>배포:{project.stack.deployment}</p>
+                  <p>데이터베이스:{project.stack.database}</p>
+                  {/* <p className='text-base'>{project.description}</p> */}
                 </div>
               </div>
             </div>
