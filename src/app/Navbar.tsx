@@ -1,5 +1,8 @@
 'use client';
 
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 // import Link from 'next/link';
 
 export default function Navbar() {
@@ -43,11 +46,14 @@ export default function Navbar() {
             </div>
             {/* FIXME: 수정하기 top버튼만들고 LJJPortfolio 클릭 시 메인페이지로 이동하게 */}
             {/* 목차1 목차2 버튼 영역 글씨에 딱맞게 조정하기 */}
-            <div className='flex flex-row mt-3 '>
+            <div className='md:hidden'><FontAwesomeIcon icon={faBars} /></div>
+            {/* FIXME: 햄버거 메뉴 여백 설정하기 */}
+            {/* <div className='flex flex-row mt-3 '> */}
+            <div className='hidden md:flex flex-row mt-3'>
+
               {data.map(({ title }, i) => (
                 <div
                   key={i}
-                  
                   onClick={() => handleScroll(title)}
                   className='mx-[10px] my-[10px] cursor-pointer'
                 >
