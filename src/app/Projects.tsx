@@ -122,8 +122,8 @@ export default function Projects() {
               {/* FIXME: 상세내용 projects에 추가하기  */}
               {/* <h1 className='text-5xl mt-5'>프로젝트 제목: {project.title}</h1> */}
 
-              <div className='flex flex-col'>
-                <div className=' md:w-[600px]'>
+              <div className='flex flex-col md:ml-[100px]'>
+                <div className=' md:w-[800px]'>
                   <ImageComponent {...project}></ImageComponent>
                 </div>
 
@@ -143,7 +143,7 @@ export default function Projects() {
                 </div>
               </div>
 
-              <div className='md:ml-10'>
+              <div className='md:ml-[100px] md:w-[500px]'>
                 {/* FIXME: 안쓰면 삭제하기 */}
                 {/* <hr className='border-t border-gray-400 my-5' /> */}
 

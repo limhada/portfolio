@@ -53,8 +53,8 @@ export default function ImageComponent(props: Project) {
   return (
     <div>
       <div
-      className="relative w-full h-0 pb-[100%] overflow-hidden"
-      onMouseMove={handleMouseMove}
+        className='relative w-full h-0 pb-[100%] overflow-hidden'
+        onMouseMove={handleMouseMove}
       >
         {imgArr[props.imageName].map((src, index) => (
           // FIXME: 볼더 라디우스 줄지말지 결정하기
@@ -88,7 +88,7 @@ export default function ImageComponent(props: Project) {
         ))}
       </div>
 
-      <div>
+      <div className='flex items-center justify-center'>
         <button
           className={`w-10 h-10 ${
             num === 0 ? 'opacity-50 cursor-default' : ''
