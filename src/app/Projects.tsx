@@ -149,21 +149,25 @@ export default function Projects() {
                 <div>
                   <div className='mb-1 '>
                     GitHub:{' '}
-                    <Link
+                    <a
                       href={project.github}
                       className='text-sky-400 break-all'
+                      target='_blank'
+                      rel='noopener noreferrer'
                     >
                       {project.github}
-                    </Link>
+                    </a>
                   </div>
                   <div className='mb-10  '>
                     Deployment URL :{' '}
-                    <Link
+                    <a
                       href={project.deployment}
                       className='text-sky-400 break-all'
+                      target='_blank'
+                      rel='noopener noreferrer'
                     >
                       {project.deployment}
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>
