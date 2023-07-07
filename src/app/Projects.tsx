@@ -120,7 +120,7 @@ export default function Projects() {
     if (project) {
       // console.log(project, '확인~~');
       const result = (
-        <div className='fixed inset-0 flex items-center justify-center'>
+        <div className='fixed inset-0 flex items-center justify-center z-50'>
           <div className='bg-slate-200 w-full h-full overflow-auto'>
             <div className='flex text-white bg-mycolor2'>
               <div className='text-5xl w-full h-auto flex items-center p-5'>
@@ -236,31 +236,34 @@ export default function Projects() {
       </div>
 
       {/* FIXME: 프로젝트 내용 넣기 마우스 클릭 시 프로젝트 상세페이지 or  */}
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-[20px] md:px-[10%] lg:px-[20%] '>
-        {projects.map((el) => (
-          <div
-            key={el.id}
-            className='overflow-hidden rounded-2xl transform transition-all duration-300 ease-linear hover:-translate-y-3 '
-            onClick={() => handleClick(el.id)}
-          >
-            <Image
-              src={el.image}
-              className='w-full h-[200px] object-cover'
-              alt='프로젝트 이미지'
-              width={150}
-              height={150}
-              draggable='false'
-            />
-            <div className='p-4 bg-white'>
-              <header className='mb-2'>
-                <h3 className='overflow-hidden font-bold text-ellipsis whitespace-nowrap'>
-                  {el.title}
-                </h3>
-              </header>
-              <p className='text-sm text-gray-400'>{el.description}</p>
+
+      <div>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-[20px] md:px-[10%] lg:px-[20%] '>
+          {projects.map((el) => (
+            <div
+              key={el.id}
+              className='overflow-hidden rounded-2xl transform transition-all duration-300 ease-linear hover:-translate-y-3 ㅋ-'
+              onClick={() => handleClick(el.id)}
+            >
+              <Image
+                src={el.image}
+                className='w-full h-[200px] object-cover'
+                alt='프로젝트 이미지'
+                width={150}
+                height={150}
+                draggable='false'
+              />
+              <div className='p-4 bg-white'>
+                <header className='mb-2'>
+                  <h3 className='overflow-hidden font-bold text-ellipsis whitespace-nowrap'>
+                    {el.title}
+                  </h3>
+                </header>
+                <p className='text-sm text-gray-400'>{el.description}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
