@@ -2,7 +2,7 @@
 
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 // import Link from 'next/link';
 
@@ -38,10 +38,27 @@ export default function Navbar() {
 
   const [menuBt, SetMenuBt] = useState(false);
 
+  const handleClickOutside = (event: MouseEvent) => {
+    const target = event.target as HTMLElement;
+    if (target && !target.closest('.menu')) {
+      SetMenuBt(false);
+    }
+  };
+
+  useEffect(() => {
+    if (menuBt) {
+      document.addEventListener('click', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [menuBt]);
+
   return (
     <div>
       <div className='fixed top-0 w-full h-[100px] bg-white z-40'>
-      {/* <div className={`fixed top-0 w-full h-[${navHeight}px] bg-white`}> */}
+        {/* <div className={`fixed top-0 w-full h-[${navHeight}px] bg-white`}> */}
         <div className='flex justify-between mb-5 '>
           <div
             onClick={handleScrollToTop}
@@ -57,7 +74,7 @@ export default function Navbar() {
           <FontAwesomeIcon
             icon={faBars}
             onClick={() => SetMenuBt(!menuBt)}
-            className='md:hidden mt-[20px] w-[25px] h-[25px] z-50'
+            className='md:hidden mt-[20px] mr-[10px] w-[25px] h-[25px] z-50'
           />
 
           {/* <div className='flex flex-row mt-3 '> */}
@@ -76,11 +93,14 @@ export default function Navbar() {
           </div>
         </div>
         {menuBt ? (
-          <div className='fixed top-[0px] right-0 bg-mycolor2 w-full pt-[100px] z-[40]'>
+          <div className='fixed top-[0px] right-0 bg-mycolor2 w-full pt-[100px] z-[40] menu'>
             {data.map(({ title }, i) => (
               <div
                 key={i}
-                onClick={() => {handleScroll(title); SetMenuBt(!menuBt)}}
+                onClick={() => {
+                  handleScroll(title);
+                  SetMenuBt(!menuBt);
+                }}
                 className='mx-[10px] my-[10px] cursor-pointer'
               >
                 {title}
