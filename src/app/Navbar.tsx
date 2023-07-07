@@ -80,7 +80,7 @@ export default function Navbar() {
             {data.map(({ title }, i) => (
               <div
                 key={i}
-                onClick={() => handleScroll(title)}
+                onClick={() => {handleScroll(title); SetMenuBt(!menuBt)}}
                 className='mx-[10px] my-[10px] cursor-pointer'
               >
                 {title}
