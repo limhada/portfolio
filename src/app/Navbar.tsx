@@ -2,6 +2,7 @@
 
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useState } from 'react';
 
 // import Link from 'next/link';
 
@@ -31,6 +32,8 @@ export default function Navbar() {
     { title: '목차4' },
   ];
 
+  const [menuBt, SetMenuBt] = useState(false);
+
   return (
     <div>
       <div className=" text-white h-[500px] bg-[url('/bg.jpeg')] bg-cover bg-center">
@@ -38,7 +41,7 @@ export default function Navbar() {
           <div className='flex justify-between mb-5'>
             <div
               onClick={handleScrollToTop}
-              className='mx-[10px] my-[10px] bg-blue text-[30px]'
+              className='mx-[10px] my-[10px] bg-blue text-xl md:text-4xl'
             >
               LJJ
               <br />
@@ -46,11 +49,15 @@ export default function Navbar() {
             </div>
             {/* FIXME: 수정하기 top버튼만들고 LJJPortfolio 클릭 시 메인페이지로 이동하게 */}
             {/* 목차1 목차2 버튼 영역 글씨에 딱맞게 조정하기 */}
-            <div className='md:hidden'><FontAwesomeIcon icon={faBars} /></div>
-            {/* FIXME: 햄버거 메뉴 여백 설정하기 */}
-            {/* <div className='flex flex-row mt-3 '> */}
-            <div className='hidden md:flex flex-row mt-3'>
 
+            <FontAwesomeIcon
+              icon={faBars}
+              onClick={() => SetMenuBt(!menuBt)}
+              className='md:hidden mt-[20px] w-[25px] h-[25px]'
+            />
+
+            {/* <div className='flex flex-row mt-3 '> */}
+            <div className='hidden md:flex flex-row mt-[10px]'>
               {data.map(({ title }, i) => (
                 <div
                   key={i}
@@ -62,6 +69,15 @@ export default function Navbar() {
               ))}
             </div>
           </div>
+          {menuBt ? (
+            <div
+              className={`bg-white h-${
+                menuBt ? '[100px]' : '0'
+              } overflow-hidden transition-all duration-2000`}
+            >
+              메뉴 보일 곳{' '}
+            </div>
+          ) : null}
           <div className='flex flex-col text-center'>
             <div className='text-[50px]'>
               - 임종정 -<br /> 웹 개발자 포트폴리오
