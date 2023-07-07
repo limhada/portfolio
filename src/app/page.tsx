@@ -58,7 +58,7 @@ export default function Home() {
 
       <div className='flex flex-col  px-5 py-5 bg-white'>
         <h3
-          id='목차4'
+          id='목차5'
           className='mb-5 text-xl text-center md:text-2xl lg:text-3xl'
         >
           목차 5 - CAREER(커리어)
