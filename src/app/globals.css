@@ -7,3 +7,15 @@
 .mybt {
   @apply bg-blue-500 text-white py-2 px-4 rounded;
 } */
+@keyframes revealBox {
+  0% {
+    clip-path: inset(0 0 100% 0); /* 상단부터 시작 */
+  }
+  100% {
+    clip-path: inset(0 0 0 0); /* 하단까지 이동 */
+  }
+}
+
+.reveal-box {
+  animation: revealBox 0.5s ease-in-out;
+}
