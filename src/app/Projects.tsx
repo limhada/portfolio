@@ -20,7 +20,7 @@ export default function Projects() {
     background: string;
     imageName: string;
     review: string;
-    stack:Stack;
+    stack: Stack;
   }
 
   interface Stack {
@@ -42,8 +42,13 @@ export default function Projects() {
         '지속적이고 꾸준한 운동 습관을 유지할 수 있는 도움을 제공하는 서비스입니다.',
       summary: '요약내용',
       background: '배경내용',
-      review: "후기내용~",
-      stack: {frontend:"자바스크립트", backend:"", deployment:"버셀?", database:""}
+      review: '후기내용~',
+      stack: {
+        frontend: '자바스크립트',
+        backend: '',
+        deployment: '버셀?',
+        database: '',
+      },
     },
     {
       id: 2,
@@ -56,8 +61,13 @@ export default function Projects() {
         'Big Five 기법을 사용하여 성격 유형을 테스트하고 나의 성격을 대표하는 동물들을 찾아볼 수 있습니다.',
       summary: '요약내용',
       background: '배경내용',
-      review: "후기내용~",
-      stack: {frontend:"자바스크립트", backend:"동물", deployment:"버셀?", database:""}
+      review: '후기내용~',
+      stack: {
+        frontend: '자바스크립트',
+        backend: '동물',
+        deployment: '버셀?',
+        database: '',
+      },
     },
     {
       id: 3,
@@ -70,9 +80,13 @@ export default function Projects() {
         '인공지능 AI인 ChatGPT를 기반으로 구현하여 깜냥이에게 사람과의 대화처럼 운세를 질문하고 상담할 수 있습니다.',
       summary: '요약내용',
       background: '배경내용',
-      review: "후기내용~",
-      stack: {frontend:"자바스크립트", backend:"", deployment:"버셀?", database:""}
-      
+      review: '후기내용~',
+      stack: {
+        frontend: '자바스크립트',
+        backend: '',
+        deployment: '버셀?',
+        database: '',
+      },
     },
     {
       id: 4,
@@ -85,8 +99,13 @@ export default function Projects() {
         '자기소개, 기술 스택, 프로젝트, 블로그 등을 소개하는 페이지입니다.',
       summary: '요약내용',
       background: '배경내용',
-      review: "후기내용~",
-      stack: {frontend:"자바스크립트", backend:"", deployment:"버셀?", database:""}
+      review: '후기내용~',
+      stack: {
+        frontend: '자바스크립트',
+        backend: '',
+        deployment: '버셀?',
+        database: '',
+      },
     },
   ];
 
@@ -130,15 +149,25 @@ export default function Projects() {
                 <div>
                   <div className='mb-1 '>
                     GitHub:{' '}
-                    <Link href={project.github} className='text-sky-400 break-all'>
+                    <a
+                      href={project.github}
+                      className='text-sky-400 break-all'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
                       {project.github}
-                    </Link>
+                    </a>
                   </div>
                   <div className='mb-10  '>
                     Deployment URL :{' '}
-                    <Link href={project.deployment} className='text-sky-400 break-all'>
+                    <a
+                      href={project.deployment}
+                      className='text-sky-400 break-all'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
                       {project.deployment}
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -211,31 +240,34 @@ export default function Projects() {
       </div>
 
       {/* FIXME: 프로젝트 내용 넣기 마우스 클릭 시 프로젝트 상세페이지 or  */}
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-[20px] md:px-[10%] lg:px-[20%]'>
-        {projects.map((el) => (
-          <div
-            key={el.id}
-            className='overflow-hidden rounded-2xl transform transition-all duration-300 ease-linear hover:-translate-y-3'
-            onClick={() => handleClick(el.id)}
-          >
-            <Image
-              src={el.image}
-              className='w-full h-[200px] object-cover'
-              alt='프로젝트 이미지'
-              width={150}
-              height={150}
-              draggable='false'
-            />
-            <div className='p-4 bg-white'>
-              <header className='mb-2'>
-                <h3 className='overflow-hidden font-bold text-ellipsis whitespace-nowrap'>
-                  {el.title}
-                </h3>
-              </header>
-              <p className='text-sm text-gray-400'>{el.description}</p>
+
+      <div>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-[20px] md:px-[10%] lg:px-[20%] '>
+          {projects.map((el) => (
+            <div
+              key={el.id}
+              className='overflow-hidden rounded-2xl transform transition-all duration-300 ease-linear hover:-translate-y-3 ㅋ-'
+              onClick={() => handleClick(el.id)}
+            >
+              <Image
+                src={el.image}
+                className='w-full h-[200px] object-cover'
+                alt='프로젝트 이미지'
+                width={150}
+                height={150}
+                draggable='false'
+              />
+              <div className='p-4 bg-white'>
+                <header className='mb-2'>
+                  <h3 className='overflow-hidden font-bold text-ellipsis whitespace-nowrap'>
+                    {el.title}
+                  </h3>
+                </header>
+                <p className='text-sm text-gray-400'>{el.description}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -16,7 +16,7 @@ export default function Home() {
       {/* ABOUT ME */}
       <div className='flex flex-col items-center px-5 py-5'>
         <h3
-          id='목차1'
+          id='ABOUT ME'
           className='mb-5 text-xl text-center md:text-2xl lg:text-3xl'
         >
           목차 1 - ABOUT ME
@@ -27,7 +27,7 @@ export default function Home() {
       {/* ARCHIVING */}
       <div className='flex flex-col items-center px-5 py-5 bg-mycolor1 '>
         <h3
-          id='목차2'
+          id='ARCHIVING'
           className='mb-5 text-xl text-center md:text-2xl lg:text-3xl'
         >
           목차 2 - ARCHIVING
@@ -38,7 +38,7 @@ export default function Home() {
 
       <div className='flex flex-col items-center px-5 py-5 bg-white'>
         <h3
-          id='목차3'
+          id='SKILLS'
           className='mb-5 text-xl text-center md:text-2xl lg:text-3xl'
         >
           목차 3 - SKILLS
@@ -58,7 +58,7 @@ export default function Home() {
 
       <div className='flex flex-col  px-5 py-5 bg-white'>
         <h3
-          id='목차4'
+          id='PROJECTS'
           className='mb-5 text-xl text-center md:text-2xl lg:text-3xl'
         >
           목차 5 - CAREER(커리어)
