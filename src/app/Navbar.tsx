@@ -30,10 +30,10 @@ export default function Navbar() {
   }
 
   const data: DataItem[] = [
-    { title: '목차1' },
-    { title: '목차2' },
-    { title: '목차3' },
-    { title: '목차4' },
+    { title: 'ABOUT ME' },
+    { title: 'ARCHIVING' },
+    { title: 'SKILLS' },
+    { title: 'PROJECTS' },
   ];
 
   const [menuBt, SetMenuBt] = useState(false);
@@ -93,7 +93,7 @@ export default function Navbar() {
           </div>
         </div>
         {menuBt ? (
-          <div className='fixed top-[0px] right-0 bg-mycolor2 w-full pt-[100px] z-[40] menu'>
+          <div className='fixed top-[0px] right-0 bg-white w-full pt-[100px] z-[40] menu'>
             {data.map(({ title }, i) => (
               <div
                 key={i}
