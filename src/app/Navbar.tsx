@@ -45,13 +45,23 @@ export default function Navbar() {
     }
   };
 
+  const handleResize = () => {
+    if (window.innerWidth >= 768 && menuBt) {
+      SetMenuBt(false);
+    }
+  };
+
   useEffect(() => {
     if (menuBt) {
       document.addEventListener('click', handleClickOutside);
     }
+    window.addEventListener('resize', handleResize);
+
 
     return () => {
       document.removeEventListener('click', handleClickOutside);
+      window.removeEventListener('resize', handleResize);
+
     };
   }, [menuBt]);
 
