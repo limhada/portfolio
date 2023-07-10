@@ -65,7 +65,7 @@ export default function Navbar() {
 
   return (
     <div>
-      <div className='fixed top-0 w-full h-[100px] bg-white z-40'>
+      <div className='fixed top-0 w-full h-[100px] bg-white z-40 drop-shadow-lg'>
         {/* <div className={`fixed top-0 w-full h-[${navHeight}px] bg-white`}> */}
         <div className='flex justify-between mb-5 '>
           <div
