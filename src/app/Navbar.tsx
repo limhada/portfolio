@@ -57,17 +57,15 @@ export default function Navbar() {
     }
     window.addEventListener('resize', handleResize);
 
-
     return () => {
       document.removeEventListener('click', handleClickOutside);
       window.removeEventListener('resize', handleResize);
-
     };
   }, [menuBt]);
 
   return (
     <div>
-      <div className='fixed top-0 w-full h-[100px] bg-white z-40'>
+      <div className='fixed top-0 w-full h-[100px] bg-white z-40 drop-shadow-lg'>
         {/* <div className={`fixed top-0 w-full h-[${navHeight}px] bg-white`}> */}
         <div className='flex justify-between mb-5 '>
           <div
@@ -95,7 +93,8 @@ export default function Navbar() {
                 onClick={() => {
                   handleScroll(title);
                 }}
-                className='mx-[10px] my-[10px] cursor-pointer'
+                // FIXME: 높이 다시 설정하기
+                className='mx-[10px] my-[10px] cursor-pointer h-[30%]'
               >
                 {title}
               </div>
@@ -103,7 +102,7 @@ export default function Navbar() {
           </div>
         </div>
         {menuBt ? (
-          <div className='fixed top-[0px] right-0 bg-white w-full pt-[100px] z-[40] menu'>
+          <div className='fixed top-[0px] right-0 bg-white w-full pt-[100px] z-[40] menu reveal-box'>
             {data.map(({ title }, i) => (
               <div
                 key={i}
@@ -111,7 +110,9 @@ export default function Navbar() {
                   handleScroll(title);
                   SetMenuBt(!menuBt);
                 }}
-                className='mx-[10px] my-[10px] cursor-pointer'
+                // FIXME: 배경색 변경하기
+                className='mx-[10px] my-[10px] cursor-pointer bg-slate-500 '
+                style={{ width: 'max-content' }}
               >
                 {title}
               </div>
