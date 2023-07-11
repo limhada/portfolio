@@ -70,7 +70,7 @@ export default function Navbar() {
         <div className='flex justify-between mb-5 '>
           <div
             onClick={handleScrollToTop}
-            className='mb-[10px] mt-[20px] my-[10px] ml-[10px] md:mt-[10px] bg-blue text-2xl md:text-4xl z-50'
+            className='mb-[10px] mt-[20px] my-[10px] ml-[10px] md:mt-[10px] bg-blue text-2xl md:text-4xl z-50 font-bold'
           >
             LJJ
             <br />
@@ -86,7 +86,7 @@ export default function Navbar() {
           />
 
           {/* <div className='flex flex-row mt-3 '> */}
-          <div className='hidden md:flex flex-row mt-[10px]'>
+          <div className='hidden md:flex flex-row mt-[10px] font-bold'>
             {data.map(({ title }, i) => (
               <div
                 key={i}
@@ -111,7 +111,7 @@ export default function Navbar() {
                   SetMenuBt(!menuBt);
                 }}
                 // FIXME: 배경색 변경하기
-                className='mx-[10px] my-[10px] cursor-pointer bg-slate-500 '
+                className='mx-[10px] my-[10px] cursor-pointer bg-slate-200 font-bold'
                 style={{ width: 'max-content' }}
               >
                 {title}

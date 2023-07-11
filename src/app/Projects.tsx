@@ -1,7 +1,7 @@
 'use client';
 
 import Image /* {StaticImageData} */ from 'next/image';
-import Link from 'next/link';
+// import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import ImageComponent from './components/ImageComponent';
 // import bg from '../../public/bg.jpeg';
@@ -121,7 +121,7 @@ export default function Projects() {
       // console.log(project, '확인~~');
       const result = (
         <div className='fixed inset-0 flex items-center justify-center z-50'>
-          <div className='bg-slate-200 w-full h-full overflow-auto'>
+          <div className='bg-white w-full h-full overflow-auto'>
             <div className='flex text-white bg-mycolor2'>
               <div className='text-5xl w-full h-auto flex items-center p-5'>
                 {project.title}
