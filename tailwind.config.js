@@ -15,7 +15,9 @@ module.exports = {
       colors: {
 
           // mycolor1: '#167c80',
-          mycolor1: '#2a9d8f',
+          // mycolor1: '#2a9d8f',
+          // mycolor1: '#354F52',
+          mycolor1: '#52796F',
           // mycolor2: '#ff6b61',
           // mycolor2: '#e76f51',
           mycolor2: '#14213D',
