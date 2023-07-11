@@ -17,9 +17,9 @@ export default function Home() {
       <div className='flex flex-col items-center px-5 py-5'>
         <h3
           id='ABOUT ME'
-          className='mb-5 text-xl text-center md:text-2xl lg:text-3xl'
+          className='mb-5 text-xl text-center md:text-2xl lg:text-3xl font-bold'
         >
-          목차 1 - ABOUT ME
+          ABOUT ME
         </h3>
         <Aboutme></Aboutme>
       </div>
@@ -28,20 +28,20 @@ export default function Home() {
       <div className='flex flex-col items-center px-5 py-5 bg-mycolor1 '>
         <h3
           id='ARCHIVING'
-          className='mb-5 text-xl text-center md:text-2xl lg:text-3xl text-white'
+          className='mb-5 text-xl text-center md:text-2xl lg:text-3xl text-white font-bold'
         >
-          목차 2 - ARCHIVING
+          ARCHIVING
         </h3>
         {/* FIXME: 호버 시 색상 살짝 변경해주기 */}
         <Archiving></Archiving>
       </div>
 
-      <div className='flex flex-col items-center px-5 py-5 bg-white'>
+      <div className='flex flex-col items-center px-5 py-5 bg-white font-bold'>
         <h3
           id='SKILLS'
           className='mb-5 text-xl text-center md:text-2xl lg:text-3xl'
         >
-          목차 3 - SKILLS
+          SKILLS
         </h3>
         <Skills></Skills>
       </div>
@@ -49,19 +49,19 @@ export default function Home() {
       <div className='flex flex-col  px-5 py-5  bg-mycolor4'>
         <h3
           id='목차4'
-          className='mb-5 text-xl text-center md:text-2xl lg:text-3xl text-white'
+          className='mb-5 text-xl text-center md:text-2xl lg:text-3xl text-white font-bold'
         >
-          목차 4 - PROJECTS
+          PROJECTS
         </h3>
         <Projects></Projects>
       </div>
 
-      <div className='flex flex-col  px-5 py-5 bg-white'>
+      <div className='flex flex-col  px-5 py-5 bg-white font-bold'>
         <h3
           id='PROJECTS'
           className='mb-5 text-xl text-center md:text-2xl lg:text-3xl'
         >
-          목차 5 - CAREER(커리어)
+          CAREER
         </h3>
         <div>
           내용~

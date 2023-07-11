@@ -50,11 +50,29 @@ export default function ImageComponent(props: Project) {
     setOffsetX(0);
   };
 
+
+  // 터치 슬라이드 로직
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setDragging(true);
+    setStartX(e.changedTouches[0].clientX);
+  };
+  
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!dragging) return;
+    const diffX = e.changedTouches[0].clientX - startX;
+    setOffsetX(diffX);
+  };
+  
+  const handleTouchEnd = () => {
+    handleMouseUp(); // 마우스 이벤트 처리와 동일한 로직을 수행하므로 기존의 handleMouseUp 함수를 호출
+  };
+
   return (
     <div>
       <div
         className='relative w-full h-0 pb-[100%] overflow-hidden'
         onMouseMove={handleMouseMove}
+        onTouchMove={handleTouchMove}
       >
         {imgArr[props.imageName].map((src, index) => (
           // FIXME: 볼더 라디우스 줄지말지 결정하기
@@ -83,6 +101,11 @@ export default function ImageComponent(props: Project) {
             onMouseDown={handleMouseDown}
             onMouseUp={handleMouseUp}
             onMouseLeave={handleMouseUp}
+            
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+
             draggable='false'
           />
         ))}
