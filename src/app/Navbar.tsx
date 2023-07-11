@@ -70,7 +70,7 @@ export default function Navbar() {
         <div className='flex justify-between mb-5 '>
           <div
             onClick={handleScrollToTop}
-            className='mb-[10px] mt-[20px] my-[10px] md:mt-[10px] bg-blue text-2xl md:text-4xl z-50'
+            className='mb-[10px] mt-[20px] my-[10px] ml-[10px] md:mt-[10px] bg-blue text-2xl md:text-4xl z-50'
           >
             LJJ
             <br />

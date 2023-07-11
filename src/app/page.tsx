@@ -46,10 +46,10 @@ export default function Home() {
         <Skills></Skills>
       </div>
 
-      <div className='flex flex-col  px-5 py-5 bg-white'>
+      <div className='flex flex-col  px-5 py-5  bg-mycolor4'>
         <h3
           id='목차4'
-          className='mb-5 text-xl text-center md:text-2xl lg:text-3xl'
+          className='mb-5 text-xl text-center md:text-2xl lg:text-3xl text-white'
         >
           목차 4 - PROJECTS
         </h3>
