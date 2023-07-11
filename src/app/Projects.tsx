@@ -131,7 +131,7 @@ export default function Projects() {
                 <button
                   onClick={() => setShowModal(false)}
                   // className='bg-mycolor3 w-10 h-10 md:w-14 md:h-14 m-2 rounded-tl-full rounded-bl-full rounded-br-full'
-                  className='bg-mycolor3 w-14 h-14 m-2 rounded-tl-full rounded-bl-full rounded-br-full'
+                  className='bg-mycolor5 w-14 h-14 m-2 rounded-tl-full rounded-bl-full rounded-br-full'
                 >
                   닫기
                 </button>
@@ -242,11 +242,11 @@ export default function Projects() {
       {/* FIXME: 프로젝트 내용 넣기 마우스 클릭 시 프로젝트 상세페이지 or  */}
 
       <div>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-[20px] md:px-[10%] lg:px-[20%] drop-shadow-lg'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-[20px] md:px-[10%] lg:px-[20%] drop-shadow-lg '>
           {projects.map((el) => (
             <div
               key={el.id}
-              className='overflow-hidden rounded-2xl transform transition-all duration-300 ease-linear hover:-translate-y-3 ㅋ-'
+              className='overflow-hidden rounded-2xl transform transition-all duration-300 ease-linear hover:-translate-y-3 border-white border-[5px]'
               onClick={() => handleClick(el.id)}
             >
               <Image
@@ -257,7 +257,7 @@ export default function Projects() {
                 height={150}
                 draggable='false'
               />
-              <div className='p-4 bg-white md:h-[150px]'>
+              <div className='p-4 bg-white md:h-[180px]'>
                 <header className='mb-2'>
                   <h3 className='overflow-hidden font-bold text-ellipsis whitespace-nowrap mb-1'>
                     {el.title}
@@ -265,7 +265,7 @@ export default function Projects() {
                   <hr/>
                 </header>
                 
-                <p className='text-sm text-gray-400 mt-4'>{el.description}</p>
+                <p className='text-sm text-gray-400 mt-4 h-auto'>{el.description}</p>
               </div>
             </div>
           ))}
