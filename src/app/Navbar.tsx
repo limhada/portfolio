@@ -70,7 +70,7 @@ export default function Navbar() {
         <div className='flex justify-between mb-5 '>
           <div
             onClick={handleScrollToTop}
-            className='mx-[10px] my-[10px] bg-blue text-xl md:text-4xl z-50'
+            className='mb-[10px] mt-[20px] my-[10px] md:mt-[10px] bg-blue text-2xl md:text-4xl z-50'
           >
             LJJ
             <br />
@@ -122,14 +122,14 @@ export default function Navbar() {
       </div>
       <div className=" text-white h-[500px] bg-[url('/bg.jpeg')] bg-cover bg-center">
         <div className='mx-5'>
-          <div className='flex flex-col text-center pt-[150px]'>
-            <div className='text-[50px]'>
+          <div className='flex flex-col text-center pt-[210px] md:pt-[140px] lg:pt-[120px]'>
+            {/* <div className='text-[50px]'>
               - 임종정 -<br /> 웹 개발자 포트폴리오
-            </div>
-            <div className='text-[30px]'>
-              <br />
-              안녕하세요 꾸준함을 실천하고 몰입을 즐기는 <br />웹 프론트엔드
-              개발자로 성장을 추구하는 임종정입니다.
+            </div> */}
+            <div className='text-[20px] md:text-[40px] lg:text-[50px]'>
+              <br/>
+              꾸준함을 실천하고 몰입을 즐기며<br/>웹 프론트엔드
+              개발자로 성장을 추구하는<br/>임종정입니다.
             </div>
           </div>
         </div>

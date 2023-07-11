@@ -28,7 +28,7 @@ export default function Home() {
       <div className='flex flex-col items-center px-5 py-5 bg-mycolor1 '>
         <h3
           id='ARCHIVING'
-          className='mb-5 text-xl text-center md:text-2xl lg:text-3xl'
+          className='mb-5 text-xl text-center md:text-2xl lg:text-3xl text-white'
         >
           목차 2 - ARCHIVING
         </h3>
