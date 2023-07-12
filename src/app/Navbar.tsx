@@ -70,7 +70,7 @@ export default function Navbar() {
         <div className='flex justify-between mb-5 '>
           <div
             onClick={handleScrollToTop}
-            className='mb-[10px] mt-[20px] my-[10px] ml-[10px] md:mt-[10px] bg-blue text-2xl md:text-4xl z-50 font-bold hover:text-mycolor1'
+            className='mb-[10px] mt-[20px] my-[10px] ml-[10px] md:mt-[10px] bg-blue text-2xl md:text-4xl z-50 font-bold hover:text-mycolor1 cursor-pointer'
           >
             LJJ
             <br />
@@ -94,7 +94,7 @@ export default function Navbar() {
                   handleScroll(title);
                 }}
                 // FIXME: 높이 다시 설정하기
-                className='mx-[10px] my-[10px] cursor-pointer h-[30%] text-slate-500 hover:text-mycolor1 cursor-pointer'
+                className='mx-[10px] my-[10px] cursor-pointer h-[30%] text-slate-500 hover:text-mycolor1 '
               >
                 {title}
               </div>
@@ -111,7 +111,7 @@ export default function Navbar() {
                   SetMenuBt(!menuBt);
                 }}
                 // FIXME: 배경색 변경하기
-                className='mx-[10px] my-[10px] cursor-pointer font-bold hover:text-mycolor1 cursor-pointer text-slate-500' // bg-slate-200
+                className='mx-[10px] my-[10px] cursor-pointer font-bold hover:text-mycolor1 text-slate-500' // bg-slate-200
                 style={{ width: 'max-content' }}
               >
                 {title}
