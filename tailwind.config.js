@@ -20,13 +20,13 @@ module.exports = {
           // mycolor1: '#52796F',
           mycolor1: '#0F4C5C',
           // mycolor2: '#ff6b61',
-          // mycolor2: '#e76f51',
           mycolor2: '#14213D',
           mycolor3: '#FAEDCD',
           // mycolor4: '#31587A',
           // mycolor4: '#1D3557',
           mycolor4: '#274769',
           mycolor5: '#FFB703',
+          mycolor6: '#FB8500',
 
 
       },

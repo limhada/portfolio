@@ -126,13 +126,13 @@ export default function Navbar() {
             {/* <div className='text-[50px]'>
               - 임종정 -<br /> 웹 개발자 포트폴리오
             </div> */}
-            <div className='text-[20px] md:text-[40px] lg:text-[50px]'>
+            <p className='text-[20px] md:text-[40px] lg:text-[50px]'>
               <br />
-              꾸준함을 실천하고 몰입을 즐기며
+               꾸준함을 실천하고 몰입을 즐기며
               <br />웹 프론트엔드 개발자로 성장을 추구하는
               <br />
               임종정입니다.
-            </div>
+            </p>
           </div>
         </div>
       </div>
