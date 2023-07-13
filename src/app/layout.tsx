@@ -25,6 +25,28 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <head>
+
+      <title>LJJ Portfolio</title>
+  <meta name="description" content="프론트엔드 웹 개발자 임종정의 포트폴리오입니다."/> 
+  <meta name="keywords" content="프론트엔드, frontend, 포트폴리오, portfolio, 웹개발자, 개발자"/> 
+
+  {/* 기별 표시 설정 */}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  {/* Open Graph Protocol (Facebook, Twitter 등에 페이지가 올바르게 표시되게 함) */}
+  <meta property="og:title" content="LJJ Portfolio" />
+  <meta property="og:description" content="프론트엔드 웹 개발자 임종정의 포트폴리오입니다." />
+  <meta property="og:image" content="https://portfolio-limhada.vercel.app//LJJPortfolio.png" />
+  <meta property="og:url" content="https://portfolio-limhada.vercel.app/" />
+  {/* <meta property="og:type" content="Type of Page (e.g., website, article, video, etc.)" /> */}
+  <meta property="og:type" content="website"/>
+
+{/* 로봇 메타태그 */}
+{/* <meta name="naver-site-verification" content="your-site-verification-key"/> */}
+{/* 네이버 웹마스터 도구에서 제공하는 사이트 인증 키를 사용하여 웹 페이지가 네이버 검색 엔진에 정상적으로 등록되었는지 확인할 수 있습니다. */}
+<meta name="naverbot" content="index,follow"/>
+<meta name="robots" content="index, follow"/>
+
       <link rel="icon" type="image/x-icon" sizes="16x16" href="/favicon/favicon-16x16.png" />
         <link rel="icon" type="image/x-icon" sizes="32x32" href="/favicon/favicon-32x32.png" />
         <link rel="icon" type="image/x-icon" sizes="96x96" href="/favicon/favicon-96x96.png" />
