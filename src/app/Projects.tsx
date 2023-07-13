@@ -91,7 +91,7 @@ export default function Projects() {
     {
       id: 4,
       image: '/bg2.jpeg',
-      imageName: 'guenlog',
+      imageName: 'portfolio',
       title: '포트폴리오 웹사이트',
       github: 'naver.com',
       deployment: 'naver.com',
