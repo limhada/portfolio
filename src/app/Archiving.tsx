@@ -14,12 +14,12 @@ export default function Archiving() {
     {
       title: 'github',
       url: 'github.com/limhada',
-      logo: logo_github, // 로고 이미지 경로
+      logo: logo_github,
     },
     {
       title: 'naver blog',
       url: 'blog.naver.com/leem95',
-      logo: logo_naver, // 로고 이미지 경로
+      logo: logo_naver,
     },
   ];
 
