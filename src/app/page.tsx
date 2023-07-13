@@ -48,7 +48,7 @@ export default function Home() {
 
       <div className='flex flex-col  px-5 py-5  bg-mycolor4'>
         <h3
-          id='목차4'
+          id='PROJECTS'
           className='mb-5 text-xl text-center md:text-2xl lg:text-3xl text-white font-bold'
         >
           PROJECTS
@@ -56,7 +56,7 @@ export default function Home() {
         <Projects></Projects>
       </div>
 
-      <div className='flex flex-col  px-5 py-5 bg-white font-bold'>
+      {/* <div className='flex flex-col  px-5 py-5 bg-white font-bold'>
         <h3
           id='PROJECTS'
           className='mb-5 text-xl text-center md:text-2xl lg:text-3xl'
@@ -66,10 +66,8 @@ export default function Home() {
         <div>
           내용~
         </div>
-      </div>
+      </div> */}
       <ScrollToTop/>
-      {/* <button id="scrollButton" className="fixed right-10 bottom-10 bg-lime-600"
-            >닫기⬆️</button> */}
     </div>
   );
 }
