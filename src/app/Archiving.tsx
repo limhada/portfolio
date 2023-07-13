@@ -25,7 +25,7 @@ export default function Archiving() {
 
   return (
     <div>
-      <div className='grid grid-cols-1 gap-4 md:grid-cols-2'>
+      <div className='grid grid-cols-1 gap-4 md:grid-cols-2 pb-5'>
         {/* 반복되는 부분을 map 함수로 생성 */}
         {data.map((item, index) => (
           <a
@@ -57,7 +57,9 @@ export default function Archiving() {
             </div>
           </a>
         ))}
+        
       </div>
+      
     </div>
   );
 }

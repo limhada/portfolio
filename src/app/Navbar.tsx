@@ -20,7 +20,7 @@ export default function Navbar() {
 
     if (element) {
       const yOffset =
-        element.getBoundingClientRect().top + window.pageYOffset - navHeight;
+        element.getBoundingClientRect().top + window.scrollY - navHeight;
       window.scrollTo({ top: yOffset, behavior: 'smooth' });
     }
   };

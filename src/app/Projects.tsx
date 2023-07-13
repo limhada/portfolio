@@ -103,7 +103,7 @@ export default function Projects() {
       stack: {
         frontend: '자바스크립트',
         backend: '',
-        deployment: '버셀?',
+        deployment: '버셀',
         database: '',
       },
     },
@@ -122,8 +122,8 @@ export default function Projects() {
       const result = (
         <div className='fixed inset-0 flex items-center justify-center z-50'>
           <div className='bg-white w-full h-full overflow-auto'>
-            <div className='flex text-white bg-mycolor2'>
-              <div className='text-5xl w-full h-auto flex items-center p-5'>
+            <div className='flex text-white bg-mycolor4'>
+              <div className='text-1xl md:text-3xl lg:text-5xl w-full h-auto flex items-center p-5'>
                 {project.title}
               </div>
               <div>
@@ -131,20 +131,20 @@ export default function Projects() {
                 <button
                   onClick={() => setShowModal(false)}
                   // className='bg-mycolor3 w-10 h-10 md:w-14 md:h-14 m-2 rounded-tl-full rounded-bl-full rounded-br-full'
-                  className='bg-mycolor5 w-14 h-14 m-2 rounded-tl-full rounded-bl-full rounded-br-full'
+                  className='bg-mycolor5 h-10 w-10 lg:w-14 lg:h-14 m-2 rounded-tl-full rounded-bl-full rounded-br-full'
                 >
                   닫기
                 </button>
               </div>
             </div>
-            <div className='p-6 md:flex md:flex-row'>
+            <div className='p-6 pt-10 lg:flex lg:flex-row'>
               {/* FIXME: 상세내용 projects에 추가하기  */}
               {/* <h1 className='text-5xl mt-5'>프로젝트 제목: {project.title}</h1> */}
 
               <div className='flex flex-col md:ml-[100px]'>
-                <div className=' md:w-[800px]'>
+                {/* <div className=' md:w-[800px]'> */}
                   <ImageComponent {...project}></ImageComponent>
-                </div>
+                {/* </div> */}
 
                 <div>
                   <div className='mb-1 '>
@@ -172,7 +172,7 @@ export default function Projects() {
                 </div>
               </div>
 
-              <div className='md:ml-[100px] md:w-[500px]'>
+              <div className='md:ml-[100px] '>
                 {/* FIXME: 안쓰면 삭제하기 */}
                 {/* <hr className='border-t border-gray-400 my-5' /> */}
 
@@ -242,7 +242,7 @@ export default function Projects() {
       {/* FIXME: 프로젝트 내용 넣기 마우스 클릭 시 프로젝트 상세페이지 or  */}
 
       <div>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-[20px] md:px-[10%] lg:px-[20%] drop-shadow-lg '>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-[20px] md:px-[10%] lg:px-[20%] drop-shadow-lg pb-10'>
           {projects.map((el) => (
             <div
               key={el.id}

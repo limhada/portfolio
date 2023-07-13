@@ -70,7 +70,7 @@ export default function ImageComponent(props: Project) {
   return (
     <div>
       <div
-        className='relative w-full h-0 pb-[100%] overflow-hidden'
+        className='relative w-full md:w-[700px] h-0 pb-[120%] md:pb-[110%] overflow-hidden'
         onMouseMove={handleMouseMove}
         onTouchMove={handleTouchMove}
       >

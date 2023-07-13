@@ -5,7 +5,7 @@ export default function Skills() {
       <div className='border-4 p-2 m-2 rounded-[10px] border-mycolor3 bg-mycolor3'>
         {/* FIXME: 색 확정하기, 글씨크기 정하기 */}
         {/* <div className='text-orange-400'>Frontend</div> */}
-        <div className='text-orange-400 font-bold'>Frontend</div>
+        <div className='text-orange-400 font-bold mb-4'>Frontend</div>
         <img
           src='https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white'
           className='w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[50px] mb-2'
@@ -49,7 +49,7 @@ export default function Skills() {
       </div>
 
       <div className='border-4 p-2 m-2 rounded-[10px] border-white bg-mycolor3'>
-        <div className='text-orange-400 font-bold'>Database</div>
+        <div className='text-orange-400 font-bold mb-4'>Database</div>
         <img
           src='https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white'
           className='w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[50px] mb-2'
@@ -58,7 +58,7 @@ export default function Skills() {
 
      
       <div className='border-4 p-2 m-2 rounded-[10px] border-white bg-mycolor3'>
-        <div className='text-orange-400 font-bold'>Backend</div>
+        <div className='text-orange-400 font-bold mb-4'>Backend</div>
         <img
           src='https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white'
           className='w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[50px] mb-2'
@@ -74,7 +74,7 @@ export default function Skills() {
 
 
       <div className='border-4 p-2 m-2 rounded-[10px] border-white bg-mycolor3'>
-        <div className='text-orange-400 font-bold'>Deployment</div>
+        <div className='text-orange-400 font-bold mb-4'>Deployment</div>
         <img
           src='https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white'
           className='w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[50px] mb-2'
@@ -109,7 +109,7 @@ export default function Skills() {
       </div>
 
       <div className='border-4 p-2 m-2 rounded-[10px] border-white bg-mycolor3'>
-        <div className='text-orange-400 font-bold'>Others</div>
+        <div className='text-orange-400 font-bold mb-4'>Others</div>
         <img
           src='https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white'
           className='w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[50px] mb-2'
