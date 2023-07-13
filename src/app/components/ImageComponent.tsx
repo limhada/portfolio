@@ -22,6 +22,7 @@ export default function ImageComponent(props: Project) {
     guenlog: ['/guenlog/test1.png', '/guenlog/test2.png', '/guenlog/test3.png'],
     animaltest: ['/animaltest/test1.png', '/guenlog/test1.png'],
     fortuneteller: ['/fortuneteller/test1.png', '/guenlog/test1.png'],
+    portfolio: ['/portfolio/img1.png'],
   };
 
   const [num, setNum] = useState(0);
@@ -76,6 +77,7 @@ export default function ImageComponent(props: Project) {
       >
         {imgArr[props.imageName].map((src, index) => (
           // FIXME: 볼더 라디우스 줄지말지 결정하기
+          // FIXME: 이미지 비율 조정하기!!!!!
           <Image
             key={index}
             src={src}
@@ -97,6 +99,8 @@ export default function ImageComponent(props: Project) {
                   return 'translateX(100%)'; // num < index인 나머지 이미지를 오른쪽으로 이동
                 }
               })(),
+              // objectFit: "contain", // 이미지를 원본사이즈로
+              // objectFit: "fill"
             }}
             onMouseDown={handleMouseDown}
             onMouseUp={handleMouseUp}
