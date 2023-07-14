@@ -19,10 +19,20 @@ type ImageGroup = {
 
 export default function ImageComponent(props: Project) {
   const imgArr: ImageGroup = {
-    guenlog: ['/guenlog/img1.png', '/guenlog/img2.png', '/guenlog/img3.png'],
-    animaltest: ['/animaltest/img1.png', '/animaltest/img2.png'],
-    fortuneteller: ['/fortuneteller/img1.png', '/guenlog/img2.png'],
-    portfolio: ['/portfolio/img1.png', '/portfolio/img2.png'],
+    guenlog: [
+      '/guenlog/i1.gif',
+      '/guenlog/i2.gif',
+      '/guenlog/i3.gif',
+      '/guenlog/i4.gif',
+      '/guenlog/i5.gif',
+    ],
+    animaltest: [
+      '/animaltest/i1.png',
+      '/animaltest/i2.png',
+      '/animaltest/i3.gif',
+    ],
+    fortuneteller: ['/fortuneteller/i1.png', '/guenlog/i2.png'],
+    portfolio: ['/portfolio/i1.png', '/portfolio/i2.png'],
   };
 
   const [num, setNum] = useState(0);
@@ -51,19 +61,18 @@ export default function ImageComponent(props: Project) {
     setOffsetX(0);
   };
 
-
   // 터치 슬라이드 로직
   const handleTouchStart = (e: React.TouchEvent) => {
     setDragging(true);
     setStartX(e.changedTouches[0].clientX);
   };
-  
+
   const handleTouchMove = (e: React.TouchEvent) => {
     if (!dragging) return;
     const diffX = e.changedTouches[0].clientX - startX;
     setOffsetX(diffX);
   };
-  
+
   const handleTouchEnd = () => {
     handleMouseUp(); // 마우스 이벤트 처리와 동일한 로직을 수행하므로 기존의 handleMouseUp 함수를 호출
   };
@@ -71,7 +80,7 @@ export default function ImageComponent(props: Project) {
   return (
     <div>
       <div
-        className='relative w-full md:w-[700px] h-0 pb-[120%] md:pb-[110%] overflow-hidden'
+        className='relative w-full md:w-[700px] h-0 pb-[120%] md:pb-[110%] overflow-hidden shadow-md rounded-md'
         onMouseMove={handleMouseMove}
         onTouchMove={handleTouchMove}
       >
@@ -82,8 +91,8 @@ export default function ImageComponent(props: Project) {
             key={index}
             src={src}
             alt={''}
-            width={300}
-            height={300}
+            width={700}
+            height={770}
             quality={100}
             className={`absolute top-0 left-0 w-full h-full ${
               dragging ? '' : 'transition-transform duration-700'
@@ -101,16 +110,14 @@ export default function ImageComponent(props: Project) {
                 }
               })(),
               // objectFit: "contain", // 이미지를 원본사이즈로
-              objectFit: "fill",
+              objectFit: 'fill',
             }}
             onMouseDown={handleMouseDown}
             onMouseUp={handleMouseUp}
             onMouseLeave={handleMouseUp}
-            
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
-
             draggable='false'
           />
         ))}
