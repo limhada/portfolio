@@ -120,9 +120,9 @@ export default function Navbar() {
           </div>
         ) : null}
       </div>
-      <div className=" text-white h-[500px] bg-[url('/bg.jpeg')] bg-cover bg-center">
+      <div className=" text-white h-[500px] md:h-[700px] bg-[url('/bg.jpeg')] bg-cover bg-center">
         <div className='mx-5'>
-          <div className='flex flex-col text-center pt-[210px] md:pt-[140px] lg:pt-[120px]'>
+          <div className='flex flex-col text-center pt-[210px] md:pt-[230px] lg:pt-[220px]'>
             {/* <div className='text-[50px]'>
               - 임종정 -<br /> 웹 개발자 포트폴리오
             </div> */}
