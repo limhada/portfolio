@@ -19,10 +19,10 @@ type ImageGroup = {
 
 export default function ImageComponent(props: Project) {
   const imgArr: ImageGroup = {
-    guenlog: ['/guenlog/test1.png', '/guenlog/test2.png', '/guenlog/test3.png'],
-    animaltest: ['/animaltest/test1.png', '/guenlog/test1.png'],
-    fortuneteller: ['/fortuneteller/test1.png', '/guenlog/test1.png'],
-    portfolio: ['/portfolio/img1.png'],
+    guenlog: ['/guenlog/img1.png', '/guenlog/img2.png', '/guenlog/img3.png'],
+    animaltest: ['/animaltest/img1.png', '/animaltest/img2.png'],
+    fortuneteller: ['/fortuneteller/img1.png', '/guenlog/img2.png'],
+    portfolio: ['/portfolio/img1.png', '/portfolio/img2.png'],
   };
 
   const [num, setNum] = useState(0);
@@ -82,8 +82,9 @@ export default function ImageComponent(props: Project) {
             key={index}
             src={src}
             alt={''}
-            width={100}
-            height={100}
+            width={300}
+            height={300}
+            quality={100}
             className={`absolute top-0 left-0 w-full h-full ${
               dragging ? '' : 'transition-transform duration-700'
             }`}
@@ -100,7 +101,7 @@ export default function ImageComponent(props: Project) {
                 }
               })(),
               // objectFit: "contain", // 이미지를 원본사이즈로
-              // objectFit: "fill"
+              objectFit: "fill",
             }}
             onMouseDown={handleMouseDown}
             onMouseUp={handleMouseUp}

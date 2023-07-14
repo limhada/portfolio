@@ -93,8 +93,8 @@ export default function Projects() {
       image: '/bg2.jpeg',
       imageName: 'portfolio',
       title: '포트폴리오 웹사이트',
-      github: 'naver.com',
-      deployment: 'naver.com',
+      github: 'https://github.com/limhada/portfolio',
+      deployment: 'https://portfolio-limhada.vercel.app/',
       description:
         '자기소개, 기술 스택, 프로젝트, 블로그 등을 소개하는 페이지입니다.',
       summary: '요약내용',
@@ -256,6 +256,7 @@ export default function Projects() {
                 width={150}
                 height={150}
                 draggable='false'
+                quality={100}
               />
               <div className='p-4 bg-white md:h-[180px]'>
                 <header className='mb-2'>
