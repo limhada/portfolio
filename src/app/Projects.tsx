@@ -33,7 +33,7 @@ export default function Projects() {
   const projects: Project[] = [
     {
       id: 1,
-      image: '/bg1.jpeg',
+      image: '/guenlog/i0.png',
       imageName: 'guenlog',
       title: '근로그',
       github: 'https://github.com/limhada/seb40_main_028',
@@ -52,7 +52,7 @@ export default function Projects() {
     },
     {
       id: 2,
-      image: '/bg2.jpeg',
+      image: '/animaltest/i2.png',
       imageName: 'animaltest',
       title: '동물 성격유형 테스트',
       github: 'https://github.com/limhada/animal-personality-type-test',
@@ -71,7 +71,7 @@ export default function Projects() {
     },
     {
       id: 3,
-      image: '/bg1.jpeg',
+      image: '/fortuneteller/i1.png',
       imageName: 'fortuneteller',
       title: '운세 보는 깜냥이',
       github: 'https://github.com/limhada/fortuneteller',
@@ -90,7 +90,7 @@ export default function Projects() {
     },
     {
       id: 4,
-      image: '/bg2.jpeg',
+      image: '/portfolio/i1.png',
       imageName: 'portfolio',
       title: '포트폴리오 웹사이트',
       github: 'https://github.com/limhada/portfolio',

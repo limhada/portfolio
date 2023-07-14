@@ -31,8 +31,8 @@ export default function ImageComponent(props: Project) {
       '/animaltest/i2.png',
       '/animaltest/i3.gif',
     ],
-    fortuneteller: ['/fortuneteller/i1.png', '/guenlog/i2.png'],
-    portfolio: ['/portfolio/i1.png', '/portfolio/i2.png'],
+    fortuneteller: ['/fortuneteller/i1.png', '/fortuneteller/i2.png', '/fortuneteller/i3.png', '/fortuneteller/i4.png',],
+    portfolio: ['/portfolio/i1.png', '/portfolio/i2.png', '/portfolio/i3.png', '/portfolio/i4.png', '/portfolio/i5.png', '/portfolio/i6.png', '/portfolio/i7.png'],
   };
 
   const [num, setNum] = useState(0);
