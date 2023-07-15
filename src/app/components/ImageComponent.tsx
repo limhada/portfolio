@@ -9,7 +9,7 @@ interface Project {
   deployment: string;
   description: string;
   summary: string;
-  background: string;
+  background: React.ReactNode;
   imageName: string;
 }
 

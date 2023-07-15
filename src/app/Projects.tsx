@@ -17,7 +17,7 @@ export default function Projects() {
     github: string;
     deployment: string;
     summary: string;
-    background: string;
+    background: React.ReactNode;
     imageName: string;
     review: string;
     stack: Stack;
@@ -29,6 +29,28 @@ export default function Projects() {
     deployment: string;
     database: string;
   }
+  
+  const gunlog = (
+    <div>
+      근로그 서비스는 운동하려고 마음만 계속 먹는 분들,
+      <br/>
+      집 근처 체육관을 찾다가 포기하시는 분들,
+      어떤 운동이 있는지 몰라서 못하시는 분들을 생각하며
+      
+      어떻게하면 더 많은 사람들이 운동에 관심과 습관을 가질 수 있을지 고민하고
+      우리에게 필요하다고 느낀 서비스 아이디어를 모아 개발한 프로젝트 입니다!
+      
+      저희 서비스는 사용자가 직접 운동을 계획해 참여도를 이끌어내어 책임감을
+      가질 수 있도록 하였고 몸무게 변화와 매달 운동한 횟수를 그래프로 표현하여
+      성취감을 느낄 수 있습니다.
+      
+      또한 운동을 갓 시작하시는 분들을 위해
+      
+      주변 체육관을 검색할 수 있도록 카카오 지도 API를 연동하고,
+      운동 동작 이미지 첨부해 사용자가 동작을 확인할 수 있고,
+      더 많은 정보를 찾을 수 있도록 YouTube API를 이용해 헬스에 관련한 추천 동영상을 시청할 수 있도록 하였습니다.
+    </div>
+  )
 
   const projects: Project[] = [
     {
@@ -41,7 +63,7 @@ export default function Projects() {
       description:
         '지속적이고 꾸준한 운동 습관을 유지할 수 있는 도움을 제공하는 서비스입니다.',
       summary: '요약내용',
-      background: '배경내용',
+      background: gunlog,
       review: '후기내용~',
       stack: {
         frontend: '자바스크립트',
@@ -60,7 +82,7 @@ export default function Projects() {
       description:
         'Big Five 기법을 사용하여 성격 유형을 테스트하고 나의 성격을 대표하는 동물들을 찾아볼 수 있습니다.',
       summary: '요약내용',
-      background: '배경내용',
+      background: gunlog,
       review: '후기내용~',
       stack: {
         frontend: '자바스크립트',
@@ -79,7 +101,7 @@ export default function Projects() {
       description:
         '인공지능 AI인 ChatGPT를 기반으로 구현하여 깜냥이에게 사람과의 대화처럼 운세를 질문하고 상담할 수 있습니다.',
       summary: '요약내용',
-      background: '배경내용',
+      background: gunlog,
       review: '후기내용~',
       stack: {
         frontend: '자바스크립트',
@@ -98,7 +120,7 @@ export default function Projects() {
       description:
         '자기소개, 기술 스택, 프로젝트, 블로그 등을 소개하는 페이지입니다.',
       summary: '요약내용',
-      background: '배경내용',
+      background: gunlog,
       review: '후기내용~',
       stack: {
         frontend: '자바스크립트',
@@ -183,7 +205,7 @@ export default function Projects() {
                 {/* <p>주요기능</p> */}
                 <div className='mb-10'>
                   <h1 className='text-3xl mb-5'>배경</h1>
-                  <p className='text-base'>개발하게 된 배경</p>
+                  <p className='text-base'>{project.background}</p>
                 </div>
                 <div className='mb-10'>
                   <h1 className='text-3xl mb-5'>후기</h1>

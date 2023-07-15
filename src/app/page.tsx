@@ -12,8 +12,6 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-
-      {/* ABOUT ME */}
       <div className='flex flex-col items-center px-5 py-5'>
         <h3
           id='ABOUT ME'
@@ -23,8 +21,6 @@ export default function Home() {
         </h3>
         <Aboutme></Aboutme>
       </div>
-
-      {/* ARCHIVING */}
       <div className='flex flex-col items-center px-5 py-5 bg-mycolor1 '>
         <h3
           id='ARCHIVING'
@@ -32,10 +28,8 @@ export default function Home() {
         >
           ARCHIVING
         </h3>
-        {/* FIXME: 호버 시 색상 살짝 변경해주기 */}
         <Archiving></Archiving>
       </div>
-
       <div className='flex flex-col items-center px-5 py-5 bg-white font-bold'>
         <h3
           id='SKILLS'
@@ -45,7 +39,6 @@ export default function Home() {
         </h3>
         <Skills></Skills>
       </div>
-
       <div className='flex flex-col  px-5 py-5  bg-mycolor4'>
         <h3
           id='PROJECTS'
@@ -55,7 +48,6 @@ export default function Home() {
         </h3>
         <Projects></Projects>
       </div>
-
       {/* <div className='flex flex-col  px-5 py-5 bg-white font-bold'>
         <h3
           id='PROJECTS'
@@ -67,7 +59,7 @@ export default function Home() {
           내용~
         </div>
       </div> */}
-      <ScrollToTop/>
+      <ScrollToTop />
     </div>
   );
 }
