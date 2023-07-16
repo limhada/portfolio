@@ -25,6 +25,7 @@ export default function ImageComponent(props: Project) {
       '/guenlog/i3.gif',
       '/guenlog/i4.gif',
       '/guenlog/i5.gif',
+      '/guenlog/i6.png',
     ],
     animaltest: [
       '/animaltest/i1.png',
