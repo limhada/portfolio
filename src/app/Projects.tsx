@@ -41,7 +41,7 @@ export default function Projects() {
           <br />
           어떤 운동이 있는지 몰라서 못하시는 분들을 생각하며 어떻게하면 더 많은
           사람들이 운동에 관심과 습관을 가질 수 있을지 고민하고 필요하다고 느낀
-          서비스 아이디어를 모아 개발한 프로젝트 입니다!
+          서비스 아이디어를 모아 개발한 프로젝트 입니다.
           <br />
           저희 서비스는 사용자가 직접 운동을 계획해 참여도를 이끌어내어 책임감을
           가질 수 있도록 하였고 몸무게 변화와 매달 운동한 횟수를 그래프로
@@ -53,7 +53,7 @@ export default function Projects() {
           추천하는 서비스를 제공합니다.
         </div>
       ),
-      reviw: (
+      review: (
         // FIXME: 줄바꿈 하기
         <div>
           평소에도 흔하게 사용하는 로그인과 로그아웃 기능을 직접 구현해보니까
@@ -146,7 +146,7 @@ export default function Projects() {
           <br />
         </div>
       ),
-      reviw: (
+      review: (
         <div>
           Big Five Personality Traits 심리테스트는 성격 유형의 다섯 가지
           특성(성실성, 외향성, 우호성, 신경성, 개방성)을 분석하여 개개인의
@@ -173,15 +173,36 @@ export default function Projects() {
     fortuneteller: {
       background: (
         <div>
-          인공지능 AI인 ChatGPT를 기반으로 구현하여 깜냥이에게 사람과의 대화처럼
-          운세를 질문하고 상담할 수 있습니다.
+          깜냥이 서비스는 인공지능 AI인 ChatGPT를 기반으로 구현되어, 사용자들이
+          사람과의 대화처럼 운세를 질문하고 상담할 수 있습니다.
+          <br />
+          생년월일을 입력하면 오늘의 운세를 알려주는 간단한 애플리케이션을
+          만들어 사용자가 쉽게 접근하고 사용할 수 있도록 하였습니다.
+          <br />
+          UI/UX 디자인에서는 스마트폰이 대중화되어 익숙해진 기본 채팅 형식을
+          선택하였고, 보라색과 검은 고양이를 사용하여 점술가 느낌을 주어 컨셉에
+          맞는 디자인을 구현하였습니다.
+          <br />
+          세계적으로 인공지능(AI)에 대한 관심이 높아져 AI를 활용한 서비스를
+          개발하고자 하는 생각이 있었습니다.
+          <br />
+          AI에 대한 지식이 없어도 ChatGPT API를 사용할 수 있다는 사실을 알게
+          되었고, 그로 인해 운세를 보는 깜냥이 서비스를 개발하게 되었습니다.
         </div>
       ),
-      reviw: (
+      review: (
         <div>
-          ChatGPT와 같은 AI를 활용하면 운세뿐만 아니라 의료 상담, 금융, 여행,
-          건강 등 다양한 분야의 서비스를 더욱 쉽게 구축하고 사용자들에게 향상된
-          경험을 제공할 수 있겠다는 생각이 들었습니다.
+          ChatGPT API 활용 방법에 대해 익히게 되었습니다. ChatGPT를 적용한
+          나만의 웹 서비스를 만드는 방법을 알게 되었습니다. 기존의 vercel를 통한
+          배포가 익숙하였지만 Cloudflare Pages를 활용해 배포해보았습니다. 또한
+          AWS Lambda Functions와 node.js의 Express프레임워크 활용하여 서버리스를
+          사용해보았습니다. ChatGPT와 같은 AI를 활용하면 운세뿐만 아니라 의료
+          상담, 금융, 여행, 건강 등 다양한 분야의 서비스를 더욱 쉽게 구축하고
+          사용자들에게 향상된 경험을 제공할 수 있겠다는 생각이 들었습니다.
+          카카오에드핏과 toss를 활용한 수익모델을 만들었습니다. 로딩 시간이 조금
+          길어서 화면이 멈춘것 같다는 피드백이 많아서 로딩 아이콘을 추가하여
+          로딩중임을 확실히 나타냈고 사용자들의 불만족스러운 경험이
+          감소되었습니다.
         </div>
       ),
     },
@@ -189,7 +210,7 @@ export default function Projects() {
     // FIXME: 복사용
     // fortuneteller: {
     //   background: <div></div>,
-    //   reviw: <div></div>,
+    //   review: <div></div>,
     // },
   };
 
@@ -205,7 +226,7 @@ export default function Projects() {
         '지속적이고 꾸준한 운동 습관을 유지할 수 있는 도움을 제공하는 서비스입니다.',
       summary: '요약내용',
       background: contentData.guenlog.background,
-      review: contentData.guenlog.reviw,
+      review: contentData.guenlog.review,
       stack: {
         frontend:
           'react, react-router, JavaScript, TailwindCSS, styled-components, axios, Recoil',
@@ -225,7 +246,7 @@ export default function Projects() {
         'Big Five 기법을 사용하여 성격 유형을 테스트하고 나의 성격을 대표하는 동물들을 찾아볼 수 있습니다.',
       summary: '요약내용',
       background: contentData.animaltest.background,
-      review: contentData.animaltest.reviw,
+      review: contentData.animaltest.review,
       stack: {
         frontend: 'react, styled-components',
         backend: '',
@@ -244,11 +265,11 @@ export default function Projects() {
         '인공지능 AI인 ChatGPT를 기반으로 구현하여 깜냥이에게 사람과의 대화처럼 운세를 질문하고 상담할 수 있습니다.',
       summary: '요약내용',
       background: contentData.fortuneteller.background,
-      review: '카카오에드핏 광고내용, ',
+      review: contentData.fortuneteller.review,
       stack: {
         frontend: 'JavaScript',
         backend: 'node.js Express, AWS Lambda Functions, serverless-http',
-        deployment: 'cloudflare',
+        deployment: 'cloudflare Pages',
         database: '',
       },
     },
@@ -286,7 +307,7 @@ export default function Projects() {
       const result = (
         <div className='fixed inset-0 flex items-center justify-center z-50'>
           <div className='bg-white w-full h-full overflow-auto'>
-            <div className='flex text-white bg-mycolor4'>
+            <div className='fixed top-0 w-full z-50 flex text-white bg-mycolor4'>
               <div className='text-1xl md:text-3xl lg:text-5xl w-full h-auto flex items-center p-5'>
                 {project.title}
               </div>
@@ -301,7 +322,7 @@ export default function Projects() {
                 </button>
               </div>
             </div>
-            <div className='p-6 pt-10 lg:flex lg:flex-row'>
+            <div className='p-6 pt-[120px] lg:flex lg:flex-row'>
               {/* FIXME: 상세내용 projects에 추가하기  */}
               {/* <h1 className='text-5xl mt-5'>프로젝트 제목: {project.title}</h1> */}
 
