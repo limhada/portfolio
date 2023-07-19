@@ -16,7 +16,6 @@ export default function Projects() {
     description: string;
     github: string;
     deployment: string;
-    summary: string;
     background: React.ReactNode;
     imageName: string;
     review: React.ReactNode;
@@ -37,50 +36,54 @@ export default function Projects() {
       background: (
         <div>
           근로그 서비스는 운동하려고 마음만 계속 먹는 분들, 집 근처 체육관을
-          찾다가 포기하시는 분들,
+          찾다가 포기하시는 분들, 그리고 어떤 운동을 해야할지 잘 모르는 분들을
+          위해 개발된 프로젝트입니다.
           <br />
-          어떤 운동이 있는지 몰라서 못하시는 분들을 생각하며 어떻게하면 더 많은
-          사람들이 운동에 관심과 습관을 가질 수 있을지 고민하고 필요하다고 느낀
-          서비스 아이디어를 모아 개발한 프로젝트 입니다.
+          이 서비스를 통해 더 많은 사람들이 운동에 관심과 습관을 가질 수 있도록
+          고민하고 필요하다고 느낀 아이디어를 모아 구현하였습니다.
           <br />
-          저희 서비스는 사용자가 직접 운동을 계획해 참여도를 이끌어내어 책임감을
-          가질 수 있도록 하였고 몸무게 변화와 매달 운동한 횟수를 그래프로
-          표현하여 성취감을 느낄 수 있습니다.
+          저희 서비스는 사용자가 직접 운동 계획을 세우고 참여도를 이끌어내어
+          책임감을 가질 수 있게 하였습니다.
           <br />
-          운동을 갓 시작하시는 분들을 위해 주변 체육관을 검색할 수 있도록 카카오
-          지도 API를 연동했습니다. 운동 동작 이미지 첨부해 사용자가 동작을
-          확인할 수 있습니다. YouTube API를 이용해 헬스에 관련한 동영상을
-          추천하는 서비스를 제공합니다.
+          또한, 몸무게 변화와 월별 운동 횟수를 그래프로 표현하여 성취감을 느낄
+          수 있습니다.
+          <br />
+          운동을 막 시작하는 분들을 위해 카카오 지도 API를 연동하여 주변
+          체육관을 검색할 수 있도록 하였고, 운동 동작 이미지를 첨부하여 사용자가
+          동작을 확인할 수 있게 하였습니다.
+          <br />
+          YouTube API를 이용해 헬스에 관련된 동영상을 추천하는 서비스를
+          제공합니다.
         </div>
       ),
       review: (
         // FIXME: 줄바꿈 하기
         <div>
-          평소에도 흔하게 사용하는 로그인과 로그아웃 기능을 직접 구현해보니까
-          생각보다 쉽지 않았습니다. 그래서 여러 기능들이 모여 하나의 프로젝트가
-          완성된다는 것의 중요성과 각각기능들의 소중함을 알게 되었습니다.
-          <br />
-          프로젝트를 진행하면서 신경 썼던 부분은 유효성검사가 있습니다.
-          사용자에게 데이터를 입력 받을 때 올바른 데이터만 입력 받기 위해
-          꼼꼼하게 제약조건을 걸어 두었습니다. 예를들면 회원가입 페이지의 경우
-          닉네임의 경우 한글, 영문, 숫자를 제외한 값을 입력하지 못하도록
-          차단하여 최대한 서버로 보낼 데이터에 문제가 생기지 않도록 사전에
-          예방하였습니다.
-          <br />
-          OAuth2를 통해 구글로그인을 구현하는 과정에서 기존의 익숙한
-          Frontend에서 Backend와 직접 통신하는 방식이 아닌 Frontend에서
-          GoogleServer를 거쳐 Backend와 통신하는 것에 어려움이 있었습니다.
-          <br />
-          URLSearchParams를 사용하여 문제를 해결했습니다. URLSearchParams는URL의
-          쿼리 문자열에 대한 작업을 할 수 있는 메서드 제공하며 그 중에서
-          get메서드를 사용했습니다. get메서드는 해당 파라미터의 value 출력하고,
-          없을 시에는 null값을 출력합니다. URLSearchParams의 get메서드를
-          사용하여 accesstoken 값과 처음 로그인하는 사용자인지 여부를 판별하는
-          데이터를 가져올 수 있었고 문제를 해결할 수 있었습니다.
-          <br />
-          문제를 해결하는 과정에서 팀원들과의 소통이 무엇보다 중요하다는 점을
-          느꼈습니다. 여러 사람들의 의견을 통해 다양한 방법을 시도한 끝에
-          해결방법을 찾을 수 있었기 때문입니다.
+          평소에 흔하게 사용하는 로그인과 로그아웃 기능을 직접 구현해보니
+          생각보다 쉽지 않았습니다. 여러 기능들이 모여 하나의 프로젝트가
+          완성된다는 것의 중요성과 각각의 기능들이 얼마나 소중한지 알게
+          되었습니다. 평소에도 흔하게 사용하는 로그인과 로그아웃 기능을 직접
+          구현해보니까 생각보다 쉽지 않았습니다. 그래서 여러 기능들이 모여
+          하나의 프로젝트가 완성된다는 것의 중요성과 각각기능들의 소중함을 알게
+          되었습니다. 프로젝트를 진행하면서 가장 신경 썼던 부분은 기술적인 것
+          보다는 팀워크였습니다. 프론트엔드팀장을 맡게되어 팀원분들과 한달이라는
+          시간동안 서로 불편한 점이나 개선할점 등 다양한기술적인 부분이 중요하지
+          않는 것은 아니지만 유효성검사가 있습니다. 사용자에게 데이터를 입력
+          받을 때 올바른 데이터만 입력 받기 위해 꼼꼼하게 제약조건을 걸어
+          두었습니다. 예를들면 회원가입 페이지의 경우 닉네임의 경우 한글, 영문,
+          숫자를 제외한 값을 입력하지 못하도록 차단하여 최대한 서버로 보낼
+          데이터에 문제가 생기지 않도록 사전에 예방하였습니다. OAuth2를 통해
+          구글로그인을 구현하는 과정에서 기존의 익숙한 Frontend에서 Backend와
+          직접 통신하는 방식이 아닌 Frontend에서 GoogleServer를 거쳐 Backend와
+          통신하는 것에 어려움이 있었습니다. URLSearchParams를 사용하여 문제를
+          해결했습니다. URLSearchParams는URL의 쿼리 문자열에 대한 작업을 할 수
+          있는 메서드 제공하며 그 중에서 get메서드를 사용했습니다. get메서드는
+          해당 파라미터의 value 출력하고, 없을 시에는 null값을 출력합니다.
+          URLSearchParams의 get메서드를 사용하여 accesstoken 값과 처음
+          로그인하는 사용자인지 여부를 판별하는 데이터를 가져올 수 있었고 문제를
+          해결할 수 있었습니다. 문제를 해결하는 과정에서 팀원들과의 소통이
+          무엇보다 중요하다는 점을 느꼈습니다. 여러 사람들의 의견을 통해 다양한
+          방법을 시도한 끝에 해결방법을 찾을 수 있었기 때문입니다.
           {/* FIXME: 추가 내용 근로그를 만들어서 평소에 취미로 하던 운동을 조금 더 재미있게 즐길 수 있게 되었다. 등등 내용 추가하기 */}
         </div>
       ),
@@ -207,24 +210,52 @@ export default function Projects() {
       ),
     },
 
+    portfolio: {
+      background: (
+        <div>
+          자기소개, 기술 스택, 프로젝트, 블로그 등을 소개하는 웹페이지를
+          개발하였습니다. 웹 프론트엔드 기술인 Next.js, TypeScript,
+          TailwindCSS를 학습과 적용을 목표로 개발하였습니다. 기존의 React는
+          자체로 서버 렌더링을 지원하지 않아 검색 엔진 최적화(SEO)에 불리함을
+          해결하기 위해 Next.js를 사용하게 되었습니다. 실시간으로 업데이트되는
+          콘텐츠가 아니기 때문에 정적 사이트 생성(SSG) 기능을 활용할 수 있는
+          Next.js가 적합했습니다.
+        </div>
+      ),
+      review: (
+        <div>
+          next.js는 파일 기반의 라우팅 시스템으로 라우트 관리가 간편했습니다.
+          그러나 페이지가 많아지고 규모가 커지면 관리 측면에서 복잡할 수 있다는
+          생각이 들었습니다. 처음으로 TypeScript를 사용해 개발 속도가 다소
+          느려졌지만, 정적 타입 지정으로 코드의 안정성을 향상시킬 수 있었습니다.
+          더불어 타입 체크를 통해 코드에서 오류를 쉽게 찾아 수정할 수
+          있었습니다. TailwindCSS를 이전에 간단히 사용해본 경험이 있어 이번
+          기회에 더 깊게 사용하였습니다. 처음에는 적응하는데 시간이 필요했지만,
+          유틸리티 기반의 CSS 프레임워크를 익히고 나서 개발 속도를 향상할 수
+          있었습니다. TailwindCSS를 사용하여 반응형 웹 디자인을 구축하여 모바일
+          및 데스크톱 기기에서 웹 사이트가 원활하게 작동되는 경험도 얻을 수
+          있었습니다.
+        </div>
+      ),
+    },
+
     // FIXME: 복사용
-    // fortuneteller: {
+    // 이름: ({
     //   background: <div></div>,
     //   review: <div></div>,
-    // },
+    // }),
   };
 
   const projects: Project[] = [
     {
       id: 1,
-      image: '/guenlog/i0.png',
+      image: '/guenlog/i0.png?1',
       imageName: 'guenlog',
       title: '근로그 (팀)',
-      github: 'https://github.com/limhada/seb40_main_028',
+      github: 'https://github.com/codestates-seb/seb40_main_028',
       deployment: 'https://realguenlog.vercel.app/start',
       description:
         '지속적이고 꾸준한 운동 습관을 유지할 수 있는 도움을 제공하는 서비스입니다.',
-      summary: '요약내용',
       background: contentData.guenlog.background,
       review: contentData.guenlog.review,
       stack: {
@@ -244,7 +275,6 @@ export default function Projects() {
       deployment: 'https://animal-personality-type-test.vercel.app/',
       description:
         'Big Five 기법을 사용하여 성격 유형을 테스트하고 나의 성격을 대표하는 동물들을 찾아볼 수 있습니다.',
-      summary: '요약내용',
       background: contentData.animaltest.background,
       review: contentData.animaltest.review,
       stack: {
@@ -263,7 +293,6 @@ export default function Projects() {
       deployment: 'https://fortuneteller-eqt.pages.dev/',
       description:
         '인공지능 AI인 ChatGPT를 기반으로 구현하여 깜냥이에게 사람과의 대화처럼 운세를 질문하고 상담할 수 있습니다.',
-      summary: '요약내용',
       background: contentData.fortuneteller.background,
       review: contentData.fortuneteller.review,
       stack: {
@@ -282,9 +311,8 @@ export default function Projects() {
       deployment: 'https://portfolio-limhada.vercel.app/',
       description:
         '자기소개, 기술 스택, 프로젝트, 블로그 등을 소개하는 페이지입니다.',
-      summary: '요약내용',
-      background: 'guenlog.background',
-      review: '후기내용~',
+      background: contentData.portfolio.background,
+      review: contentData.portfolio.review,
       stack: {
         frontend: 'Next.js, TypeScript, TailwindCSS',
         backend: '',

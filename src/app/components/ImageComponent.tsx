@@ -8,7 +8,6 @@ interface Project {
   github: string;
   deployment: string;
   description: string;
-  summary: string;
   background: React.ReactNode;
   imageName: string;
 }
