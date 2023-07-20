@@ -20,6 +20,8 @@ export default function Projects() {
     imageName: string;
     review: React.ReactNode;
     stack: Stack;
+    href: string;
+    src: string;
   }
 
   interface Stack {
@@ -300,6 +302,8 @@ export default function Projects() {
         deployment: 'vercel, aws,',
         database: 'mysql',
       },
+      href: 'http://m.site.naver.com/1bs6T',
+      src: 'https://qrcodethumb-phinf.pstatic.net/20230721_27/1689878458774mQGya_PNG/1bs6T.png',
     },
     {
       id: 2,
@@ -307,7 +311,7 @@ export default function Projects() {
       imageName: 'animaltest',
       title: '동물 성격유형 테스트 (개인)',
       github: 'https://github.com/limhada/animal-personality-type-test',
-      deployment: 'https://animal-personality-type-test.vercel.app/',
+      deployment: 'https://animal-personality-type-test.vercel.app',
       description:
         'Big Five 기법을 사용하여 성격 유형을 테스트하고 나의 성격을 대표하는 동물들을 찾아볼 수 있습니다.',
       background: contentData.animaltest.background,
@@ -318,6 +322,8 @@ export default function Projects() {
         deployment: 'vercel',
         database: '',
       },
+      href: 'http://m.site.naver.com/1bs7A',
+      src: 'https://qrcodethumb-phinf.pstatic.net/20230721_169/16898783663251kha4_PNG/1bs7A.png',
     },
     {
       id: 3,
@@ -325,7 +331,7 @@ export default function Projects() {
       imageName: 'fortuneteller',
       title: '운세 보는 깜냥이 (개인)',
       github: 'https://github.com/limhada/fortuneteller',
-      deployment: 'https://fortuneteller-eqt.pages.dev/',
+      deployment: 'https://fortuneteller-eqt.pages.dev',
       description:
         '인공지능 AI인 ChatGPT를 기반으로 구현하여 깜냥이에게 사람과의 대화처럼 운세를 질문하고 상담할 수 있습니다.',
       background: contentData.fortuneteller.background,
@@ -336,6 +342,8 @@ export default function Projects() {
         deployment: 'cloudflare Pages',
         database: '',
       },
+      href: 'http://m.site.naver.com/1bs7F',
+      src: 'https://qrcodethumb-phinf.pstatic.net/20230721_187/168987862327391bjo_PNG/1bs7F.png',
     },
     {
       id: 4,
@@ -343,7 +351,7 @@ export default function Projects() {
       imageName: 'portfolio',
       title: '포트폴리오 웹사이트 (개인)',
       github: 'https://github.com/limhada/portfolio',
-      deployment: 'https://portfolio-limhada.vercel.app/',
+      deployment: 'https://portfolio-limhada.vercel.app',
       description:
         '자기소개, 기술 스택, 프로젝트, 블로그 등을 소개하는 페이지입니다.',
       background: contentData.portfolio.background,
@@ -354,6 +362,8 @@ export default function Projects() {
         deployment: 'vercel',
         database: '',
       },
+      href: 'http://m.site.naver.com/1bs7H',
+      src: 'https://qrcodethumb-phinf.pstatic.net/20230721_94/1689878700567MDEQz_PNG/1bs7H.png',
     },
   ];
 
@@ -385,7 +395,7 @@ export default function Projects() {
                 </button>
               </div>
             </div>
-            <div className='p-6 pt-[120px] lg:flex lg:flex-row'>
+            <div className='p-6 pt-[120px] md:pt-[160px] lg:flex lg:flex-row'>
               <div className='flex flex-col md:ml-[100px]'>
                 {/* <div className=' md:w-[800px]'> */}
                 <ImageComponent {...project}></ImageComponent>
@@ -415,13 +425,14 @@ export default function Projects() {
                     </a>
                   </div>
                   <div>
-                    QR코드 자리
-                    {/* FIXME: QR코드 넣기 */}
+                    <a href={project.href} target='_blank'>
+                      <img src={project.src} />
+                    </a>
                   </div>
                 </div>
               </div>
 
-              <div className='md:ml-[100px]'>
+              <div className='md:ml-[100px] md:mr-[100px]'>
                 {/* FIXME: 안쓰면 삭제하기 */}
                 {/* <hr className='border-t border-gray-400 my-5' /> */}
 
