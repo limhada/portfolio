@@ -424,10 +424,18 @@ export default function Projects() {
                       {project.deployment}
                     </a>
                   </div>
-                  <div>
+                  {/* QR코드 */}
+                  <div className='flex flex-col items-center p-5 mb-5 bg-mycolor1 rounded-[50px]'>
                     <a href={project.href} target='_blank'>
                       <img src={project.src} />
                     </a>
+                    <div className='text-white mt-1'>{project.title}</div>
+                    <div className='text-white mt-3'>
+                      스마트폰에서 확인해 보세요!
+                    </div>
+                    <div className='text-white mt-1'>
+                      (크롬 혹은 사파리를 권장합니다)
+                    </div>
                   </div>
                 </div>
               </div>
