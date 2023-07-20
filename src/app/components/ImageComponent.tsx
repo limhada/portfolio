@@ -31,8 +31,21 @@ export default function ImageComponent(props: Project) {
       '/animaltest/i2.png',
       '/animaltest/i3.gif',
     ],
-    fortuneteller: ['/fortuneteller/i1.png', '/fortuneteller/i2.png', '/fortuneteller/i3.png', '/fortuneteller/i4.png',],
-    portfolio: ['/portfolio/i1.png', '/portfolio/i2.png', '/portfolio/i3.png', '/portfolio/i4.png', '/portfolio/i5.png', '/portfolio/i6.png', '/portfolio/i7.png'],
+    fortuneteller: [
+      '/fortuneteller/i1.png',
+      '/fortuneteller/i2.png',
+      '/fortuneteller/i3.png',
+      '/fortuneteller/i4.png',
+    ],
+    portfolio: [
+      '/portfolio/i1.png',
+      '/portfolio/i2.png',
+      '/portfolio/i3.png',
+      '/portfolio/i4.png',
+      '/portfolio/i5.png',
+      '/portfolio/i6.png',
+      '/portfolio/i7.png',
+    ],
   };
 
   const [num, setNum] = useState(0);
@@ -85,8 +98,6 @@ export default function ImageComponent(props: Project) {
         onTouchMove={handleTouchMove}
       >
         {imgArr[props.imageName].map((src, index) => (
-          // FIXME: 볼더 라디우스 줄지말지 결정하기
-          // FIXME: 이미지 비율 조정하기!!!!!
           <Image
             key={index}
             src={src}
