@@ -43,6 +43,10 @@ export default function Skills() {
           className='w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[50px] mb-2'
         ></img>
         <img
+          src='https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white'
+          className='w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[50px] mb-2'
+        ></img>
+        <img
           src='https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white'
           className='w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[50px] mb-2'
         ></img>
