@@ -1,3 +1,4 @@
+import GoogleAnalytics from './components/GoogleAnalytics';
 import './globals.css';
 import { Inter } from 'next/font/google';
 
@@ -83,7 +84,7 @@ export default function RootLayout({
           sizes='96x96'
           href='/favicon/favicon-96x96.png'
         />
-
+<GoogleAnalytics />
       </head>
       <body className={inter.className}>{children}</body>
       {/* 
