@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { useState } from 'react';
-// FIXME: 이미지 슬라이드 공부하고 정리해 놓기
 interface Project {
   id: number;
   image: string;
@@ -117,7 +116,8 @@ export default function ImageComponent(props: Project) {
                 } else if (index < num) {
                   return `translateX(calc(-100% + ${offsetX}px))`;
                 } else {
-                  return 'translateX(100%)'; // num < index인 나머지 이미지를 오른쪽으로 이동
+                  return 'translateX(100%)'; 
+                  // num < index인 나머지 이미지를 오른쪽으로 이동
                 }
               })(),
               // objectFit: "contain", // 이미지를 원본사이즈로

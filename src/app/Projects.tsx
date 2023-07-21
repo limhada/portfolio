@@ -1,16 +1,16 @@
 'use client';
 
 import Image /* {StaticImageData} */ from 'next/image';
-// import Link from 'next/link';
+
 import { useState, useEffect } from 'react';
 import ImageComponent from './components/ImageComponent';
-// import bg from '../../public/bg.jpeg';
-// import bg2 from '../../public/bg.jpeg';
+
 
 export default function Projects() {
   interface Project {
     id: number;
-    // image: StaticImageData; // 이미지파일 import 해서 사용할 때 지정하는 타입
+    // image: StaticImageData;
+    // 이미지파일 import 해서 사용할 때 지정하는 타입
     image: string;
     title: string;
     description: string;
@@ -22,6 +22,7 @@ export default function Projects() {
     stack: Stack;
     href: string;
     src: string;
+    precautions?: string;
   }
 
   interface Stack {
@@ -31,7 +32,6 @@ export default function Projects() {
     database: string;
   }
 
-  // FIXME: 근로그 테스트계정 및 배포 주소 백엔드 기능 x aws 기간 만료
   // 근로그 로그인 안해도 둘러볼 수 있게 재배포할지 고민하기
   const contentData = {
     guenlog: {
@@ -276,7 +276,7 @@ export default function Projects() {
       ),
     },
 
-    // FIXME: 복사용
+    // 복사용
     // 이름: ({
     //   background: <div></div>,
     //   review: <div></div>,
@@ -304,6 +304,7 @@ export default function Projects() {
       },
       href: 'http://m.site.naver.com/1bs6T',
       src: 'https://qrcodethumb-phinf.pstatic.net/20230721_27/1689878458774mQGya_PNG/1bs6T.png',
+      precautions: '백엔드 aws 만료로 정상적인 동작이 안될 수 있습니다.',
     },
     {
       id: 2,
@@ -397,10 +398,7 @@ export default function Projects() {
             </div>
             <div className='p-6 pt-[120px] md:pt-[160px] lg:flex lg:flex-row'>
               <div className='flex flex-col md:ml-[100px]'>
-                {/* <div className=' md:w-[800px]'> */}
                 <ImageComponent {...project}></ImageComponent>
-                {/* </div> */}
-
                 <div>
                   <div className='mb-1 '>
                     GitHub:{' '}
@@ -423,6 +421,9 @@ export default function Projects() {
                     >
                       {project.deployment}
                     </a>
+                    {project.precautions ? (
+                      <div>({project.precautions})</div>
+                    ) : null}
                   </div>
                   {/* QR코드 */}
                   <div className='flex flex-col items-center p-5 mb-5 bg-mycolor1 rounded-[50px]'>
@@ -441,14 +442,10 @@ export default function Projects() {
               </div>
 
               <div className='md:ml-[100px] md:mr-[100px]'>
-                {/* FIXME: 안쓰면 삭제하기 */}
-                {/* <hr className='border-t border-gray-400 my-5' /> */}
-
                 <div className='mb-10'>
                   <h1 className='text-3xl mb-5 font-bold'>요약</h1>
                   <p className='text-base md:text-xl'>{project.description}</p>
                 </div>
-                {/* <p>주요기능</p> */}
                 <div className='mb-10 text-base md:text-xl'>
                   <h1 className='text-3xl mb-5 font-bold'>기술</h1>
                   <div>프론트엔드: {project.stack.frontend}</div>
@@ -469,7 +466,6 @@ export default function Projects() {
                 <div className='mb-10'>
                   <h1 className='text-3xl mb-5 font-bold'>후기</h1>
                   <div className='text-base md:text-xl'>{project.review}</div>
-                  {/* <div>테스트 계정</div> */}
                 </div>
               </div>
             </div>

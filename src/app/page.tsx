@@ -6,9 +6,6 @@ import Projects from './Projects';
 import ScrollToTop from './components/ScrollToTop';
 
 export default function Home() {
-  // 로딩 컴포넌트
-  // <FontAwesomeIcon icon={faSpinner} className='animate-spin h-5 w-5' />
-
   return (
     <div>
       <Navbar />
