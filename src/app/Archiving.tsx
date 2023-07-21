@@ -40,7 +40,7 @@ export default function Archiving() {
             noreferrer: 링크를 통해 이동할 때 HTTP 리퍼러(Referer) 헤더를 전송하지 않도록 방지합니다. 이는 사용자의 개인 정보 보호를 위해 사용됩니다.
             따라서 rel='noopener noreferrer'는 보안 및 개인 정보 보호 측면에서 링크를 안전하게 처리하기 위해 사용되는 속성입니다.
             */
-            className='flex items-center justify-start p-6 bg-white rounded-[10px]'
+            className='flex items-center justify-start p-6 bg-white rounded-[10px] hover:bg-slate-200'
           >
             <Image
               src={item.logo}

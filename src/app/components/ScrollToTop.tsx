@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 
 export default function ScrollToTop() {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
 
   const handleScrollToTop = (): void => {
     window.scrollTo({
@@ -12,7 +12,7 @@ export default function ScrollToTop() {
     });
   };
 
-  const onScroll = () => {
+  const onScroll = (): void => {
     // 스크롤이 위치에 따라 top버튼을 화면에 렌더링 할지 여부
     if (window.scrollY > 50) {
       setIsVisible(true);

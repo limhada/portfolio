@@ -34,7 +34,7 @@ export default function Navbar() {
     { title: 'PROJECTS' },
   ];
 
-  const [menuBt, SetMenuBt] = useState(false);
+  const [menuBt, SetMenuBt] = useState<boolean>(false);
 
   const handleClickOutside = (event: MouseEvent) => {
     const target = event.target as HTMLElement;
