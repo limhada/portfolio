@@ -47,13 +47,13 @@ export default function Home() {
       </div>
       {/* <div className='flex flex-col  px-5 py-5 bg-white font-bold'>
         <h3
-          id='PROJECTS'
+          id='CAREER'
           className='mb-5 text-xl text-center md:text-2xl lg:text-3xl'
         >
           CAREER
         </h3>
         <div>
-          내용~
+          내용??
         </div>
       </div> */}
       <ScrollToTop />

@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import './globals.css';
 import { Inter } from 'next/font/google';
+
 
 const inter = Inter({ subsets: ['latin'] });
 // subsets는 폰트에서 사용할 문자 집합을 지정하는 옵션
@@ -22,6 +22,8 @@ export default function RootLayout({
   // RootLayout 컴포넌트는 children이라는 속성을 받아올 때 해당 속성이 JSX 요소나 React 컴포넌트를 포함한 어떤 값이라도 받아들일 수 있게 됨
   children: React.ReactNode;
 }) {
+
+
   return (
     <html lang='en'>
       <head>
@@ -54,14 +56,13 @@ export default function RootLayout({
         />
         {/* <meta property="og:type" content="Type of Page (e.g., website, article, video, etc.)" /> */}
         <meta property='og:type' content='website' />
-        <meta property="og:site_name" content="LJJ Portfolio" />
+        <meta property='og:site_name' content='LJJ Portfolio' />
 
         {/* 로봇 메타태그 */}
         {/* <meta name="naver-site-verification" content="your-site-verification-key"/> */}
         {/* 네이버 웹마스터 도구에서 제공하는 사이트 인증 키를 사용하여 웹 페이지가 네이버 검색 엔진에 정상적으로 등록되었는지 확인할 수 있습니다. */}
         <meta name='naverbot' content='index,follow' />
         <meta name='robots' content='index, follow' />
-        
 
         <link
           rel='icon'
@@ -81,6 +82,7 @@ export default function RootLayout({
           sizes='96x96'
           href='/favicon/favicon-96x96.png'
         />
+
       </head>
       <body className={inter.className}>{children}</body>
       {/* 
