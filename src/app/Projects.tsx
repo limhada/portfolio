@@ -449,7 +449,7 @@ export default function Projects() {
                   {/* QR코드 */}
                   <div className='flex flex-col items-center p-5 mb-5 bg-mycolor1 rounded-[50px]'>
                     <a href={project.href} target='_blank'>
-                      <img src={project.src} />
+                      <img src={project.src} alt="QR코드"/>
                     </a>
                     <div className='text-white mt-1'>{project.title}</div>
                     <div className='text-white mt-3'>
