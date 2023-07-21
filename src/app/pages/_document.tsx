@@ -1,26 +1,36 @@
-import { Head, Html, Main, NextScript } from 'next/document';
+// pages/_document.tsx
 
-export default function MyDocument() {
-  return (
-    <Html lang="ko">
-      {/* ... */}
-      <body>
-        <Main />
-        <NextScript />
+import Document, { Html, Head, Main, NextScript } from "next/document";
 
-        {/* Global Site Tag (gtag.js) - Google Analytics */}
-        {process.env.NODE_ENV !== 'development' && (
+class MyDocument extends Document {
+  render() {
+    return (
+      <Html>
+        <Head>
+          {/* GA4 gtag 스크립트 추가 */}
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-7KN64VCFVV"
+          ></script>
           <script
             dangerouslySetInnerHTML={{
               __html: `
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
+
+                gtag('config', 'G-7KN64VCFVV');
               `,
             }}
-          />
-        )}
-      </body>
-    </Html>
-  );
+          ></script>
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
 }
+
+export default MyDocument;
