@@ -18,21 +18,26 @@ export default function Projects() {
     background: React.ReactNode;
     imageName: string;
     review: React.ReactNode;
-    stack: Stack;
+    stack: {
+      frontend: string;
+      backend: string;
+      deployment: string;
+      database: string;
+    };
     href: string;
     src: string;
     precautions?: string;
   }
 
-  interface Stack {
-    frontend: string;
-    backend: string;
-    deployment: string;
-    database: string;
+  interface ContentData {
+    [key: string]: {
+      background: JSX.Element;
+      review: JSX.Element;
+    };
   }
 
   // 근로그 로그인 안해도 둘러볼 수 있게 재배포할지 고민하기
-  const contentData = {
+  const contentData: ContentData = {
     guenlog: {
       background: (
         <div>
@@ -389,7 +394,7 @@ export default function Projects() {
     },
   ];
 
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState<boolean>(false);
   const [modalContent, setModalContent] = useState<React.ReactNode | null>(
     null
   );
@@ -449,7 +454,7 @@ export default function Projects() {
                   {/* QR코드 */}
                   <div className='flex flex-col items-center p-5 mb-5 bg-mycolor1 rounded-[50px]'>
                     <a href={project.href} target='_blank'>
-                      <img src={project.src} alt="QR코드"/>
+                      <img src={project.src} alt='QR코드' />
                     </a>
                     <div className='text-white mt-1'>{project.title}</div>
                     <div className='text-white mt-3'>
@@ -498,7 +503,7 @@ export default function Projects() {
     setShowModal(true);
   };
 
-  const handleKeyDown = (e: KeyboardEvent) => {
+  const handleKeyDown = (e: KeyboardEvent): void => {
     if (e.key === 'Escape') {
       setShowModal(false);
     }
