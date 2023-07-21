@@ -4,10 +4,12 @@ import Archiving from './Archiving';
 import Skills from './Skills';
 import Projects from './Projects';
 import ScrollToTop from './components/ScrollToTop';
+import GoogleAnalytics from './components/GoogleAnalytics';
 
 export default function Home() {
   return (
     <div>
+      <GoogleAnalytics />
       <Navbar />
       <div className='flex flex-col items-center px-5 py-5'>
         <h3
