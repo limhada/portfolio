@@ -53,7 +53,7 @@ export default function Home() {
           CAREER
         </h3>
         <div>
-          내용~
+          내용??
         </div>
       </div> */}
       <ScrollToTop />
