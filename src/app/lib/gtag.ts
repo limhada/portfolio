@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 
-export const GA_TRACKING_ID = '<어짜피 HTML에 노출된다>';
+export const GA_TRACKING_ID = 'G-7KN64VCFVV';
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
 export const pageview = (url: URL) => {
@@ -13,7 +13,7 @@ export const pageview = (url: URL) => {
 // https://developers.google.com/analytics/devguides/collection/gtagjs/events
 export const event = (
   action: Gtag.EventNames,
-  { event_category, event_label, value }: Gtag.EventParams,
+  { event_category, event_label, value }: Gtag.EventParams
 ) => {
   window.gtag('event', action, {
     event_category,
