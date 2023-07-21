@@ -1,4 +1,3 @@
-//components/GoogleAnalytics.tsx
 import { useRouter } from "next/router";
 import Script from "next/script";
 import { memo, useEffect } from "react";
@@ -7,11 +6,11 @@ const GoogleAnalytics = () => {
   const router = useRouter();
   // 👇 send page views when users gets to the landing page
   useEffect(() => {
-    if (!TRACKING_ID || router.isPreview) return;
-    gtag("config", TRACKING_ID, {
+    if (!TRACKING_ID || router.isPreview || typeof window === 'undefined') return;
+    window.gtag("config", TRACKING_ID, {
       send_page_view: false, //manually send page views to have full control
     });
-    gtag("event", "page_view", {
+    window.gtag("event", "page_view", {
       page_path: window.location.pathname,
       send_to: TRACKING_ID,
     });
@@ -19,9 +18,9 @@ const GoogleAnalytics = () => {
   // 👇 send page views on route change
   useEffect(() => {
     const handleRouteChange = (url: string) => {
-      if (!TRACKING_ID || router.isPreview) return;
+      if (!TRACKING_ID || router.isPreview || typeof window === 'undefined') return;
       // manually send page views
-      gtag("event", "page_view", {
+      window.gtag("event", "page_view", {
         page_path: url,
         send_to: TRACKING_ID,
       });
@@ -57,4 +56,3 @@ const GoogleAnalytics = () => {
   );
 };
 export default memo(GoogleAnalytics);
-
