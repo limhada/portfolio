@@ -1,10 +1,7 @@
 export default function Skills() {
   return (
     <div className='flex flex-col flex-wrap justify-start items-center w-[350px] h-[900px] md:w-[600px] md:h-[1100px] '>
-      {/* FIXME: 테두리 굵기, 및 색 정하기 or 테투리 할지 안할지 정하기*/}
       <div className='border-4 p-2 m-2 rounded-[10px] border-mycolor3 bg-mycolor3'>
-        {/* FIXME: 색 확정하기, 글씨크기 정하기 */}
-        {/* <div className='text-orange-400'>Frontend</div> */}
         <div className='text-orange-400 font-bold mb-4'>Frontend</div>
         <img
           src='https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white'
@@ -60,7 +57,6 @@ export default function Skills() {
         ></img>
       </div>
 
-     
       <div className='border-4 p-2 m-2 rounded-[10px] border-white bg-mycolor3'>
         <div className='text-orange-400 font-bold mb-4'>Backend</div>
         <img
@@ -73,10 +69,6 @@ export default function Skills() {
         ></img>
       </div>
 
-
- 
-
-
       <div className='border-4 p-2 m-2 rounded-[10px] border-white bg-mycolor3'>
         <div className='text-orange-400 font-bold mb-4'>Deployment</div>
         <img
@@ -84,20 +76,20 @@ export default function Skills() {
           className='w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[50px] mb-2'
         ></img>
         <img
-  src="https://img.shields.io/badge/AWS_Lambda-FF9900?style=for-the-badge&logo=aws-lambda&logoColor=white"
-  alt="AWS Lambda badge"
-  className="w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[50px] mb-2"
-/>
-<img
-  src="https://img.shields.io/badge/AWS_S3-FF9900?style=for-the-badge&logo=amazon-s3&logoColor=white"
-  alt="AWS S3 badge"
-  className="w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[50px] mb-2"
-/>
-<img
-  src="https://img.shields.io/badge/AWS_EC2-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white"
-  alt="AWS EC2 badge"
-  className="w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[50px] mb-2"
-/>
+          src='https://img.shields.io/badge/AWS_Lambda-FF9900?style=for-the-badge&logo=aws-lambda&logoColor=white'
+          alt='AWS Lambda badge'
+          className='w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[50px] mb-2'
+        />
+        <img
+          src='https://img.shields.io/badge/AWS_S3-FF9900?style=for-the-badge&logo=amazon-s3&logoColor=white'
+          alt='AWS S3 badge'
+          className='w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[50px] mb-2'
+        />
+        <img
+          src='https://img.shields.io/badge/AWS_EC2-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white'
+          alt='AWS EC2 badge'
+          className='w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[50px] mb-2'
+        />
         <img
           src='https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white'
           className='w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[50px] mb-2'
@@ -106,10 +98,6 @@ export default function Skills() {
           src='https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white'
           className='w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[50px] mb-2'
         ></img>
-
-
-
-
       </div>
 
       <div className='border-4 p-2 m-2 rounded-[10px] border-white bg-mycolor3'>

@@ -4,8 +4,6 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 
-// import Link from 'next/link';
-
 export default function Navbar() {
   const handleScrollToTop = (): void => {
     window.scrollTo({
@@ -76,9 +74,6 @@ export default function Navbar() {
             <br />
             Portfolio
           </div>
-          {/* FIXME: 수정하기 top버튼만들고 LJJPortfolio 클릭 시 메인페이지로 이동하게 */}
-          {/* 목차1 목차2 버튼 영역 글씨에 딱맞게 조정하기 */}
-
           <FontAwesomeIcon
             icon={faBars}
             onClick={() => SetMenuBt(!menuBt)}
@@ -93,7 +88,6 @@ export default function Navbar() {
                 onClick={() => {
                   handleScroll(title);
                 }}
-                // FIXME: 높이 다시 설정하기
                 className='mx-[10px] my-[10px] cursor-pointer h-[30%] text-slate-500 hover:text-mycolor1 '
               >
                 {title}
@@ -110,8 +104,7 @@ export default function Navbar() {
                   handleScroll(title);
                   SetMenuBt(!menuBt);
                 }}
-                // FIXME: 배경색 변경하기
-                className='mx-[10px] my-[10px] cursor-pointer font-bold hover:text-mycolor1 text-slate-500' // bg-slate-200
+                className='mx-[10px] my-[10px] cursor-pointer font-bold hover:text-mycolor1 text-slate-500'
                 style={{ width: 'max-content' }}
               >
                 {title}
@@ -128,7 +121,7 @@ export default function Navbar() {
             </div> */}
             <p className='text-[20px] md:text-[40px] lg:text-[50px]'>
               <br />
-               꾸준함을 실천하고 몰입을 즐기며
+              꾸준함을 실천하고 몰입을 즐기며
               <br />웹 프론트엔드 개발자로 성장을 추구하는
               <br />
               임종정입니다.

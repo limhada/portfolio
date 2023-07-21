@@ -1,16 +1,16 @@
 'use client';
 
 import Image /* {StaticImageData} */ from 'next/image';
-// import Link from 'next/link';
+
 import { useState, useEffect } from 'react';
 import ImageComponent from './components/ImageComponent';
-// import bg from '../../public/bg.jpeg';
-// import bg2 from '../../public/bg.jpeg';
+
 
 export default function Projects() {
   interface Project {
     id: number;
-    // image: StaticImageData; // 이미지파일 import 해서 사용할 때 지정하는 타입
+    // image: StaticImageData;
+    // 이미지파일 import 해서 사용할 때 지정하는 타입
     image: string;
     title: string;
     description: string;
@@ -20,6 +20,9 @@ export default function Projects() {
     imageName: string;
     review: React.ReactNode;
     stack: Stack;
+    href: string;
+    src: string;
+    precautions?: string;
   }
 
   interface Stack {
@@ -29,7 +32,6 @@ export default function Projects() {
     database: string;
   }
 
-  // FIXME: 근로그 테스트계정 및 배포 주소 백엔드 기능 x aws 기간 만료
   // 근로그 로그인 안해도 둘러볼 수 있게 재배포할지 고민하기
   const contentData = {
     guenlog: {
@@ -57,7 +59,6 @@ export default function Projects() {
         </div>
       ),
       review: (
-        // FIXME: 줄바꿈 하기
         <div>
           평소에 흔하게 사용하는 로그인과 로그아웃 기능을 직접 구현해보니
           생각보다 쉽지 않았습니다. 여러 기능들이 모여 하나의 프로젝트가
@@ -97,7 +98,6 @@ export default function Projects() {
           이번일을 계기로 팀원들과의 소통이 무엇보다 중요하다는 점을 느꼈습니다.
           여러 사람들의 의견을 통해 다양한 방법을 시도한 끝에 해결방법을 찾을 수
           있었기 때문입니다.
-          {/* FIXME: 추가 내용 근로그를 만들어서 평소에 취미로 하던 운동을 조금 더 재미있게 즐길 수 있게 되었다. 등등 내용 추가하기 */}
         </div>
       ),
     },
@@ -167,23 +167,25 @@ export default function Projects() {
         <div>
           Big Five Personality Traits 심리테스트는 성격 유형의 다섯 가지
           특성(성실성, 외향성, 우호성, 신경성, 개방성)을 분석하여 개개인의
-          성격을 평가하는 독특하고 흥미로운 방법이었습니다. 15개의 질문들을 통해
-          금방 나만의 성격 유형을 찾아낼 수 있었고, 그 결과를 바탕으로 자기
-          성장과 발전에 대한 귀중한 인사이트를 얻을 수 있었습니다.
+          성격을 평가하는 흥미로운 방법이었습니다. 15개의 질문들을 통해 금방
+          나만의 성격 유형을 찾아낼 수 있었고, 그 결과를 바탕으로 자신에 대해
+          조금이나마 알 수 있었고 이것을 토대로 자신의 성장과 발전에 대한 귀중한
+          인사이트를 얻을 수도 있었습니다.
           <br />
-          구글 애널리틱스GA4를 처음 사용하여 웹 및 앱 트래픽을 분석함으로써,
-          서비스 사용자 수를 확인할 수 있었습니다. 이로 인해 서비스를 이용하는
+          구글 애널리틱스GA4를 사용하여 웹 및 앱 트래픽을 분석함으로써, 서비스
+          사용자 수를 확인할 수 있었습니다. 이로 인해 서비스를 이용하는
           사용자들이 머무는 시간이 너무 짧다는 것을 알게 되었습니다.
           <br />
           이처럼 개선할 수 있는 부분에 대한 중요한 정보를 얻을 수 있었습니다.
-          카카오톡 링크를 공유할 때 메타태그를 추가하여 공유 시 썸네일과 제목이
-          올바르게 표시되도록 설정하였습니다.
+          다음 프로젝트를 진행할 때는 이런 점들을 좀 더 보완하고 신경쓰야겠다고
+          느꼈습니다. 카카오톡 링크를 공유할 때 메타태그를 추가하여 공유 시
+          썸네일과 제목이 원하는 대로 올바르게 표시되도록 설정하였습니다.
           <br />
-          BingImageCreator 를 사용하여 귀여운 동물들을 만들 수 있었고 프롬프트
-          작성에 대한 중요성을 인지하게 되었습니다.
+          BingImageCreator를 사용하여 귀여운 동물들의 이미지를 만들 수 있었고
+          프롬프트 작성에 대한 중요성을 인지하게 되었습니다.
           <br />
-          ChatGPT를 활용하여 BigFive기법과 같은 생소한 정보를 보다 정확하게
-          이해하고 원하는 형태로 사용하는 방법을 습득했습니다.
+          ChatGPT를 활용하여 BigFive기법과 같은 생소한 정보와 지식을 보다
+          정확하게 이해하고 원하는 형태로 사용하는 방법을 습득했습니다.
         </div>
       ),
     },
@@ -218,13 +220,17 @@ export default function Projects() {
           사용해보았습니다.
           <br />
           인프라 관리는 AWS Lambda가 처리하기 때문에 사용자는 오직 코드 작성에만
-          집중할 수 있게 서버 관리의 불필요, 람다 함수를 사용하면 AWS가 자동으로
-          확장 처리를 수행하므로, 트래픽이 증가하더라도 성능에 영향을 받지 않는
-          확장성과 실행 시간에 따른 비용 효율성을 느낄 수 있었습니다.
+          집중할 수 있게 서버 관리의 불필요함에 대한 편리함을 느꼈습니다. 그리고
+          람다 함수를 사용하면 AWS가 자동으로 확장 처리를 수행하므로, 트래픽이
+          증가하더라도 성능에 영향을 받지 않는 확장성 부분은 많은 사용자가
+          몰리지 않아 체감할 수는 없었지만 트래픽이 급증하는 프로젝트를 진행하게
+          된다면 유용하게 사용해 볼 수 있다는 생각이 들었습니다. 또한, 계속
+          비용이 발생하는 것이 아닌 실행 시간에 따른 비용 발생으로 부담이 적어
+          비용적으로 와닿게 효율성을 느낄 수 있었습니다.
           <br />
           ChatGPT와 같은 AI를 활용하면 운세뿐만 아니라 의료 상담, 금융, 여행,
-          건강 등 다양한 분야의 서비스를 더욱 쉽게 구축하고 사용자들에게 향상된
-          경험을 제공할 수 있겠다는 생각이 들었습니다.
+          건강 등 다양한 분야의 서비스를 더욱 쉽게 구축하고 사용자분들에게
+          향상된 경험을 제공할 수 있겠다는 생각이 들었습니다.
           <br />
           카카오애드핏으로 광고 수익과 부가적으로 toss를 통한 기부로 수익모델을
           만들었습니다.
@@ -240,10 +246,11 @@ export default function Projects() {
           웹 프론트엔드 기술인 Next.js, TypeScript, TailwindCSS를 학습과 적용을
           목표로 개발하였습니다.
           <br />
-          기존의 React는 자체로 서버 렌더링을 지원하지 않아 검색 엔진
-          최적화(SEO)에 불리함을 해결하기 위해 Next.js를 사용하게 되었습니다.
+          기존의 React는 자체로 서버 렌더링을 지원하지 않아 경험해 보고 싶은
+          마음에 자체 서버 렌더링을 지원하는 Next.js를 사용하게 되었습니다.
           <br />
-          그리고 실시간으로 업데이트되는 콘텐츠가 아니기 때문에 정적 사이트
+          그리고 실시간으로 업데이트되는 콘텐츠가 아니며 사용자 인터랙션에 따라
+          즉각적으로 변하는 콘텐츠를 다루려는 목적이 아니기 때문에 정적 사이트
           생성(SSG) 기능을 활용할 수 있는 Next.js가 적합했습니다.
         </div>
       ),
@@ -269,7 +276,7 @@ export default function Projects() {
       ),
     },
 
-    // FIXME: 복사용
+    // 복사용
     // 이름: ({
     //   background: <div></div>,
     //   review: <div></div>,
@@ -295,6 +302,9 @@ export default function Projects() {
         deployment: 'vercel, aws,',
         database: 'mysql',
       },
+      href: 'http://m.site.naver.com/1bs6T',
+      src: 'https://qrcodethumb-phinf.pstatic.net/20230721_27/1689878458774mQGya_PNG/1bs6T.png',
+      precautions: '백엔드 aws 만료로 정상적인 동작이 안될 수 있습니다.',
     },
     {
       id: 2,
@@ -302,7 +312,7 @@ export default function Projects() {
       imageName: 'animaltest',
       title: '동물 성격유형 테스트 (개인)',
       github: 'https://github.com/limhada/animal-personality-type-test',
-      deployment: 'https://animal-personality-type-test.vercel.app/',
+      deployment: 'https://animal-personality-type-test.vercel.app',
       description:
         'Big Five 기법을 사용하여 성격 유형을 테스트하고 나의 성격을 대표하는 동물들을 찾아볼 수 있습니다.',
       background: contentData.animaltest.background,
@@ -313,6 +323,8 @@ export default function Projects() {
         deployment: 'vercel',
         database: '',
       },
+      href: 'http://m.site.naver.com/1bs7A',
+      src: 'https://qrcodethumb-phinf.pstatic.net/20230721_169/16898783663251kha4_PNG/1bs7A.png',
     },
     {
       id: 3,
@@ -320,7 +332,7 @@ export default function Projects() {
       imageName: 'fortuneteller',
       title: '운세 보는 깜냥이 (개인)',
       github: 'https://github.com/limhada/fortuneteller',
-      deployment: 'https://fortuneteller-eqt.pages.dev/',
+      deployment: 'https://fortuneteller-eqt.pages.dev',
       description:
         '인공지능 AI인 ChatGPT를 기반으로 구현하여 깜냥이에게 사람과의 대화처럼 운세를 질문하고 상담할 수 있습니다.',
       background: contentData.fortuneteller.background,
@@ -331,6 +343,8 @@ export default function Projects() {
         deployment: 'cloudflare Pages',
         database: '',
       },
+      href: 'http://m.site.naver.com/1bs7F',
+      src: 'https://qrcodethumb-phinf.pstatic.net/20230721_187/168987862327391bjo_PNG/1bs7F.png',
     },
     {
       id: 4,
@@ -338,7 +352,7 @@ export default function Projects() {
       imageName: 'portfolio',
       title: '포트폴리오 웹사이트 (개인)',
       github: 'https://github.com/limhada/portfolio',
-      deployment: 'https://portfolio-limhada.vercel.app/',
+      deployment: 'https://portfolio-limhada.vercel.app',
       description:
         '자기소개, 기술 스택, 프로젝트, 블로그 등을 소개하는 페이지입니다.',
       background: contentData.portfolio.background,
@@ -349,6 +363,8 @@ export default function Projects() {
         deployment: 'vercel',
         database: '',
       },
+      href: 'http://m.site.naver.com/1bs7H',
+      src: 'https://qrcodethumb-phinf.pstatic.net/20230721_94/1689878700567MDEQz_PNG/1bs7H.png',
     },
   ];
 
@@ -380,15 +396,9 @@ export default function Projects() {
                 </button>
               </div>
             </div>
-            <div className='p-6 pt-[120px] lg:flex lg:flex-row'>
-              {/* FIXME: 상세내용 projects에 추가하기  */}
-              {/* <h1 className='text-5xl mt-5'>프로젝트 제목: {project.title}</h1> */}
-
+            <div className='p-6 pt-[120px] md:pt-[160px] lg:flex lg:flex-row'>
               <div className='flex flex-col md:ml-[100px]'>
-                {/* <div className=' md:w-[800px]'> */}
                 <ImageComponent {...project}></ImageComponent>
-                {/* </div> */}
-
                 <div>
                   <div className='mb-1 '>
                     GitHub:{' '}
@@ -411,23 +421,31 @@ export default function Projects() {
                     >
                       {project.deployment}
                     </a>
+                    {project.precautions ? (
+                      <div>({project.precautions})</div>
+                    ) : null}
                   </div>
-                  <div>
-                    QR코드 자리
-                    {/* FIXME: QR코드 넣기 */}
+                  {/* QR코드 */}
+                  <div className='flex flex-col items-center p-5 mb-5 bg-mycolor1 rounded-[50px]'>
+                    <a href={project.href} target='_blank'>
+                      <img src={project.src} />
+                    </a>
+                    <div className='text-white mt-1'>{project.title}</div>
+                    <div className='text-white mt-3'>
+                      스마트폰에서 확인해 보세요!
+                    </div>
+                    <div className='text-white mt-1'>
+                      (크롬 혹은 사파리를 권장합니다)
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div className='md:ml-[100px]'>
-                {/* FIXME: 안쓰면 삭제하기 */}
-                {/* <hr className='border-t border-gray-400 my-5' /> */}
-
+              <div className='md:ml-[100px] md:mr-[100px]'>
                 <div className='mb-10'>
                   <h1 className='text-3xl mb-5 font-bold'>요약</h1>
                   <p className='text-base md:text-xl'>{project.description}</p>
                 </div>
-                {/* <p>주요기능</p> */}
                 <div className='mb-10 text-base md:text-xl'>
                   <h1 className='text-3xl mb-5 font-bold'>기술</h1>
                   <div>프론트엔드: {project.stack.frontend}</div>
@@ -448,7 +466,6 @@ export default function Projects() {
                 <div className='mb-10'>
                   <h1 className='text-3xl mb-5 font-bold'>후기</h1>
                   <div className='text-base md:text-xl'>{project.review}</div>
-                  {/* <div>테스트 계정</div> */}
                 </div>
               </div>
             </div>
@@ -487,9 +504,6 @@ export default function Projects() {
         {/* 모달 */}
         {showModal && <div>{modalContent}</div>}
       </div>
-
-      {/* FIXME: 프로젝트 내용 넣기 마우스 클릭 시 프로젝트 상세페이지 or  */}
-
       <div>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-[20px] md:px-[10%] lg:px-[20%] drop-shadow-lg pb-10'>
           {projects.map((el) => (
