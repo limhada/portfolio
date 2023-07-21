@@ -2,7 +2,7 @@
 
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import GoogleAnalytics from "./components/GoogleAnalytics";
+import GoogleAnalytics from "../components/GoogleAnalytics";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
