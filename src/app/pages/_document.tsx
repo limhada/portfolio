@@ -1,36 +1,27 @@
-// pages/_document.tsx
+//pages/document.tsx
 
-import Document, { Html, Head, Main, NextScript } from "next/document";
+import { Html, Head, Main, NextScript } from "next/document";
 
-class MyDocument extends Document {
-  render() {
-    return (
-      <Html>
-        <Head>
-          {/* GA4 gtag 스크립트 추가 */}
-          <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-7KN64VCFVV"
-          ></script>
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
+export default function Document() {
+  return (
+    <Html>
+      <Head />
+      <body>
+        <Main />
+        <NextScript />
 
-                gtag('config', 'G-7KN64VCFVV');
-              `,
-            }}
-          ></script>
-        </Head>
-        <body>
-          <Main />
-          <NextScript />
-        </body>
-      </Html>
-    );
-  }
+        {/* Global Site Tag (gtag.js) - Google Analytics */}
+        {/* Necessary to prevent error: window.gtag is not defined for Next.js-hydration */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          `,
+          }}
+        />
+      </body>
+    </Html>
+  );
 }
-
-export default MyDocument;
