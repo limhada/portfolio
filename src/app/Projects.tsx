@@ -360,7 +360,7 @@ export default function Projects() {
       review: contentData.fortuneteller.review,
       stack: {
         frontend: 'JavaScript',
-        backend: 'node.js Express, AWS Lambda Functions, serverless-http',
+        backend: 'node.js Express, AWS Lambda Functions',
         deployment: 'cloudflare Pages',
         database: '',
       },
