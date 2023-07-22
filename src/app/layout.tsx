@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import GoogleAnalytics from './components/GoogleAnalytics';
 import './globals.css';
 import { Inter } from 'next/font/google';
@@ -25,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <Head>
+      <head>
         {process.env.GA4_TRACKING_ID && (
           <GoogleAnalytics
             GA4_TRACKING_ID={process.env.GA4_TRACKING_ID as string}
@@ -36,6 +35,7 @@ export default function RootLayout({
           name='google-site-verification'
           content='BrM_y3EPAr9M_IHutlP1nEnWmnCz57NOIlrl85V79u4'
         />
+        
         <title>LJJ Portfolio</title>
         <meta
           name='description'
@@ -91,7 +91,7 @@ export default function RootLayout({
           sizes='96x96'
           href='/favicon/favicon-96x96.png'
         />
-      </Head>
+      </head>
       <body className={inter.className}>{children}</body>
       {/* 
       RootLayout 컴포넌트의 <body> 요소에 Inter 폰트의 스타일이 적용
