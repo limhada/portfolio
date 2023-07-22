@@ -30,12 +30,17 @@ export default function RootLayout({
             GA4_TRACKING_ID={process.env.GA4_TRACKING_ID as string}
           />
         )}
-        {/* 구글 서치콘솔 추가 */}
+        {/* 구글 서치콘솔 */}
         <meta
           name='google-site-verification'
           content='BrM_y3EPAr9M_IHutlP1nEnWmnCz57NOIlrl85V79u4'
         />
-        
+        {/* 네이버 웹마스터도구 */}
+        <meta
+          name='naver-site-verification'
+          content='0efd18d7a9aa2ee40d748298fc6bbd4178026585'
+        />
+
         <title>LJJ Portfolio</title>
         <meta
           name='description'
