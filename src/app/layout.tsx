@@ -28,7 +28,9 @@ export default function RootLayout({
   return (
     
     <html lang='en'>
+       {process.env.GA4_TRACKING_ID && (
       <GoogleAnalytics GA4_TRACKING_ID={process.env.GA_TRACKING_ID as string} />
+      )}
       <head>
         <title>LJJ Portfolio</title>
         <meta
