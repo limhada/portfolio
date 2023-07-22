@@ -2,7 +2,6 @@ import GoogleAnalytics from './components/GoogleAnalytics';
 import './globals.css';
 import { Inter } from 'next/font/google';
 
-
 const inter = Inter({ subsets: ['latin'] });
 // subsets는 폰트에서 사용할 문자 집합을 지정하는 옵션
 // latin은 서브셋(subset)의 하나로, 라틴 알파벳 문자 집합을 의미
@@ -23,15 +22,14 @@ export default function RootLayout({
   // RootLayout 컴포넌트는 children이라는 속성을 받아올 때 해당 속성이 JSX 요소나 React 컴포넌트를 포함한 어떤 값이라도 받아들일 수 있게 됨
   children: React.ReactNode;
 }) {
-
-
   return (
-    
     <html lang='en'>
-       {process.env.GA4_TRACKING_ID && (
-      <GoogleAnalytics GA4_TRACKING_ID={process.env.GA4_TRACKING_ID as string} />
-      )}
       <head>
+        {process.env.GA4_TRACKING_ID && (
+          <GoogleAnalytics
+            GA4_TRACKING_ID={process.env.GA4_TRACKING_ID as string}
+          />
+        )}
         <title>LJJ Portfolio</title>
         <meta
           name='description'
@@ -87,7 +85,6 @@ export default function RootLayout({
           sizes='96x96'
           href='/favicon/favicon-96x96.png'
         />
-
       </head>
       <body className={inter.className}>{children}</body>
       {/* 
