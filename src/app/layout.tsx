@@ -30,6 +30,11 @@ export default function RootLayout({
             GA4_TRACKING_ID={process.env.GA4_TRACKING_ID as string}
           />
         )}
+        {/* 구글 서치콘솔 추가 */}
+        <meta
+          name='google-site-verification'
+          content='BrM_y3EPAr9M_IHutlP1nEnWmnCz57NOIlrl85V79u4'
+        />
         <title>LJJ Portfolio</title>
         <meta
           name='description'
