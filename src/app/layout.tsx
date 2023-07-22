@@ -48,7 +48,7 @@ export default function RootLayout({
         />
         <meta
           name='keywords'
-          content='프론트엔드, frontend, 포트폴리오, portfolio, 웹개발자, 개발자'
+          content='LJJ 포트폴리오, LJJ portfolio, 임종정, 임종정 포트폴리오, 프론트엔드, 프론트엔드 포트폴리오, frontend portfolio, frontend, 포트폴리오, portfolio, 웹개발자, 개발자'
         />
 
         {/* 기별 표시 설정 */}
