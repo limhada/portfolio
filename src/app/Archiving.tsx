@@ -1,5 +1,4 @@
 import Image, { StaticImageData } from 'next/image';
-
 import logo_github from '../../public/logo_github.png';
 import logo_naver from '../../public/logo_naver.png';
 

@@ -1,5 +1,4 @@
 // GoogleAnalytics.tsx
-
 import Script from "next/script";
 
 const GoogleAnalytics = ({ GA4_TRACKING_ID }: { GA4_TRACKING_ID: string }) => {
@@ -14,7 +13,6 @@ const GoogleAnalytics = ({ GA4_TRACKING_ID }: { GA4_TRACKING_ID: string }) => {
         window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-
           gtag('config', "${GA4_TRACKING_ID}");
         `}
       </Script>

@@ -79,8 +79,6 @@ export default function Navbar() {
             onClick={() => SetMenuBt(!menuBt)}
             className='md:hidden mt-[20px] mr-[10px] w-[25px] h-[25px] z-50 hover:text-mycolor1 cursor-pointer'
           />
-
-          {/* <div className='flex flex-row mt-3 '> */}
           <div className='hidden md:flex flex-row mt-[10px] font-bold'>
             {data.map(({ title }, i) => (
               <div

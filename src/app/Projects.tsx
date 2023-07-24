@@ -415,7 +415,6 @@ export default function Projects() {
                 {/* 모달 닫기 버튼 */}
                 <button
                   onClick={() => setShowModal(false)}
-                  // className='bg-mycolor3 w-10 h-10 md:w-14 md:h-14 m-2 rounded-tl-full rounded-bl-full rounded-br-full'
                   className='bg-mycolor5 h-10 w-10 lg:w-14 lg:h-14 m-2 rounded-tl-full rounded-bl-full rounded-br-full'
                 >
                   닫기
@@ -554,7 +553,6 @@ export default function Projects() {
                   </h3>
                   <hr />
                 </header>
-
                 <p className='text-sm text-gray-400 mt-4 h-auto'>
                   {el.description}
                 </p>
