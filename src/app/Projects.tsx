@@ -35,8 +35,6 @@ export default function Projects() {
       review: JSX.Element;
     };
   }
-
-  // 근로그 로그인 안해도 둘러볼 수 있게 재배포할지 고민하기
   const contentData: ContentData = {
     guenlog: {
       background: (
