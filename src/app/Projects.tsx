@@ -8,7 +8,6 @@ import ImageComponent from './components/ImageComponent';
 export default function Projects() {
   interface Project {
     id: number;
-    // image: StaticImageData;
     // 이미지파일 import 해서 사용할 때 지정하는 타입
     image: string;
     title: string;
@@ -35,8 +34,6 @@ export default function Projects() {
       review: JSX.Element;
     };
   }
-
-  // 근로그 로그인 안해도 둘러볼 수 있게 재배포할지 고민하기
   const contentData: ContentData = {
     guenlog: {
       background: (
