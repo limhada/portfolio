@@ -8,7 +8,6 @@ import ImageComponent from './components/ImageComponent';
 export default function Projects() {
   interface Project {
     id: number;
-    // image: StaticImageData;
     // 이미지파일 import 해서 사용할 때 지정하는 타입
     image: string;
     title: string;
