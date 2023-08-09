@@ -411,7 +411,10 @@ export default function Projects() {
               <div>
                 {/* 모달 닫기 버튼 */}
                 <button
-                  onClick={() => setShowModal(false)}
+                  onClick={() => {
+                    setShowModal(false);
+                    window.history.back(); // 이전 히스토리로 이동
+                  }}
                   className='bg-mycolor5 h-10 w-10 lg:w-14 lg:h-14 m-2 rounded-tl-full rounded-bl-full rounded-br-full'
                 >
                   닫기
@@ -502,21 +505,34 @@ export default function Projects() {
   const handleKeyDown = (e: KeyboardEvent): void => {
     if (e.key === 'Escape') {
       setShowModal(false);
+      window.history.back(); // 이전 히스토리로 이동
     }
   };
 
   // 모달 창이 활성화될 때 기존의 스크롤바를 숨기고 모달 창의 스크롤바만 보이게
   useEffect(() => {
+    // 모달창이 열려있을 때
     if (showModal) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden'; // 오버플로우(스크롤) 스타일을 숨기기
       document.addEventListener('keydown', handleKeyDown);
+
+      // 현재 URL을 브라우저 히스토리에 추가
+      window.history.pushState(null, '', location.href);
+
+      window.onpopstate = (event) => {
+        // 뒤로가기 버튼 클릭을 무시하고 현재 URL로 다시 pushState
+        window.history.pushState(null, '', location.href);
+        setShowModal(false); // 모달창 닫기
+        window.history.back(); // 이전 히스토리로 이동
+      };
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = 'unset'; // 오버플로우(스크롤) 스타일을 기본값으로 되돌리는 역할
     }
 
-    // 이벤트 리스너가 제거하여  메모리 누수가 방지 위해서  컴포넌트가 unmount될 때 이벤트 리스너를 제거
+    // 이벤트 리스너가 제거하여  메모리 누수가 방지 위해서 컴포넌트가 unmount될 때 이벤트 리스너를 제거
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
+      window.onpopstate = null; //window.onpopstate는 사용자가 브라우저의 뒤로가기 버튼을 클릭하거나 브라우저의 히스토리를 조작할 때 호출되는 이벤트 핸들러입니다. 위 코드에서는 해당 이벤트 핸들러를 null로 설정하여 제거
     };
   }, [showModal]);
 
