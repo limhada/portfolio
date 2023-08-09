@@ -519,6 +519,7 @@ export default function Projects() {
       // 현재 URL을 브라우저 히스토리에 추가
       window.history.pushState(null, '', location.href);
 
+      // window.onpopstate는 사용자가 브라우저의 뒤로가기 버튼을 클릭하거나 브라우저의 히스토리를 조작할 때 호출되는 이벤트 핸들러
       window.onpopstate = (event) => {
         // 뒤로가기 버튼 클릭을 무시하고 현재 URL로 다시 pushState
         window.history.pushState(null, '', location.href);
@@ -532,7 +533,7 @@ export default function Projects() {
     // 이벤트 리스너가 제거하여  메모리 누수가 방지 위해서 컴포넌트가 unmount될 때 이벤트 리스너를 제거
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
-      window.onpopstate = null; //window.onpopstate는 사용자가 브라우저의 뒤로가기 버튼을 클릭하거나 브라우저의 히스토리를 조작할 때 호출되는 이벤트 핸들러입니다. 위 코드에서는 해당 이벤트 핸들러를 null로 설정하여 제거
+      window.onpopstate = null; // 해당 이벤트 핸들러를 null로 설정하여 제거
     };
   }, [showModal]);
 
