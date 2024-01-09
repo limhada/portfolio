@@ -23,7 +23,6 @@ export default function Projects() {
       deployment: string;
       database: string;
     };
-    href: string;
     src: string;
     precautions?: string;
   }
@@ -298,8 +297,12 @@ export default function Projects() {
         </div>
       ),
     },
+    frankenshop: {
+      background: <div>ㅇ</div>,
+      review: <div>ㅇ</div>,
+    },
 
-    // 복사용
+    // FIXME: 복사용
     // 이름: ({
     //   background: <div></div>,
     //   review: <div></div>,
@@ -322,10 +325,9 @@ export default function Projects() {
         frontend:
           'react, react-router, JavaScript, TailwindCSS, styled-components, axios, Recoil',
         backend: 'Java, Spring Boot, Gradle',
-        deployment: 'vercel, aws,',
+        deployment: 'Vercel, aws,',
         database: 'mysql',
       },
-      href: 'http://m.site.naver.com/1bs6T',
       src: 'https://qrcodethumb-phinf.pstatic.net/20230721_27/1689878458774mQGya_PNG/1bs6T.png',
       precautions: '백엔드 aws 만료로 정상적인 동작이 안될 수 있습니다.',
     },
@@ -343,10 +345,9 @@ export default function Projects() {
       stack: {
         frontend: 'react, styled-components',
         backend: '',
-        deployment: 'vercel',
+        deployment: 'Vercel',
         database: '',
       },
-      href: 'http://m.site.naver.com/1bs7A',
       src: 'https://qrcodethumb-phinf.pstatic.net/20230721_169/16898783663251kha4_PNG/1bs7A.png',
     },
     {
@@ -366,7 +367,6 @@ export default function Projects() {
         deployment: 'cloudflare Pages',
         database: '',
       },
-      href: 'http://m.site.naver.com/1bs7F',
       src: 'https://qrcodethumb-phinf.pstatic.net/20230721_187/168987862327391bjo_PNG/1bs7F.png',
     },
     {
@@ -383,11 +383,30 @@ export default function Projects() {
       stack: {
         frontend: 'Next.js, TypeScript, TailwindCSS',
         backend: '',
-        deployment: 'vercel',
+        deployment: 'Vercel',
         database: '',
       },
-      href: 'http://m.site.naver.com/1bs7H',
       src: 'https://qrcodethumb-phinf.pstatic.net/20230721_94/1689878700567MDEQz_PNG/1bs7H.png',
+    },
+    {
+      id: 5,
+      image: '/portfolio/i1.png',
+      imageName: 'frankenshop',
+      title: '프랑켄샵 (개인)',
+      github: 'https://github.com/limhada/frankenshop',
+      deployment: 'https://frankenshop.vercel.app/',
+      description: '세상의 모든 물품을 파는 쇼핑몰 입니다.',
+      background: contentData.frankenshop.background,
+      review: contentData.frankenshop.review,
+      stack: {
+        frontend:
+          'Next.js, TypeScript, TailwindCSS, Redux-Toolkit, Redux-thunk, RTK-Query',
+        backend: 'Next.js, next-auth, mongodb-adapter, bcrypt, aws-sdk(S3)',
+        deployment: 'Vercel',
+        database: 'MongoDB',
+      },
+      // 네이버 QR코드 > 관리 해당 QR의 이미지 주소 복사
+      src: 'https://qrcodethumb-phinf.pstatic.net/20240108_183/1704709332656FN6nc_PNG/1hWFh.png',
     },
   ];
 
@@ -452,7 +471,7 @@ export default function Projects() {
                   </div>
                   {/* QR코드 */}
                   <div className='flex flex-col items-center p-5 mb-5 bg-mycolor1 rounded-[50px]'>
-                    <a href={project.href} target='_blank'>
+                    <a href={project.deployment} target='_blank'>
                       <img src={project.src} alt='QR코드' />
                     </a>
                     <div className='text-white mt-1'>{project.title}</div>
