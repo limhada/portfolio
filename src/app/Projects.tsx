@@ -392,7 +392,7 @@ export default function Projects() {
       id: 5,
       image: '/portfolio/i1.png',
       imageName: 'frankenshop',
-      title: '프랑켄샵 (개인)',
+      title: '프랑켄샵 (개인) - 미완성(아직 개발 중입니다.)',
       github: 'https://github.com/limhada/frankenshop',
       deployment: 'https://frankenshop.vercel.app/',
       description: '세상의 모든 물품을 파는 쇼핑몰 입니다.',
