@@ -45,6 +45,16 @@ export default function ImageComponent(props: Project): React.ReactElement {
       '/portfolio/i6.png',
       '/portfolio/i7.png',
     ],
+    // TODO: 수정 하기
+    frankenshop: [
+      '/portfolio/i1.png',
+      '/portfolio/i2.png',
+      '/portfolio/i3.png',
+      '/portfolio/i4.png',
+      '/portfolio/i5.png',
+      '/portfolio/i6.png',
+      '/portfolio/i7.png',
+    ],
   };
 
   const [num, setNum] = useState<number>(0);
