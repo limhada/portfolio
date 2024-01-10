@@ -1,6 +1,6 @@
 export default function Skills() {
   return (
-    <div className='flex flex-col flex-wrap justify-start items-center w-[350px] h-[900px] md:w-[600px] md:h-[1150px] overflow-x-auto'>
+    <div className='skills-mobile flex flex-col flex-wrap justify-start items-center w-[350px] h-[900px] md:w-[600px] md:h-[1150px]'>
       <div className='border-4 p-2 m-2 rounded-[10px] border-mycolor3 bg-mycolor3'>
         <div className='text-orange-400 font-bold mb-4'>Frontend</div>
         <img

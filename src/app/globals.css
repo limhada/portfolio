@@ -19,3 +19,10 @@
 .reveal-box {
   animation: revealBox 0.5s ease-in-out;
 }
+
+/* width가 500이하일때만 skills의 가로 스크롤 보이게 */
+@media (max-width: 500px) {
+  .skills-mobile {
+    overflow-x: auto;
+  }
+}
