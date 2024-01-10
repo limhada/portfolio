@@ -1,6 +1,6 @@
 export default function Skills() {
   return (
-    <div className='flex flex-col flex-wrap justify-start items-center w-[350px] h-[900px] md:w-[600px] md:h-[1100px] '>
+    <div className='skills-mobile flex flex-col flex-wrap justify-start items-center w-[350px] h-[900px] md:w-[600px] md:h-[1150px]'>
       <div className='border-4 p-2 m-2 rounded-[10px] border-mycolor3 bg-mycolor3'>
         <div className='text-orange-400 font-bold mb-4'>Frontend</div>
         <img
@@ -45,6 +45,15 @@ export default function Skills() {
         ></img>
         <img
           src='https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white'
+          className='w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[50px] mb-2'
+        ></img>
+        {/*  */}
+        <img
+          src='https://img.shields.io/badge/redux thunk-764ABC?style=for-the-badge&logo=redux&logoColor=white'
+          className='w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[50px] mb-2'
+        ></img>
+        <img
+          src='https://img.shields.io/badge/RTK Query-764ABC?style=for-the-badge&logo=redux&logoColor=white'
           className='w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[50px] mb-2'
         ></img>
       </div>
