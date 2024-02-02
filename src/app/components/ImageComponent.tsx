@@ -16,6 +16,7 @@ type ImageGroup = {
 };
 
 export default function ImageComponent(props: Project): React.ReactElement {
+  // console.log('props= ~~~~~~', props);
   const imgArr: ImageGroup = {
     guenlog: [
       '/guenlog/i1.gif',
@@ -47,13 +48,13 @@ export default function ImageComponent(props: Project): React.ReactElement {
     ],
     // TODO: 수정 하기
     frankenshop: [
-      '/portfolio/i1.png',
-      '/portfolio/i2.png',
-      '/portfolio/i3.png',
-      '/portfolio/i4.png',
-      '/portfolio/i5.png',
-      '/portfolio/i6.png',
-      '/portfolio/i7.png',
+      '/frankenshop/i0.gif',
+      '/frankenshop/i1.gif',
+      '/frankenshop/i2.gif',
+      '/frankenshop/i3.png',
+      // '/frankenshop/i5.png',
+      // '/frankenshop/i6.png',
+      // '/frankenshop/i7.png',
     ],
   };
 

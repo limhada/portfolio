@@ -123,6 +123,15 @@ export default function Skills() {
           src='https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white'
           className='w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[50px] mb-2'
         ></img>
+
+        <img
+          src='https://img.shields.io/badge/Ngrok-1F1E37?style=for-the-badge&logo=ngrok&logoColor=white'
+          className='w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[50px] mb-2'
+        />
+        <img
+          src='https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white'
+          className='w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[50px] mb-2'
+        />
       </div>
     </div>
   );
