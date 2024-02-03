@@ -14,9 +14,11 @@ export default function Projects() {
     description: string;
     github: string;
     deployment: string;
-    background: React.ReactNode;
     imageName: string;
+    background: React.ReactNode;
     review: React.ReactNode;
+    regret?: JSX.Element;
+    improvement?: JSX.Element;
     stack: {
       frontend: string;
       backend: string;
@@ -31,6 +33,8 @@ export default function Projects() {
     [key: string]: {
       background: JSX.Element;
       review: JSX.Element;
+      regret?: JSX.Element;
+      improvement?: JSX.Element;
     };
   }
   const contentData: ContentData = {
@@ -361,6 +365,69 @@ export default function Projects() {
           알게되었습니다.
         </div>
       ),
+      regret: (
+        <ul className='pl-5'>
+          <li className='list-disc'>
+            프로젝트 시작 전 몽고 db설계를 명확하게 하지 못함
+          </li>
+          <li className='list-disc'>
+            SSR과 정적 생성의 장점을 제대로 활용하지 못함(메인 페이지 및
+            장바구니 페이지 등 매우 느린 속도)
+          </li>
+          <li className='list-disc'>
+            새로운 기술을 사용해 보기 급급해서 사이트 완성도가 낮다
+          </li>
+          <li className='list-disc'>반응형 구현 못함</li>
+          <li className='list-disc'>
+            포트원(아임 포트) 사용 시 vercel에서 발생한 오류였지만 확신하지
+            못하고 많은 시간을 허비함(결제 테스트만 200번)
+          </li>
+          <li className='list-disc'>전체적인 디자인 완성도가 떨어짐</li>
+        </ul>
+      ),
+      improvement: (
+        <ul>
+          <li>
+            {/* <input type='checkbox' checked /> 전반적인 데이터 유효성 검사 */}
+            <input type='checkbox' /> 전반적인 데이터 유효성 검사
+          </li>
+          <li>
+            <input type='checkbox' /> 디바운스와 쓰로틀 적용
+          </li>
+          <li>
+            <input type='checkbox' /> 반응형 디자인
+          </li>
+          <li>
+            <input type='checkbox' /> 이미지에 스켈레톤 적용
+          </li>
+          <li>
+            <input type='checkbox' /> 메인 페이지 이미지 슬라이드 빠르게 페이지
+            이동 시 이상 동작
+          </li>
+          <li>
+            <input type='checkbox' /> 구매내역 페이지
+          </li>
+          <li>
+            <input type='checkbox' /> 적립 포인트
+          </li>
+          <li>
+            <input type='checkbox' /> 할인율
+          </li>
+          <li>
+            <input type='checkbox' /> 관리자 - 상품 추가 기능
+          </li>
+          <li>
+            <input type='checkbox' /> 무한 스크롤
+          </li>
+          <li>
+            <input type='checkbox' /> GA4
+          </li>
+          <li>
+            <input type='checkbox' /> 카테고리 페이지 해당 카테고리 이름
+            추가하기
+          </li>
+        </ul>
+      ),
     },
 
     // FIXME: 복사용
@@ -453,13 +520,15 @@ export default function Projects() {
       id: 5,
       image: '/frankenshop/i0.gif',
       imageName: 'frankenshop',
-      title: '프랑켄샵 (개인) - 미완성(아직 개발 중입니다.)',
+      title: '프랑켄샵 (개인)',
       github: 'https://github.com/limhada/frankenshop',
       deployment: 'https://frankenshop.vercel.app/',
       description:
         'Frankenshop은 세상의 모든 물품을 파는 쇼핑몰 입니다.다양성과 혁신을 중시하는 쇼핑 몰로서의 상징성과 함께, 고객에게 새로운 기술적 경험을 제공하며 계속해서 발전하고자 하는 의지를 담고 있습니다.',
       background: contentData.frankenshop.background,
       review: contentData.frankenshop.review,
+      regret: contentData.frankenshop.regret,
+      improvement: contentData.frankenshop.improvement,
       stack: {
         frontend:
           'Next.js, TypeScript, TailwindCSS, Redux-Toolkit, Redux-thunk, RTK-Query',
@@ -574,6 +643,20 @@ export default function Projects() {
                   <h1 className='text-3xl mb-5 font-bold'>후기</h1>
                   <div className='text-base md:text-xl'>{project.review}</div>
                 </div>
+                {project.regret && (
+                  <div className='mb-10'>
+                    <h1 className='text-3xl mb-5 font-bold'>아쉬운 점</h1>
+                    <div className='text-base md:text-xl'>{project.regret}</div>
+                  </div>
+                )}
+                {project.improvement && (
+                  <div className='mb-10'>
+                    <h1 className='text-3xl mb-5 font-bold'>차후 개선할 점</h1>
+                    <div className='text-base md:text-xl'>
+                      {project.improvement}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>
