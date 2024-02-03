@@ -1,6 +1,6 @@
 export default function Skills() {
   return (
-    <div className='skills-mobile flex flex-col flex-wrap justify-start items-center w-[350px] h-[900px] md:w-[600px] md:h-[1150px]'>
+    <div className='skills-mobile flex flex-col flex-wrap justify-start items-center w-[350px] h-[900px] md:w-auto md:h-[1150px]'>
       <div className='border-4 p-2 m-2 rounded-[10px] border-mycolor3 bg-mycolor3'>
         <div className='text-orange-400 font-bold mb-4'>Frontend</div>
         <img
@@ -12,11 +12,11 @@ export default function Skills() {
           className='w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[50px] mb-2'
         ></img>
         <img
-          src='https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black'
+          src='https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white'
           className='w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[50px] mb-2'
         ></img>
         <img
-          src='https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black'
+          src='https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=white'
           className='w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[50px] mb-2'
         ></img>
         <img
@@ -130,6 +130,10 @@ export default function Skills() {
         />
         <img
           src='https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white'
+          className='w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[50px] mb-2'
+        />
+        <img
+          src='https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white'
           className='w-[7.5em] h-[3.125em] md:w-[13.75em] md:h-[4.375em] my-1 rounded-[50px] mb-2'
         />
       </div>
