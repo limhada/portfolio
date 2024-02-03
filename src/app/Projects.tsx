@@ -19,6 +19,10 @@ export default function Projects() {
     review: React.ReactNode;
     regret?: JSX.Element;
     improvement?: JSX.Element;
+    account?: {
+      id: string;
+      password: string;
+    };
     stack: {
       frontend: string;
       backend: string;
@@ -529,6 +533,10 @@ export default function Projects() {
       review: contentData.frankenshop.review,
       regret: contentData.frankenshop.regret,
       improvement: contentData.frankenshop.improvement,
+      account: {
+        id: 'test@test.com',
+        password: 'test',
+      },
       stack: {
         frontend:
           'Next.js, TypeScript, TailwindCSS, Redux-Toolkit, Redux-thunk, RTK-Query',
@@ -587,7 +595,7 @@ export default function Projects() {
                       {project.github}
                     </a>
                   </div>
-                  <div className='mb-10  '>
+                  <div>
                     Deployment URL :{' '}
                     <a
                       href={project.deployment}
@@ -601,8 +609,14 @@ export default function Projects() {
                       <div>({project.precautions})</div>
                     ) : null}
                   </div>
+                  {project.account && (
+                    <div className='mt-5'>
+                      <div>test 계정</div>- id: {project.account?.id}
+                      <br />- password: {project.account?.password}
+                    </div>
+                  )}
                   {/* QR코드 */}
-                  <div className='flex flex-col items-center p-5 mb-5 bg-mycolor1 rounded-[50px]'>
+                  <div className='flex flex-col items-center p-5 mb-5 bg-mycolor1 rounded-[50px] mt-10'>
                     <a href={project.deployment} target='_blank'>
                       <img src={project.src} alt='QR코드' />
                     </a>
