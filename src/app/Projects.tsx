@@ -14,9 +14,11 @@ export default function Projects() {
     description: string;
     github: string;
     deployment: string;
-    background: React.ReactNode;
     imageName: string;
+    background: React.ReactNode;
     review: React.ReactNode;
+    regret?: JSX.Element;
+    improvement?: JSX.Element;
     stack: {
       frontend: string;
       backend: string;
@@ -31,6 +33,8 @@ export default function Projects() {
     [key: string]: {
       background: JSX.Element;
       review: JSX.Element;
+      regret?: JSX.Element;
+      improvement?: JSX.Element;
     };
   }
   const contentData: ContentData = {
@@ -298,8 +302,132 @@ export default function Projects() {
       ),
     },
     frankenshop: {
-      background: <div>ㅇ</div>,
-      review: <div>ㅇ</div>,
+      background: (
+        <div>
+          Frankenshop의 이름에는 크게 두 가지 의미가 있습니다.
+          <br />
+          <br />
+          1. 상징성 - 다양성과 포용
+          <br /> Frankenshop의 이름은 프랑켄슈타인 괴물의 이야기에서 영감을
+          받았습니다.
+          <br />
+          프랑켄슈타인 괴물은 여러 부분이 결합되어 하나의 독특한 존재로
+          탄생했습니다. 이와 유사하게, Frankenshop은 다양한 상품을 모두
+          포용한다는 상징성을 담고 있습니다. 각각 다른 특징과 스타일을 가진
+          상품들이 모여 하나의 독창적인 쇼핑 경험을 제공합니다.
+          <br />
+          <br />
+          2. 기술적 상징의미 - 혁신과 다양성
+          <br /> Frankenshop은 이름에 담긴 또 다른 의미로, 기존의 익숙한 기술과
+          함께 새로운 다양한 기술을 도입하고 활용한다는 의미를 지니고 있습니다.
+          <br />
+          프랑켄슈타인이 새로운 부분을 결합해 창조되었듯이, Frankenshop은
+          혁신적인 기술을 도입하여 고객에게 새로운 경험과 기술적 다양성을
+          제공합니다. 이는 사용자들이 익숙한 영역에서 벗어나 새로운 기술을
+          탐험하며 쇼핑 경험을 향상시키고자 하는 의지를 반영합니다.
+        </div>
+      ),
+      review: (
+        <div>
+          Next.js를 활용하여 SSR과 정적 생성을 통해 성능 최적화를
+          몸소체감하였습니다.
+          <br />
+          프론트엔드와 백엔드를 동일한 프레임워크로 개발 경험을 더 다양한 하게
+          해볼 수 있었고, 더 넓은 시각에서 웹을 볼 수 있게 되었습니다.
+          <br />
+          TypeScript의 도입으로 코드의 안정성과 가독성을 향상시켰으며,
+          TailwindCSS로 클래스 기반 스타일링으로 빠르게 스타일을 구축하고
+          유지보수를 용이하게 할 수 있었습니다. TypeScript와 TailwindCSS는
+          이전에 다른 프로젝트에서도 몇번 사용 해 본 경험이 있어 조금 더
+          익숙해졌습니다.
+          <br />
+          프로젝트 초반에는 상태관리 툴을 사용하지 않고 직접 props를 통해 상태를
+          관리하는 경험을 해보고자 했습니다.
+          <br />
+          그러나 후반부로 갈수록 복잡성이 증가하며 상태관리의 필요성을 느끼며
+          비효율 적인 방법이라는 것을 몸소 체험한 뒤, Redux-Toolkit과
+          Redux-thunk를 도입하여 비동기 작업 및 상태 관리를 효과적으로 다룰 수
+          있었고, API 호출을 간소화하고 코드의 가독성을 향상시킬 수 있었습니다.
+          <br />
+          초기 학습은 복잡하고 시간도 소요되지만 큰 규모의 애플리케이션에서
+          상태관리가 얼마나 효율적이고 필요한 도구인지 절실히 깨달았습니다.
+          <br />
+          Next-auth를 도입하여 다양한 인증 방식을 지원하고 사용자 정의 인증을
+          간편하게 구현할 수 있었습니다.
+          <br />
+          보안을 강화하기 위해 bcrypt를 사용하여 안전한 비밀번호 해싱을
+          구현했습니다.
+          <br />
+          프로젝트에서 aws-sdk(S3)를 도입하여 이미지 파일을 간편하게 관리할 수
+          있었습니다. 그러나 클라우드 서비스 사용으로 인한 추가 비용과 초기
+          설정의 복잡성을 고려해야 했습니다. 이러한 측면을 고려하여 앞으로
+          진행할 프로젝트 규모에 따라 신중한 선택이 필요하다는 것을
+          알게되었습니다.
+        </div>
+      ),
+      regret: (
+        <ul className='pl-5'>
+          <li className='list-disc'>
+            프로젝트 시작 전 몽고 db설계를 명확하게 하지 못함
+          </li>
+          <li className='list-disc'>
+            SSR과 정적 생성의 장점을 제대로 활용하지 못함(메인 페이지 및
+            장바구니 페이지 등 매우 느린 속도)
+          </li>
+          <li className='list-disc'>
+            새로운 기술을 사용해 보기 급급해서 사이트 완성도가 낮다
+          </li>
+          <li className='list-disc'>반응형 구현 못함</li>
+          <li className='list-disc'>
+            포트원(아임 포트) 사용 시 vercel에서 발생한 오류였지만 확신하지
+            못하고 많은 시간을 허비함(결제 테스트만 200번)
+          </li>
+          <li className='list-disc'>전체적인 디자인 완성도가 떨어짐</li>
+        </ul>
+      ),
+      improvement: (
+        <ul>
+          <li>
+            {/* <input type='checkbox' checked /> 전반적인 데이터 유효성 검사 */}
+            <input type='checkbox' /> 전반적인 데이터 유효성 검사
+          </li>
+          <li>
+            <input type='checkbox' /> 디바운스와 쓰로틀 적용
+          </li>
+          <li>
+            <input type='checkbox' /> 반응형 디자인
+          </li>
+          <li>
+            <input type='checkbox' /> 이미지에 스켈레톤 적용
+          </li>
+          <li>
+            <input type='checkbox' /> 메인 페이지 이미지 슬라이드 빠르게 페이지
+            이동 시 이상 동작
+          </li>
+          <li>
+            <input type='checkbox' /> 구매내역 페이지
+          </li>
+          <li>
+            <input type='checkbox' /> 적립 포인트
+          </li>
+          <li>
+            <input type='checkbox' /> 할인율
+          </li>
+          <li>
+            <input type='checkbox' /> 관리자 - 상품 추가 기능
+          </li>
+          <li>
+            <input type='checkbox' /> 무한 스크롤
+          </li>
+          <li>
+            <input type='checkbox' /> GA4
+          </li>
+          <li>
+            <input type='checkbox' /> 카테고리 페이지 해당 카테고리 이름
+            추가하기
+          </li>
+        </ul>
+      ),
     },
 
     // FIXME: 복사용
@@ -390,18 +518,22 @@ export default function Projects() {
     },
     {
       id: 5,
-      image: '/portfolio/i1.png',
+      image: '/frankenshop/i0.gif',
       imageName: 'frankenshop',
-      title: '프랑켄샵 (개인) - 미완성(아직 개발 중입니다.)',
+      title: '프랑켄샵 (개인)',
       github: 'https://github.com/limhada/frankenshop',
       deployment: 'https://frankenshop.vercel.app/',
-      description: '세상의 모든 물품을 파는 쇼핑몰 입니다.',
+      description:
+        'Frankenshop은 세상의 모든 물품을 파는 쇼핑몰 입니다.다양성과 혁신을 중시하는 쇼핑 몰로서의 상징성과 함께, 고객에게 새로운 기술적 경험을 제공하며 계속해서 발전하고자 하는 의지를 담고 있습니다.',
       background: contentData.frankenshop.background,
       review: contentData.frankenshop.review,
+      regret: contentData.frankenshop.regret,
+      improvement: contentData.frankenshop.improvement,
       stack: {
         frontend:
           'Next.js, TypeScript, TailwindCSS, Redux-Toolkit, Redux-thunk, RTK-Query',
-        backend: 'Next.js, next-auth, mongodb-adapter, bcrypt, aws-sdk(S3)',
+        backend:
+          'Next.js, next-auth, mongodb-adapter, bcrypt, aws-sdk(S3), PortOne',
         deployment: 'Vercel',
         database: 'MongoDB',
       },
@@ -511,6 +643,20 @@ export default function Projects() {
                   <h1 className='text-3xl mb-5 font-bold'>후기</h1>
                   <div className='text-base md:text-xl'>{project.review}</div>
                 </div>
+                {project.regret && (
+                  <div className='mb-10'>
+                    <h1 className='text-3xl mb-5 font-bold'>아쉬운 점</h1>
+                    <div className='text-base md:text-xl'>{project.regret}</div>
+                  </div>
+                )}
+                {project.improvement && (
+                  <div className='mb-10'>
+                    <h1 className='text-3xl mb-5 font-bold'>차후 개선할 점</h1>
+                    <div className='text-base md:text-xl'>
+                      {project.improvement}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>
