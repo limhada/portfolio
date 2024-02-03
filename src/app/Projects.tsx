@@ -430,6 +430,9 @@ export default function Projects() {
             <input type='checkbox' /> 카테고리 페이지 해당 카테고리 이름
             추가하기
           </li>
+          <li>
+            <input type='checkbox' /> 제품 상세페이지 디자인 수정하기
+          </li>
         </ul>
       ),
     },
