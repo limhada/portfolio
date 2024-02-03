@@ -7,13 +7,15 @@ import {
   faUserLarge,
   faMobile,
   faEnvelope,
+  faStar,
 } from '@fortawesome/free-solid-svg-icons';
+import { ReactNode } from 'react';
 
 export default function Aboutme() {
   interface DataItem {
     icon: IconDefinition;
     title: string;
-    content: string;
+    content: string | ReactNode;
   }
 
   const data: DataItem[] = [
@@ -22,6 +24,15 @@ export default function Aboutme() {
     { icon: faMobile, title: '연락처', content: '010-7157-5537' },
     { icon: faPenToSquare, title: '학력', content: '한양대학교 정보융합전공' },
     { icon: faEnvelope, title: '이메일', content: 'leem1315@gmail.com' },
+    {
+      icon: faStar,
+      title: 'Learning Wishlist',
+      content: (
+        <div>
+          Flutter, Three.js, React Native, <br /> DB설계, 소프트웨어 설계, UX/UI
+        </div>
+      ),
+    },
   ];
 
   return (
